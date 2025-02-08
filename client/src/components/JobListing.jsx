@@ -12,7 +12,7 @@ const JobListing = () => {
           (searchFilter.title !== "" || searchFilter.location !== "") && (
             <>
               <h3 className="font-medium text-lg mb-4">Current Search</h3>
-              <div>
+              <div className="mb-4 text-gray-600">
                 {searchFilter.title &&(
                    <span>
                     {searchFilter.title}
