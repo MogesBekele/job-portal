@@ -14,7 +14,7 @@ const JobListing = () => {
               <h3 className="font-medium text-lg mb-4">Current Search</h3>
               <div className="mb-4 text-gray-600">
                 {searchFilter.title &&(
-                   <span>
+                   <span className="inline-flex items-center bg-blue-50 border border-blue-200 px-4 py-1.5 rounded">
                     {searchFilter.title}
                     <img onClick={e=> setSearchFilter(prev=>({...prev, title: ""}))} className="cursor-pointer" src={assets.cross_icon} alt="" />
                     
