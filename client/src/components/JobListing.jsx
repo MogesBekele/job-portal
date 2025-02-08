@@ -11,7 +11,7 @@ const JobListing = () => {
         {isSearched &&
           (searchFilter.title !== "" || searchFilter.location !== "") && (
             <>
-              <h3>Current Search</h3>
+              <h3 className="font-medium text-lg mb-4">Current Search</h3>
               <div>
                 {searchFilter.title &&(
                    <span>
