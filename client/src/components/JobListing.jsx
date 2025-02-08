@@ -6,7 +6,7 @@ import { assets } from "../assets/assets";
 const JobListing = () => {
   const { isSearched, searchFilter, setSearchFilter } = useContext(AppContext);
   return (
-    <div>
+    <div className="container 2xl:px-20 mx-auto flex">
       <div>
         {isSearched &&
           (searchFilter.title !== "" || searchFilter.location !== "") && (
