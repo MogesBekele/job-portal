@@ -1,6 +1,7 @@
 import React from 'react'
 
 const JobListing = () => {
+  const {isSearched, searchFilter} = useContext(AppContext)
   return (
     <div>
       
