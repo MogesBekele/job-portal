@@ -20,7 +20,7 @@ const JobListing = () => {
                     
                     </span>)}
                 {searchFilter.location && (
-                  <span>
+                  <span className="inline-flex items-center bg-red-50 border border-red-200 px-4 py-1.5 rounded">
                     {searchFilter.location}
                     <img  onClick={e=> setSearchFilter(prev=>({...prev, location: ""}))}  className="cursor-pointer" src={assets.cross_icon} alt="" />
 
