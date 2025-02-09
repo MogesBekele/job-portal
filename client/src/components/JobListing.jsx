@@ -30,7 +30,7 @@ const JobListing = () => {
           )}
           {/*category filter */}
           <div>
-            
+            <h4>Search by Categories</h4>
           </div>
       </div>
     </div>
