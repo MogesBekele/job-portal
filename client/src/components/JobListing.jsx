@@ -29,6 +29,9 @@ const JobListing = () => {
             </>
           )}
           {/*category filter */}
+          <div>
+            
+          </div>
       </div>
     </div>
   );
