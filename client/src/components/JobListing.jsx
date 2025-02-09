@@ -30,7 +30,7 @@ const JobListing = () => {
           )}
           {/*category filter */}
           <div className="max-lg:hidden">
-            <h4>Search by Categories</h4>
+            <h4 className="font-medium text-lg py-4">Search by Categories</h4>
             <ul>
               {
                 JobCategories.map((category, index)=>(
