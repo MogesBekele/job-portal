@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { assets } from "../assets/assets";
+import { assets, JobCategories } from "../assets/assets";
 
 const JobListing = () => {
   const { isSearched, searchFilter, setSearchFilter } = useContext(AppContext);
@@ -31,6 +31,15 @@ const JobListing = () => {
           {/*category filter */}
           <div>
             <h4>Search by Categories</h4>
+            <ul>
+              {
+                JobCategories.map((category, index)=>(
+                  <li key={index}>
+                    <input type="checkbox" name="" id="" {category}  />
+                  </li>
+                )
+              }
+            </ul>
           </div>
       </div>
     </div>
