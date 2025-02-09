@@ -35,7 +35,7 @@ const JobListing = () => {
               {
                 JobCategories.map((category, index)=>(
                   <li className="flex gap-3 items-center" key={index}>
-                  <input type="checkbox" name="" id="" />
+                  <input className="scale-125" type="checkbox" name="" id="" />
                   {category}
                 </li>
                 ))
