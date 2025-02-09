@@ -35,9 +35,9 @@ const JobListing = () => {
               {
                 JobCategories.map((category, index)=>(
                   <li key={index}>
-                    <input type="checkbox" name="" id="" {category}  />
-                  </li>
-                )
+                  <input type="checkbox" name="" id="" {category}/>
+                </li>
+                ))
               }
             </ul>
           </div>
