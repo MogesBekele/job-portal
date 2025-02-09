@@ -29,7 +29,7 @@ const JobListing = () => {
             </>
           )}
           {/*category filter */}
-          <div>
+          <div className="max-lg:hidden">
             <h4>Search by Categories</h4>
             <ul>
               {
