@@ -60,7 +60,7 @@ const JobListing = () => {
       {/* job listing */}
       <section>
         <h3>Latest jibs</h3>
-        <p></p>
+        <p>Get your desired jobsfrom top companies</p>
       </section>
     </div>
   );
