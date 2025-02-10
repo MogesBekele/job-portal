@@ -57,6 +57,8 @@ const JobListing = () => {
             </ul>
           </div>
       </div>
+      {/* job listing */}
+      
     </div>
   );
 };
