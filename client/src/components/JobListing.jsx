@@ -58,7 +58,9 @@ const JobListing = () => {
           </div>
       </div>
       {/* job listing */}
-      
+      <section>
+        <h3>Latest jibs</h3>
+      </section>
     </div>
   );
 };
