@@ -60,7 +60,7 @@ const JobListing = () => {
       {/* job listing */}
       <section className="w-full lg:w-3/4 text-gray-800 max-lg:px-4 ">
         <h3 className="font-medium text-3xl py-2" id="job-list">Latest jibs</h3>
-        <p>Get your desired jobsfrom top companies</p>
+        <p className="mb-8">Get your desired jobsfrom top companies</p>
       </section>
     </div>
   );
