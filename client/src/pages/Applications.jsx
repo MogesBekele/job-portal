@@ -7,6 +7,7 @@ const jobListings = [
 ];
 
 const Applications = () => {
+  
   const [selectedJob, setSelectedJob] = useState(null);
   const [applicantName, setApplicantName] = useState('');
   const [applicantEmail, setApplicantEmail] = useState('');
