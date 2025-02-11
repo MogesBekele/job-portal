@@ -44,7 +44,7 @@ const JobListing = () => {
           </div>
                {/*location  filter */}
                <div className="max-lg:hidden">
-            <h4 className="font-medium text-lg py-4">Search by Location</h4>
+            <h4 className="font-medium text-lg py-4 pt-14">Search by Location</h4>
             <ul className="space-y-4 text-gray-600">
               {
                 JobLocations.map((location, index)=>(
