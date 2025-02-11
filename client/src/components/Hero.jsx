@@ -24,7 +24,7 @@ const Hero = () => {
         </h2>
         <p className="mb-8 max-w-xl text-sm mx-auto font-light px-5">
           Your next big career move starts here. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Explicabo, numquam.
+          consectetur adipisicing elit. Explicabo,Lorem ipsum dolor sit.
         </p>
         <div className="flex items-center justify-between bg-white rounded text-gray-600 max-w-xl pl-4 mx-4 sm:mx-auto">
           <div className="flex items-center">
