@@ -1,5 +1,6 @@
 import { createContext } from 'react';
 import { useState } from 'react';
+import JobCard from '../components/JobCard';
 
 export const AppContext = createContext();
 
@@ -13,7 +14,8 @@ export const AppContextProvider = (props)=>{
     searchFilter,
     setSearchFilter,
     isSearched,
-    setIsSearched
+    setIsSearched,
+    JobCard
 
   }
   return (
