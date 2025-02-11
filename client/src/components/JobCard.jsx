@@ -3,8 +3,8 @@ import { assets } from '../assets/assets'
 
 const JobCard = ({job}) => {
   return (
-    <div>
-      <div>
+    <div className='border p-6 shadow rounded'>
+      <div className='flex justify-between items-center'>
         <img src={assets.company_icon} alt="" />
       </div>
       <h4>{job.title}</h4>
