@@ -7,7 +7,6 @@ const jobListings = [
 ];
 
 const Applications = () => {
-  
   const [selectedJob, setSelectedJob] = useState(null);
   const [applicantName, setApplicantName] = useState('');
   const [applicantEmail, setApplicantEmail] = useState('');
@@ -17,18 +16,37 @@ const Applications = () => {
     setSelectedJob(job);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Applying for job:', selectedJob);
-    console.log('Applicant Name:', applicantName);
-    console.log('Applicant Email:', applicantEmail);
-    console.log('Cover Letter:', coverLetter);
-    // Reset form
-    setSelectedJob(null);
-    setApplicantName('');
-    setApplicantEmail('');
-    setCoverLetter('');
+    const applicationData = {
+      jobId: selectedJob.id,
+      applicantName,
+      applicantEmail,
+      coverLetter,
+    };
+
+    try {
+      const response = await fetch('https://your-api-endpoint.com/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(applicationData),
+      });
+
+      if (response.ok) {
+        console.log('Application submitted successfully');
+        // Reset form
+        setSelectedJob(null);
+        setApplicantName('');
+        setApplicantEmail('');
+        setCoverLetter('');
+      } else {
+        console.error('Failed to submit application');
+      }
+    } catch (error) {
+      console.error('Error submitting application:', error);
+    }
   };
 
   return (
