@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const jobListings = [
   { id: 1, title: 'Software Engineer', company: 'Microsoft', location: 'Redmond, WA' },
   { id: 2, title: 'Product Manager', company: 'Google', location: 'Mountain View, CA' },
-  { id: 3, title: 'Data Scientist', company: 'Amazon', location: 'Seattle, WA' },
+  { id: 3, title: 'Data Scientist', company: 'Amazon', location: 'Seatle, WA' },
 ];
 
 const Applications = () => {
