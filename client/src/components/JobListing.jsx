@@ -94,7 +94,7 @@ const JobListing = () => {
         {
           jobs.length>0&&(
             <div>
-              <a href="">
+              <a href="#job-list">
                 <img src={assets.left_arrow_icon} alt="" />
               </a>
               {
@@ -103,8 +103,8 @@ const JobListing = () => {
                     <button>{index+1}</button>
                   </a>
                 ))}
-                <a href="">
-                <img src={assets.left_arrow_icon} alt="" />
+                <a href="#job-list">
+                <img src={assets.right_arrow_icon} alt="" />
               </a>
                 
               
