@@ -8,15 +8,15 @@ const AppDownload = () => {
         <div>
           <h1 className='text-2xl sm:text-4xl font-bold mb-8 max-w-md'>Download Mobile App For Better Experience</h1>
           <div className='flex gap-4'>
-            <a href="">
-              <img src={assets.play_store} alt="" />
+            <a href="#" className='inline-block'>
+              <img className='h-12' src={assets.play_store} alt="" />
             </a>
-            <a href="">
-              <img src={assets.app_store} alt="" />
+            <a href="#" className='inline-block'>
+              <img className='h-12' src={assets.app_store} alt="" />
             </a>
           </div>
         </div>
-        <img src={assets.app_main_img} alt="" />
+        <img className='absolute w-80 right-0 bottom-0 mr-32 max-lg:hidden' src={assets.app_main_img} alt="" />
       </div>
     </div>
   )
