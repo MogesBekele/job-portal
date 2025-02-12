@@ -93,14 +93,15 @@ const JobListing = () => {
         {/* pagination */}
         {
           jobs.length>0&&(
-            <div>
+            <div className="flex justify-center items-center
+            space-x-2 mt-10">
               <a href="#job-list">
                 <img src={assets.left_arrow_icon} alt="" />
               </a>
               {
                 Array.from({length:Math.ceil(jobs.length/6)}).map((_,index)=>(
                   <a href="#job-list">
-                    <button>{index+1}</button>
+                    <button className={`w-10 h-10 flex items-center justify-center border border-gray-300 rounded ${currentPage === index+1? 'bg-blue-100 text-blue-500':'text-gray-500'}`}>{index+1}</button>
                   </a>
                 ))}
                 <a href="#job-list">
