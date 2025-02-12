@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { assets, JobCategories, JobLocations } from "../assets/assets";
-import JobCard from "./JobCard";
 import JobCard from "./JobCard";
 
 const JobListing = () => {
@@ -96,7 +96,7 @@ const JobListing = () => {
             <div className="flex justify-center items-center
             space-x-2 mt-10">
               <a href="#job-list">
-                <img onClick={()=>setCurrentPage(index-1)} src={assets.left_arrow_icon} alt="" />
+                <img onClick={()=>setCurrentPage(Math.max(currentPage-1), 1)}  src={assets.left_arrow_icon} alt="" />
               </a>
               {
                 Array.from({length:Math.ceil(jobs.length/6)}).map((_,index)=>(
@@ -105,7 +105,7 @@ const JobListing = () => {
                   </a>
                 ))}
                 <a href="#job-list">
-                <img src={assets.right_arrow_icon} alt="" />
+                <img onClick={()=>setCurrentPage(Math.min(currentPage+1, Math.ceil(jobs.length/6)))} src={assets.right_arrow_icon} alt="" />
               </a>
                 
               
