@@ -99,10 +99,13 @@ const JobListing = () => {
               </a>
               {
                 Array.from({length:Math.ceil(jobs.length/6)}).map((_,index)=>(
-                  <a href="">
-                    <button></button>
+                  <a href="#job-list">
+                    <button>{index+1}</button>
                   </a>
                 ))}
+                <a href="">
+                <img src={assets.left_arrow_icon} alt="" />
+              </a>
                 
               
             </div>
