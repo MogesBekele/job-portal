@@ -16,6 +16,7 @@ const AppDownload = () => {
             </a>
           </div>
         </div>
+        <img src={assets.app_main_img} alt="" />
       </div>
     </div>
   )
