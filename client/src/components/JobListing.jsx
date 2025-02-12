@@ -30,7 +30,9 @@ const JobListing = () => {
               </div>
             </>
           )}
-          <button onClick={()=>setShowFilter(true)}>Show Job list</button>
+          <button onClick={()=>setShowFilter(true)}>
+            {showFilter ? "Close" : "Show filter"}
+          </button>
           {/*category filter */}
           {showFilter && (
              <div>
