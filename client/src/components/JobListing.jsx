@@ -30,12 +30,12 @@ const JobListing = () => {
               </div>
             </>
           )}
-          <button onClick={()=>setShowFilter(true)}>
+          <button className="px-6 py-1.5 rounded border border-gray-400 lg:hidden" onClick={e=>setShowFilter(prev=>!prev)}>
             {showFilter ? "Close" : "Show filter"}
           </button>
           {/*category filter */}
-          {showFilter && (
-             <div>
+          
+             <div className={showFilter? "":'max-lg:hidden'}>
             <h4 className="font-medium text-lg py-4">Search by Categories</h4>
             <ul className="space-y-4 text-gray-600">
               {
@@ -48,7 +48,7 @@ const JobListing = () => {
               }
             </ul>
           </div>
-        )}
+        
          
                {/*location  filter */}
                <div className="max-lg:hidden">
