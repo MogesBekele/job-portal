@@ -179,7 +179,7 @@ const JobListing = () => {
               <img
                 onClick={() =>
                   setCurrentPage(
-                    Math.min(currentPage + 1, Math.ceil(jobs.length / 6))
+                    Math.min(currentPage + 1, Math.ceil(filteredJobs.length / 6))
                   )
                 }
                 src={assets.right_arrow_icon}
