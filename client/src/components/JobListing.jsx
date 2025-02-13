@@ -27,6 +27,7 @@ setSelectedCategories(
 const matchesCategory = job=>selectedCategories.length === 0 || selectedCategories.include(job.category)
 const matchesLocation = job=>selectedLocations.length === 0 || selectedLocations.includes(job.location)
 const matchesTitle = job => searchFilter.title === "" || job.title.toLowerCase().includes(searchFilter.title.toLowerCase())
+const matchesSearchLocation = job => job.location.toLowerCase()
       },[])
   return (
     <div className="container 2xl:px-20 mx-auto flex flex-col lg:flex-row max-lg:space-y-8 py-8">
