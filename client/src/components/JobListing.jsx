@@ -159,7 +159,7 @@ const JobListing = () => {
                 alt=""
               />
             </a>
-            {Array.from({ length: Math.ceil(jobs.length / 6) }).map(
+            {Array.from({ length: Math.ceil(filteredJobs.length / 6) }).map(
               (_, index) => (
                 <a href="#job-list">
                   <button
