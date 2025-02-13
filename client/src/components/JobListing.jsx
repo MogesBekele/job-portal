@@ -62,7 +62,7 @@ const JobListing = () => {
           <ul className="space-y-4 text-gray-600">
             {JobCategories.map((category, index) => (
               <li className="flex gap-3 items-center" key={index}>
-                <input className="scale-125" type="checkbox" name="" id="" />
+                <input  className="scale-125" type="checkbox" onChange={()} />
                 {category}
               </li>
             ))}
