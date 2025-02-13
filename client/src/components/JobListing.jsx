@@ -147,7 +147,7 @@ const JobListing = () => {
             ))}
         </div>
         {/* pagination */}
-        {jobs.length > 0 && (
+        {filteredJobs.length > 0 && (
           <div
             className="flex justify-center items-center
             space-x-2 mt-10"
