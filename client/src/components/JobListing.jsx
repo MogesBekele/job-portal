@@ -28,6 +28,9 @@ const matchesCategory = job=>selectedCategories.length === 0 || selectedCategori
 const matchesLocation = job=>selectedLocations.length === 0 || selectedLocations.includes(job.location)
 const matchesTitle = job => searchFilter.title === "" || job.title.toLowerCase().includes(searchFilter.title.toLowerCase())
 const matchesSearchLocation = job => searchFilter.location ==="" || job.location.toLowerCase().includes(searchFilter.location.toLowerCase())
+const newFilteredJobs = jobs.slice().reverse().filter(
+  job => matchesCategory(job) && matchesTitle(job) && matchesLocation(job) && matchesSearchLocation(job)
+)
       },[])
   return (
     <div className="container 2xl:px-20 mx-auto flex flex-col lg:flex-row max-lg:space-y-8 py-8">
