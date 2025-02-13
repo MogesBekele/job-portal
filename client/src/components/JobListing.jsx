@@ -20,7 +20,7 @@ setSelectedCategories(
   }
   const handleLocationChange = (location)=>{
     setSelectedLocations(
-      prev=>prev.includes(category)?prev.filter(c=>c !==category):[...prev,category]
+      prev=>prev.includes(location)?prev.filter(c=>c !==location):[...prev,location]
     )
       }
   return (
