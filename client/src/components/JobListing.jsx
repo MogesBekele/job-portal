@@ -86,7 +86,7 @@ setSelectedCategories(
           <ul className="space-y-4 text-gray-600">
             {JobLocations.map((location, index) => (
               <li className="flex gap-3 items-center" key={index}>
-                <input className="scale-125" type="checkbox" name="" id="" />
+                <input className="scale-125" type="checkbox" onChange={()=>handleLocationChange(location)} checked={selectedLocations.includes(location)}  />
                 {location}
               </li>
             ))}
