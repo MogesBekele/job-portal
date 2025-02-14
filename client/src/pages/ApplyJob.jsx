@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext'
 import Loading from '../components/Loading'
 import Navbar from '../components/Navbar'
 import { assets } from '../assets/assets'
-
+import kconvert from 'k-convert'
 const ApplyJob = () => {
 
   const {id} = useParams()
