@@ -49,7 +49,7 @@ if(data.length !== 0){
                   </span>
                   <span>
                     <img src={assets.money_icon} alt="" />
-                    CTC: {jobData.salary}
+                    CTC: {kconvert.convertTo(jobData.salary)}
                   </span>
                 </div>
               </div>
