@@ -21,10 +21,12 @@ if(data.length !== 0){
       fetchJob()
     }
   },[id, jobs])
-  return (
+  return  jobData? (
     <div>
       
     </div>
+  ):(
+    <div></div>
   )
 }
 
