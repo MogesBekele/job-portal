@@ -35,7 +35,7 @@ if(data.length !== 0){
               <img className='h-24 bg-white rounded-lg p-4 mr-4 max-md:mb-4 border' src={jobData.companyId.image} alt="" />
               <div className='text-center md:text-left text-neutral-700'>
                 <h1 className='text-2xl sm:text-4xl font-medium'>{jobData.title}</h1>
-                <div>
+                <div className='flex flex-row flex-wrap max-md:justify-center gap-y-2 gap-6 items-center text-gray-700 mt-2'>
                   <span>
                     <img src={assets.suitcase_icon} alt="" />
                     {jobData.companyId.name}
