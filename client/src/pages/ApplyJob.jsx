@@ -36,19 +36,19 @@ if(data.length !== 0){
               <div className='text-center md:text-left text-neutral-700'>
                 <h1 className='text-2xl sm:text-4xl font-medium'>{jobData.title}</h1>
                 <div className='flex flex-row flex-wrap max-md:justify-center gap-y-2 gap-6 items-center text-gray-700 mt-2'>
-                  <span>
+                  <span className='flex items-center gap-1'>
                     <img src={assets.suitcase_icon} alt="" />
                     {jobData.companyId.name}
                   </span>
-                  <span>
+                  <span className='flex items-center gap-1'>
                     <img src={assets.location_icon} alt="" />
                     {jobData.location}
                   </span>
-                  <span>
+                  <span className='flex items-center gap-1'>
                     <img src={assets.person_icon} alt="" />
                     {jobData.level}
                   </span>
-                  <span>
+                  <span className='flex items-center gap-1'>
                     <img src={assets.money_icon} alt="" />
                     CTC: {kconvert.convertTo(jobData.salary)}
                   </span>
