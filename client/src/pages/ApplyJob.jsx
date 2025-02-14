@@ -24,7 +24,7 @@ if(data.length !== 0){
       fetchJob()
     }
   },[id, jobs])
-  return  false? (
+  return  jobData? (
     <>
     <Navbar/>
       <div>
