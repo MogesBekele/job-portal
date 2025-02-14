@@ -39,6 +39,14 @@ if(data.length !== 0){
                     <img src={assets.suitcase_icon} alt="" />
                     {jobData.companyId.name}
                   </span>
+                  <span>
+                    <img src={assets.location_icon} alt="" />
+                    {jobData.location}
+                  </span>
+                  <span>
+                    <img src={assets.person_icon} alt="" />
+                    {jobData.level}
+                  </span>
                 </div>
               </div>
             </div>
