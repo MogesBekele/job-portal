@@ -34,6 +34,12 @@ if(data.length !== 0){
               <img src={assets.company_icon} alt="" />
               <div>
                 <h1>{jobData.title}</h1>
+                <div>
+                  <span>
+                    <img src={assets.suitcase_icon} alt="" />
+                    {jobData}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
