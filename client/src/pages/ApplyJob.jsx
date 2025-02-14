@@ -55,9 +55,9 @@ if(data.length !== 0){
                 </div>
               </div>
             </div>
-            <div>
-              <button>APPLY Now</button>
-              <p>posted {moment(jobData.date).fromNow()}</p>
+            <div className='flex flex-col justify-center text-end text-sm max-md:mx-auto max-md:text-center '>
+              <button className='bg-blue-600 p-2.5 px-10 text-white rounded'>APPLY Now</button>
+              <p className='mt-1 text-gray-600'>posted {moment(jobData.date).fromNow()}</p>
             </div>
           </div>
         </div>
