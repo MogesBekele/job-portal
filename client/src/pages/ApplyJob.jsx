@@ -5,6 +5,7 @@ import Loading from '../components/Loading'
 import Navbar from '../components/Navbar'
 import { assets } from '../assets/assets'
 import kconvert from 'k-convert'
+import moment from 'moment'
 const ApplyJob = () => {
 
   const {id} = useParams()
@@ -53,6 +54,10 @@ if(data.length !== 0){
                   </span>
                 </div>
               </div>
+            </div>
+            <div>
+              <button>APPLY Now</button>
+              <p>posted {moment(jobData.data).fromNow()}</p>
             </div>
           </div>
         </div>
