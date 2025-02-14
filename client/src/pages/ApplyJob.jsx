@@ -5,6 +5,10 @@ const ApplyJob = () => {
 
   const {id} = useParams()
   const [jobData, setJobData] = useState(null)
+
+  const fetchJob = async()=>{
+    
+  }
   return (
     <div>
       
