@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 import Loading from '../components/Loading'
+import Navbar from '../components/Navbar'
 
 const ApplyJob = () => {
 
@@ -22,10 +23,11 @@ if(data.length !== 0){
       fetchJob()
     }
   },[id, jobs])
-  return  false? (
-    <div>
+  return  jobData? (
+    <>
+    <Navbar/>
       
-    </div>
+    </>
   ):(
   <Loading/>
   )
