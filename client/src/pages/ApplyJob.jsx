@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 import Loading from '../components/Loading'
 import Navbar from '../components/Navbar'
+import { assets } from '../assets/assets'
 
 const ApplyJob = () => {
 
@@ -26,7 +27,18 @@ if(data.length !== 0){
   return  jobData? (
     <>
     <Navbar/>
-      
+      <div>
+        <div>
+          <div>
+            <div>
+              <img src={assets.company_icon} alt="" />
+              <div>
+                <h1>{jobData.title}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   ):(
   <Loading/>
