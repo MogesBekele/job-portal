@@ -57,7 +57,7 @@ if(data.length !== 0){
             </div>
             <div>
               <button>APPLY Now</button>
-              <p>posted {moment(jobData.data).fromNow()}</p>
+              <p>posted {moment(jobData.date).fromNow()}</p>
             </div>
           </div>
         </div>
