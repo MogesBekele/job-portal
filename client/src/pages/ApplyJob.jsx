@@ -29,8 +29,8 @@ if(data.length !== 0){
     <>
     <Navbar/>
       <div className='container min-h-screen flex flex-col py-10 px-4 2xl:px-20 mx-auto'>
-        <div>
-          <div>
+        <div className='bg-white text-black rounded-lg w-full '>
+          <div className='flex justify-center md:justify-between flex-wrap gap-8 px-14 py-20 mb-6 bg-sky-50 border-sky-400 rounded-xl'>
             <div>
               <img src={jobData.companyId.image} alt="" />
               <div>
