@@ -17,8 +17,10 @@ if(data.length !== 0){
   }
 
   useEffect(()=>{
-    fetchJob()
-  },[id])
+    if (jobs.length>0) {
+      fetchJob()
+    }
+  },[id, jobs])
   return (
     <div>
       
