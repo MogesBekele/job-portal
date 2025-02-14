@@ -28,7 +28,7 @@ if(data.length !== 0){
   return  jobData? (
     <>
     <Navbar/>
-      <div>
+      <div className='container min-h-screen flex flex-col py-10 px-4 2xl:px-20 mx-auto'>
         <div>
           <div>
             <div>
