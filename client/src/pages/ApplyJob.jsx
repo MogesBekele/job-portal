@@ -33,8 +33,8 @@ if(data.length !== 0){
           <div className='flex justify-center md:justify-between flex-wrap gap-8 px-14 py-20 mb-6 bg-sky-50 border-sky-400 rounded-xl'>
             <div className='flex flex-col md:flex-row items-center'>
               <img className='h-24 bg-white rounded-lg p-4 mr-4 max-md:mb-4 border' src={jobData.companyId.image} alt="" />
-              <div>
-                <h1>{jobData.title}</h1>
+              <div className='text-center md:text-left text-neutral-700'>
+                <h1 className='text-2xl sm:text-4xl font-medium'>{jobData.title}</h1>
                 <div>
                   <span>
                     <img src={assets.suitcase_icon} alt="" />
