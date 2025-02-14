@@ -31,13 +31,13 @@ if(data.length !== 0){
         <div>
           <div>
             <div>
-              <img src={assets.company_icon} alt="" />
+              <img src={jobData.companyId.image} alt="" />
               <div>
                 <h1>{jobData.title}</h1>
                 <div>
                   <span>
                     <img src={assets.suitcase_icon} alt="" />
-                    {jobData}
+                    {jobData.companyId.name}
                   </span>
                 </div>
               </div>
