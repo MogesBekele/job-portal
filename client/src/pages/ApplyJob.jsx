@@ -47,6 +47,10 @@ if(data.length !== 0){
                     <img src={assets.person_icon} alt="" />
                     {jobData.level}
                   </span>
+                  <span>
+                    <img src={assets.money_icon} alt="" />
+                    CTC: {jobData.salary}
+                  </span>
                 </div>
               </div>
             </div>
