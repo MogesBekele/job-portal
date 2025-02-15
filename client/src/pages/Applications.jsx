@@ -13,7 +13,10 @@ const Applications = () => {
             isEdit? 
             <></>
             : <div>
-              
+              <a href="">
+                Resume
+              </a>
+              <button>Edit</button>
             </div>
           }
 
