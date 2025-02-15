@@ -64,6 +64,7 @@ if(data.length !== 0){
             <div>
               <h2>Job description</h2>
               <div dangerouslySetInnerHTML={{__html:jobData.description}}>
+                <button>Apply Now</button>
 
               </div>
             </div>
