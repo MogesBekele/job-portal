@@ -67,7 +67,7 @@ if(data.length !== 0){
                 <button>Apply Now</button>
 
               </div>
-              <button className='bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer'>APPLY Now</button>
+              
             </div>
           </div>
         </div>
