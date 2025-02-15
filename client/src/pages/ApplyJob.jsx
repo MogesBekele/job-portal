@@ -69,7 +69,7 @@ const ApplyJob = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="flex flex-col lg:flex-row justify-between items-start">
             <div>
               <h2>Job description</h2>
               <div
