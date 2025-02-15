@@ -60,6 +60,11 @@ if(data.length !== 0){
               <p className='mt-1 text-gray-600'>posted {moment(jobData.date).fromNow()}</p>
             </div>
           </div>
+          <div>
+            <div>
+              <h2>Job description</h2>
+            </div>
+          </div>
         </div>
       </div>
     </>
