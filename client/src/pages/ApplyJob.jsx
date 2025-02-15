@@ -63,6 +63,7 @@ if(data.length !== 0){
           <div>
             <div>
               <h2>Job description</h2>
+              <div></div>
             </div>
           </div>
         </div>
