@@ -79,6 +79,10 @@ const ApplyJob = () => {
                 APPLY Now
               </button>
             </div>
+            {/* right section */}
+            <div>
+              <h2>Moe jobs from {jobData.companyId.name}</h2>
+            </div>
           </div>
         </div>
       </div>
