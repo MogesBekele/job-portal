@@ -81,7 +81,8 @@ const ApplyJob = () => {
             </div>
             {/* right section */}
             <div>
-              <h2>Moe jobs from {jobData.companyId.name}</h2>
+              <h2>More jobs from {jobData.companyId.name}</h2>
+              {jobs.filter(job=>job._id !==jobData._id)}
             </div>
           </div>
         </div>
