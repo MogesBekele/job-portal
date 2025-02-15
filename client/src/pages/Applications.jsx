@@ -5,6 +5,9 @@ const Applications = () => {
   return (
     <>
       <Navbar/>
+      <div>
+        <h2>Your Resume</h2>
+      </div>
     </>
   )
 }
