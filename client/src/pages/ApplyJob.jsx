@@ -82,7 +82,7 @@ const ApplyJob = () => {
             {/* right section */}
             <div>
               <h2>More jobs from {jobData.companyId.name}</h2>
-              {jobs.filter(job=>job._id !==jobData._id)}
+              {jobs.filter(job=>job._id !==jobData._id && job.companyId._id === jobData.companyId._id)}
             </div>
           </div>
         </div>
