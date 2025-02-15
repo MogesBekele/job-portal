@@ -9,6 +9,13 @@ const Applications = () => {
       <div>
         <h2>Your Resume</h2>
         <div>
+          {
+            isEdit? 
+            <></>
+            : <div>
+              
+            </div>
+          }
 
         </div>
       </div>
