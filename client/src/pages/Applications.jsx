@@ -15,7 +15,7 @@ const Applications = () => {
             <>
             <label htmlFor="">
               <p>Select Resume</p>
-              <input accept='application/pdf' type="text" />
+              <input onChange={e=>} accept='application/pdf' type="text" />
             </label>
             </>
             : <div className='flex gap-2'>
