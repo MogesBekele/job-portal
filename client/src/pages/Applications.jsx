@@ -35,6 +35,9 @@ const Applications = () => {
           <thead>
             <tr>
               <th>Company</th>
+              <th>Job Title</th>
+              <th>Location</th>
+              <th>Date</th>
             </tr>
           </thead>
         </table>
