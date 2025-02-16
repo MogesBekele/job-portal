@@ -44,8 +44,10 @@ const Applications = () => {
           <tbody>
             {
               jobsApplied.map((job, index)=>job.jobId?(
-                <tr></tr>
-              ):())
+                <tr>
+                  
+                </tr>
+              ):(null))
             }
           </tbody>
         </table>
