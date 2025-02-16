@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import { assets, jobsApplied } from '../assets/assets'
+import moment from 'moment'
 
 const Applications = () => {
   const [isEdit, setIsEdit] =useState(false)
@@ -43,7 +44,7 @@ const Applications = () => {
           </thead>
           <tbody>
             {
-              jobsApplied.map((job, index)=>job.jobId?(
+              jobsApplied.map((job, index)=>true ?(
                 <tr>
                   <td>
                     <img src={job.logo} alt="" />
@@ -53,7 +54,7 @@ const Applications = () => {
                     {job.title}
                   </td>
                   <td>{job.location}</td>
-                  <td>{}</td>
+                  <td>{moment(job.date).format('ll')}</td>
                   <td></td>
                 </tr>
               ):(null))
