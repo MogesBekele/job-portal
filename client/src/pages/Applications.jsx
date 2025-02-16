@@ -30,6 +30,7 @@ const Applications = () => {
           }
 
         </div>
+        <h2>Jobs Applied</h2>
       </div>
     </>
   )
