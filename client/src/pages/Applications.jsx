@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 
 const Applications = () => {
   const [isEdit, setIsEdit] =useState(false)
+  const [resume, setResume] =useState(null)
   return (
     <>
       <Navbar/>
