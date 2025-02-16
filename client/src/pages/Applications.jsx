@@ -31,6 +31,9 @@ const Applications = () => {
 
         </div>
         <h2>Jobs Applied</h2>
+        <table>
+          <thead></thead>
+        </table>
       </div>
     </>
   )
