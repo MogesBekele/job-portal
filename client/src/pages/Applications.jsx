@@ -47,7 +47,7 @@ const Applications = () => {
               jobsApplied.map((job, index)=>true ?(
                 <tr>
                   <td className='py-3 px-4 flex items-center gap-2 border-b'>
-                    <img src={job.logo} alt="" />
+                    <img className='w-8 h-8' src={job.logo} alt="" />
                     {job.company}
                   </td>
                   <td>
