@@ -15,7 +15,7 @@ const Applications = () => {
             isEdit? 
             <>
             <label className='flex items-center' htmlFor="resumeUpload">
-              <p>Select Resume</p>
+              <p className='bg-blue-100 text-blue-600 px-4 py-2 rounded-lg mr-2'>Select Resume</p>
               <input id='resumeUpload' onChange={e=>setResume(e.target.files[0])} accept='application/pdf' type="file" hidden />
               <img src={assets.profile_upload_icon} alt="" />
             </label>
