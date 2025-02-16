@@ -32,7 +32,11 @@ const Applications = () => {
         </div>
         <h2>Jobs Applied</h2>
         <table>
-          <thead></thead>
+          <thead>
+            <tr>
+              <th>Company</th>
+            </tr>
+          </thead>
         </table>
       </div>
     </>
