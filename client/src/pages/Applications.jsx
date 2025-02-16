@@ -38,6 +38,7 @@ const Applications = () => {
               <th>Job Title</th>
               <th>Location</th>
               <th>Date</th>
+              <th>Status</th>
             </tr>
           </thead>
         </table>
