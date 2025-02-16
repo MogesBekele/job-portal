@@ -43,7 +43,9 @@ const Applications = () => {
           </thead>
           <tbody>
             {
-              jobsApplied
+              jobsApplied.map((job, index)=>job.jobId?(
+                <tr></tr>
+              ):())
             }
           </tbody>
         </table>
