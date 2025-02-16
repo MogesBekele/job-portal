@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { assets } from '../assets/assets'
+import { assets, jobsApplied } from '../assets/assets'
 
 const Applications = () => {
   const [isEdit, setIsEdit] =useState(false)
@@ -42,7 +42,9 @@ const Applications = () => {
             </tr>
           </thead>
           <tbody>
-            
+            {
+              jobsApplied
+            }
           </tbody>
         </table>
       </div>
