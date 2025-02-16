@@ -45,7 +45,16 @@ const Applications = () => {
             {
               jobsApplied.map((job, index)=>job.jobId?(
                 <tr>
-                  
+                  <td>
+                    <img src={job.logo} alt="" />
+                    {job.company}
+                  </td>
+                  <td>
+                    {job.title}
+                  </td>
+                  <td>{job.location}</td>
+                  <td>{}</td>
+                  <td></td>
                 </tr>
               ):(null))
             }
