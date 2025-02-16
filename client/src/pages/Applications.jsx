@@ -55,7 +55,7 @@ const Applications = () => {
                   </td>
                   <td>{job.location}</td>
                   <td>{moment(job.date).format('ll')}</td>
-                  <td></td>
+                  <td>{job.status}</td>
                 </tr>
               ):(null))
             }
