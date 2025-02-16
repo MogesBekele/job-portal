@@ -13,7 +13,7 @@ const Applications = () => {
           {
             isEdit? 
             <>
-            <label htmlFor="">
+            <label htmlFor="resumeUpload">
               <p>Select Resume</p>
               <input id='resumeUpload' onChange={e=>setResume(e.target.files[0])} accept='application/pdf' type="text" />
             </label>
