@@ -5,6 +5,7 @@ const RecruiterLogin = () => {
   const [name, setName] =useState('')
   const [password, setPassword] =useState('')
   const [email, setEmail] = useState('')
+  const [image, setImage] =  useState(false)
   return (
     <div>
       
