@@ -8,7 +8,7 @@ import { AppContext } from './context/AppContext.jsx'
 
 
 const App = () => {
-  const [showRecruiterLogin] = useContext(AppContext)
+  const {showRecruiterLogin} = useContext(AppContext)
   return (
     <div >
       { showRecruiterLogin && <RecruiterLogin/>}
