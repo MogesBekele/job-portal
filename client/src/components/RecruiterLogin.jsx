@@ -16,7 +16,7 @@ const RecruiterLogin = () => {
         <>
         <div>
           <img src={assets.person_icon} alt="" />
-          <input type="text" placeholder='Company Name' required />
+          <input onChange={e=>setName(e.target.value)} value={name} type="text" placeholder='Company Name' required />
         </div>
         </>
       </form>
