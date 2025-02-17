@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 
 const RecruiterLogin = () => {
-  const [state, setState] =useState('login')
+  const [state, setState] =useState('Login')
   const [name, setName] =useState('')
   const [password, setPassword] =useState('')
   const [email, setEmail] = useState('')
