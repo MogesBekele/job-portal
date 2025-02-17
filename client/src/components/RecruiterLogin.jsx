@@ -9,7 +9,9 @@ const RecruiterLogin = () => {
   const [isTextDataSubmited, setIsTextDataSubmited] =useState(false)
   return (
     <div>
-      pop message
+      <form action="">
+        <h1>Recruiter {state}</h1>
+      </form>
     </div>
   )
 }
