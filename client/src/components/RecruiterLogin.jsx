@@ -6,7 +6,7 @@ const RecruiterLogin = () => {
   const [password, setPassword] =useState('')
   const [email, setEmail] = useState('')
   const [image, setImage] =  useState(false)
-  const [isTestDataSubmited, setIsTestDataSubmited]
+  const [isTextDataSubmited, setIsTextDataSubmited] =useState(false)
   return (
     <div>
       
