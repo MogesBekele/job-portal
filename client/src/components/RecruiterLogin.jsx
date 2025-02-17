@@ -28,7 +28,7 @@ const RecruiterLogin = () => {
         </div>
         </>
         <button>
-          {state === 'Login'? 'login': 'sign up'}
+          {state === 'Login'? 'login': 'create account'}
         </button>
       </form>
     </div>
