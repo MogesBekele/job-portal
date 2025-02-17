@@ -11,6 +11,7 @@ const RecruiterLogin = () => {
     <div>
       <form action="">
         <h1>Recruiter {state}</h1>
+        <p>welcome back! please sign in to continue</p>
       </form>
     </div>
   )
