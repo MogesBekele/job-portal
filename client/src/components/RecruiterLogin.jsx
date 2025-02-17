@@ -9,7 +9,7 @@ const RecruiterLogin = () => {
   const [image, setImage] =  useState(false)
   const [isTextDataSubmited, setIsTextDataSubmited] =useState(false)
   return (
-    <div>
+    <div className='absolute top-0 right-0 bottom-0 left-0 z-10 backdrop-blur-sm bg-black/30 flex justify-center items-center'>
       <form action="">
         <h1>Recruiter {state}</h1>
         <p>welcome back! please sign in to continue</p>
