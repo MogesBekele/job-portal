@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { assets } from '../assets/assets'
 
 const RecruiterLogin = () => {
   const [state, setState] =useState('login')
@@ -12,6 +13,11 @@ const RecruiterLogin = () => {
       <form action="">
         <h1>Recruiter {state}</h1>
         <p>welcome back! please sign in to continue</p>
+        <>
+        <div>
+          <img src={assets.person_icon} alt="" />
+        </div>
+        </>
       </form>
     </div>
   )
