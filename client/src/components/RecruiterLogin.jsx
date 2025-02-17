@@ -16,6 +16,7 @@ const RecruiterLogin = () => {
         <>
         <div>
           <img src={assets.person_icon} alt="" />
+          <input type="text" placeholder='Company Name' required />
         </div>
         </>
       </form>
