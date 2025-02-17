@@ -33,8 +33,13 @@ const RecruiterLogin = () => {
         <button className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
           {state === 'Login'? 'login': 'create account'}
         </button>
-        <p>Don't have an account? <span>Sign Up</span></p>
-        <p>Already have an account <span>Login</span></p>
+        {
+          state === 'Login'
+          ?  <p>Don't have an account? <span>Sign Up</span></p>
+          :  
+          <p>Already have an account <span>Login</span></p>
+        }
+     
       </form>
     </div>
   )
