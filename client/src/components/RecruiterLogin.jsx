@@ -16,15 +16,15 @@ const RecruiterLogin = () => {
         <>
         <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
           <img src={assets.person_icon} alt="" />
-          <input className='outline-none' onChange={e=>setName(e.target.value)} value={name} type="text" placeholder='Company Name' required />
+          <input className='outline-none text-sm' onChange={e=>setName(e.target.value)} value={name} type="text" placeholder='Company Name' required />
         </div>
         <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
           <img src={assets.email_icon} alt="" />
-          <input  className='outline-none'  onChange={e=>setEmail(e.target.value)} value={email} type="email" placeholder='Email Id' required />
+          <input  className='outline-none text-sm'  onChange={e=>setEmail(e.target.value)} value={email} type="email" placeholder='Email Id' required />
         </div>
         <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
           <img src={assets.lock_icon} alt="" />
-          <input  className='outline-none'  onChange={e=>setPassword(e.target.value)} value={password} type="text" placeholder='enter password' required />
+          <input  className='outline-none text-sm'  onChange={e=>setPassword(e.target.value)} value={password} type="text" placeholder='enter password' required />
         </div>
         </>
         <button>
