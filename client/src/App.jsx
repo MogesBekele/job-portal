@@ -3,11 +3,13 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Applications from './pages/Applications.jsx'
 import ApplyJob from './pages/ApplyJob.jsx'
+import RecruiterLogin from './components/RecruiterLogin.jsx'
 
 
 const App = () => {
   return (
     <div >
+      <RecruiterLogin/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/applications' element={<Applications />} />
