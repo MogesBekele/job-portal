@@ -27,7 +27,9 @@ const RecruiterLogin = () => {
           <input onChange={e=>setPassword(e.target.value)} value={password} type="text" placeholder='enter password' required />
         </div>
         </>
-        <button></button>
+        <button>
+          {state === 'Login'? 'login': 'sign up'}
+        </button>
       </form>
     </div>
   )
