@@ -35,9 +35,9 @@ const RecruiterLogin = () => {
         </button>
         {
           state === 'Login'
-          ?  <p>Don't have an account? <span>Sign Up</span></p>
+          ?  <p>Don't have an account? <span onClick={()=>setState('sign up')}>Sign Up</span></p>
           :  
-          <p>Already have an account <span>Login</span></p>
+          <p>Already have an account <span onClick={()=>setState('Login')}>Login</span></p>
         }
      
       </form>
