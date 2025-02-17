@@ -13,6 +13,7 @@ const RecruiterLogin = () => {
       <form className='relative bg-white p-10 rounded-xl text-slate-500'>
         <h1 className='text-center text-2xl text-neutral-700 font-medium'>Recruiter {state}</h1>
         <p className='text-sm'>welcome back! please sign in to continue</p>
+      
         <>
         <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
           <img src={assets.person_icon} alt="" />
@@ -26,6 +27,7 @@ const RecruiterLogin = () => {
           <img src={assets.lock_icon} alt="" />
           <input  className='outline-none text-sm'  onChange={e=>setPassword(e.target.value)} value={password} type="text" placeholder='enter password' required />
         </div>
+        <p className='text-sm text-blue-600 my-4 cursor-pointer' >Forget Password</p>
         </>
         <button className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
           {state === 'Login'? 'login': 'create account'}
