@@ -27,7 +27,7 @@ const RecruiterLogin = () => {
           <input  className='outline-none text-sm'  onChange={e=>setPassword(e.target.value)} value={password} type="text" placeholder='enter password' required />
         </div>
         </>
-        <button className='bg-blue-600 w-full text-white py-2 rounded-full'> 
+        <button className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
           {state === 'Login'? 'login': 'create account'}
         </button>
       </form>
