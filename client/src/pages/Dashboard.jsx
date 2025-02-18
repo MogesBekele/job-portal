@@ -10,6 +10,9 @@ const Dashboard = () => {
       <div>
         <div>
           <img src={assets.logo} alt="" />
+          <div>
+            <p>Welcome, Job board</p>
+          </div>
         </div>
       </div>
      
