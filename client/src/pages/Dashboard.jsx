@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { assets } from '../assets/assets'
 
 const Dashboard = () => {
   return (
@@ -8,7 +9,7 @@ const Dashboard = () => {
 
       <div>
         <div>
-          <img src="" alt="" />
+          <img src={assets.logo} alt="" />
         </div>
       </div>
      
