@@ -48,10 +48,13 @@ const RecruiterLogin = () => {
          
           </>
         }
-         <p className='text-sm text-blue-600 my-4 cursor-pointer' >Forget Password</p>
+        {
+          state === 'Login' &&    <p  className='text-sm text-blue-600 mt-4 cursor-pointer' >Forget Password</p>
+        }
+      
       
      
-        <button type='submit' className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
+        <button type='submit' className='bg-blue-600 w-full text-white py-2 rounded-full mt-4'> 
           {state === 'Login'? 'login': isTextDataSubmited? 'create account':'next'}
         </button>
         {
