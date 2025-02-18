@@ -12,6 +12,9 @@ const Dashboard = () => {
           <img src={assets.logo} alt="" />
           <div>
             <p>Welcome, Job board</p>
+            <div>
+              <img src={assets.company_icon} alt="" />
+            </div>
           </div>
         </div>
       </div>
