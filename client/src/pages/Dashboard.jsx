@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div className='px-5 flex justify-between items-center'>
           <img className='max-sm:w-32 cursor-pointer' src={assets.logo} alt="" />
           <div className='flex items-center gap-3'>
-            <p>Welcome, Job board</p>
+            <p className='max-sm:hidden'>Welcome, Job board</p>
             <div>
               <img src={assets.company_icon} alt="" />
               <div>
