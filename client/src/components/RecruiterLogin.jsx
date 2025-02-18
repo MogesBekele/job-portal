@@ -23,9 +23,9 @@ const RecruiterLogin = () => {
         {
           state === 'sign up' && isTextDataSubmited 
           ?<>
-          <div>
-            <label htmlFor="">
-              <img src={assets.upload_area} alt="" />
+          <div className='flex items-center gap-4 my-10'>
+            <label htmlFor="image">
+              <img className='w-16 rounded-full' src={assets.upload_area} alt="" />
               <input type="file" id='image' hidden />
             </label>
             <p>upload company <br /> logo</p>
