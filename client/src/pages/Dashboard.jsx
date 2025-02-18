@@ -9,7 +9,7 @@ const Dashboard = () => {
 
       <div className='shadow py-4'>
         <div className='px-5 flex justify-between items-center'>
-          <img src={assets.logo} alt="" />
+          <img className='max-sm:w-32 cursor-pointer' src={assets.logo} alt="" />
           <div>
             <p>Welcome, Job board</p>
             <div>
