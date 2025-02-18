@@ -22,7 +22,15 @@ const RecruiterLogin = () => {
         <p className='text-sm'>welcome back! please sign in to continue</p>
         {
           state === 'sign up' && isTextDataSubmited 
-          ?<></>
+          ?<>
+          <div>
+            <label htmlFor="">
+              <img src={assets.upload_area} alt="" />
+              <input type="file" id='image' hidden />
+            </label>
+            <p>upload company <br /> logo</p>
+          </div>
+          </>
           :    <>
           {state !== 'Login' && (   <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
             <img src={assets.person_icon} alt="" />
