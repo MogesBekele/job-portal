@@ -26,7 +26,7 @@ const RecruiterLogin = () => {
           <div className='flex items-center gap-4 my-10'>
             <label htmlFor="image">
               <img className='w-16 rounded-full' src={assets.upload_area} alt="" />
-              <input type="file" id='image' hidden />
+              <input onChange={e=>setImage(e.target.files[0])} type="file" id='image' hidden />
             </label>
             <p>upload company <br /> logo</p>
           </div>
@@ -34,7 +34,7 @@ const RecruiterLogin = () => {
           :    <>
           {state !== 'Login' && (   <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
             <img src={assets.person_icon} alt="" />
-            <input className='outline-none text-sm' onChange={e=>setName(e.target.value)} value={name} type="text" placeholder='Company Name' required />
+            <input  className='outline-none text-sm' onChange={e=>setName(e.target.value)} value={name} type="text" placeholder='Company Name' required />
           </div>)}
        
           <div className='border px-4 py-2 flex items-center gap-2 rounded-full mt-5'>
