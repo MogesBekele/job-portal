@@ -6,7 +6,7 @@ const Dashboard = () => {
     <div>
       <h2>helloo</h2>
       <p>all in one</p>
-      <Outlet/>
+    
     </div>
   )
 }
