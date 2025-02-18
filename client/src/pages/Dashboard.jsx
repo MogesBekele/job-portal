@@ -7,7 +7,7 @@ const Dashboard = () => {
     <div className='min-h-screen'>
       {/* navbar for recruiter panel */}
 
-      <div>
+      <div className='shadow py-4'>
         <div>
           <img src={assets.logo} alt="" />
           <div>
