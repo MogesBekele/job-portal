@@ -7,6 +7,7 @@ import RecruiterLogin from './components/RecruiterLogin.jsx'
 import { AppContext } from './context/AppContext.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import AddJob from './pages/AddJob.jsx'
+import ManageJobs from './pages/ManageJobs.jsx'
 
 
 const App = () => {
@@ -19,6 +20,8 @@ const App = () => {
         <Route path='/applications' element={<Applications />} />
         <Route path='/apply-job/:id' element={<ApplyJob />} />
         <Route path='/dashboard'  element={<Dashboard/>}>
+        <Route path='add-job' element ={<AddJob/>}/>
+        <Route path='manage-jobs' element ={<ManageJobs/>}/>
         <Route path='add-job' element ={<AddJob/>}/>
         </Route>
       </Routes>
