@@ -44,7 +44,7 @@ const RecruiterLogin = () => {
       
      
         <button type='submit' className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
-          {state === 'Login'? 'login': 'create account'}
+          {state === 'Login'? 'login': isTextDataSubmited? 'create account':'next'}
         </button>
         {
           state === 'Login'
