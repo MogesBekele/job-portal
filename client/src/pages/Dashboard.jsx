@@ -10,7 +10,7 @@ const Dashboard = () => {
       <div className='shadow py-4'>
         <div className='px-5 flex justify-between items-center'>
           <img className='max-sm:w-32 cursor-pointer' src={assets.logo} alt="" />
-          <div>
+          <div className='flex items-center gap-3'>
             <p>Welcome, Job board</p>
             <div>
               <img src={assets.company_icon} alt="" />
