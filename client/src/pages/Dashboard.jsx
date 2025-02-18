@@ -15,7 +15,11 @@ const Dashboard = () => {
             <div>
               <img src={assets.company_icon} alt="" />
               <div>
-                
+                <ul>
+                  <li>
+                    
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
