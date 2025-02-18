@@ -5,6 +5,12 @@ const Dashboard = () => {
   return (
     <div className='min-h-screen'>
       {/* navbar for recruiter panel */}
+
+      <div>
+        <div>
+          <img src="" alt="" />
+        </div>
+      </div>
      
     
     </div>
