@@ -43,7 +43,7 @@ const RecruiterLogin = () => {
          <p className='text-sm text-blue-600 my-4 cursor-pointer' >Forget Password</p>
       
      
-        <button className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
+        <button type='submit' className='bg-blue-600 w-full text-white py-2 rounded-full mt-2'> 
           {state === 'Login'? 'login': 'create account'}
         </button>
         {
