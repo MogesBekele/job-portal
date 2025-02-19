@@ -13,7 +13,7 @@ const Dashboard = () => {
           <div className='flex items-center gap-3'>
             <p className='max-sm:hidden'>Welcome, Job board</p>
             <div className='relative group'>
-              <img className='w-8 border rounded-full' src={assets.company_icon} alt="" />
+              <img className='w-8  rounded-full' src={assets.company_icon} alt="" />
               <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
                 <ul>
                   <li>Logout</li>
