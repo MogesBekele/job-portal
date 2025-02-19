@@ -10,7 +10,7 @@ const Dashboard = () => {
 
       <div className='shadow py-4'>
         <div className='px-5 flex justify-between items-center'>
-          <img onClick={()=>navigate('/')} className='max-sm:w-32 cursor-pointer' src={assets.logo}  alt="" />
+          <img onClick={e=>navigate('/')} className='max-sm:w-32 cursor-pointer' src={assets.logo}  alt="" />
           <div className='flex items-center gap-3'>
             <p className='max-sm:hidden'>Welcome, Job board</p>
             <div className='relative group'>
