@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-
+import React, { useEffect, useRef, useState } from 'react'
+import Quill from 'quill'
 const AddJob = () => {
   const [title, setTitle] = useState('')
   const [location, setLocation] = useState('addis')
@@ -8,6 +8,10 @@ const AddJob = () => {
   const [salary, setSalary] =useState(0)
   const editorRef = useRef(null)
   const quillRef = useRef(null)
+
+  useEffect(()=>{
+       //initiate quill only once
+  },[])
   return (
     <form>
       <div>
@@ -16,7 +20,7 @@ const AddJob = () => {
       </div>
       <div>
         <p>Job Description</p>
-        <div>
+        <div ref={editorRef}>
 
         </div>
       </div>
