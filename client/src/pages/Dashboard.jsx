@@ -39,7 +39,9 @@ const Dashboard = () => {
 
         <div>
           <ul>
-            <NavLink></NavLink>
+            <NavLink to={'/dashboard/add-job'}>
+
+            </NavLink>
           </ul>
         </div>
       </div>
