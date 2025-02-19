@@ -12,9 +12,7 @@ const AddJob = () => {
   useEffect(()=>{
        //initiate quill only once
 
-       if (condition) {
-        
-       }
+     
   },[])
   return (
     <form>
