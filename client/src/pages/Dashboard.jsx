@@ -53,6 +53,9 @@ const Dashboard = () => {
             </NavLink>
           </ul>
         </div>
+        <div>
+          <Outlet/>
+        </div>
       </div>
     </div>
   );
