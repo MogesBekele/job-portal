@@ -43,11 +43,11 @@ const Dashboard = () => {
               <img src={assets.add_icon} alt="" />
               <p>Add Job</p>
             </NavLink>
-            <NavLink to={"/dashboard/"}>
+            <NavLink to={"/dashboard/manage-jobs"}>
               <img src={assets.add_icon} alt="" />
               <p>Add Job</p>
             </NavLink>
-            <NavLink to={"/dashboard/add-job"}>
+            <NavLink to={"/dashboard/view-applications"}>
               <img src={assets.add_icon} alt="" />
               <p>Add Job</p>
             </NavLink>
