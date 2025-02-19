@@ -15,7 +15,7 @@ const Dashboard = () => {
             <div className='relative group'>
               <img className='w-8  rounded-full' src={assets.company_icon} alt="" />
               <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
-                <ul>
+                <ul className='list-none m-0 p-2 bg-white rounded-md border text-sm'>
                   <li>Logout</li>
                 </ul>
               </div>
