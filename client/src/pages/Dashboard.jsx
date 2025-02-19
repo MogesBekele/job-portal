@@ -43,11 +43,11 @@ const Dashboard = () => {
               <img src={assets.add_icon} alt="" />
               <p>Add Job</p>
             </NavLink>
-            <NavLink to={"/dashboard/manage-jobs"}>
+            <NavLink className={({isActive})=>` flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && 'bg-blue-100 border-r-4 border-blue-500'}`} to={"/dashboard/manage-jobs"}>
               <img src={assets.home_icon} alt="" />
               <p>Manage Jobs</p>
             </NavLink>
-            <NavLink to={"/dashboard/view-applications"}>
+            <NavLink className={({isActive})=>` flex items-center p-3 sm:px-6 gap-2 w-full hover:bg-gray-100 ${isActive && 'bg-blue-100 border-r-4 border-blue-500'}`} to={"/dashboard/view-applications"}>
               <img src={assets.person_tick_icon} alt="" />
               <p>View Applications</p>
             </NavLink>
