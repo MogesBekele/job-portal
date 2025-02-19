@@ -16,7 +16,7 @@ const Dashboard = () => {
               <img className='w-8  rounded-full' src={assets.company_icon} alt="" />
               <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
                 <ul className='list-none m-0 p-2 bg-white rounded-md border text-sm'>
-                  <li>Logout</li>
+                  <li className='py-1 px-2 pr-10 cursor-pointer'>Logout</li>
                 </ul>
               </div>
             </div>
