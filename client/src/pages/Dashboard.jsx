@@ -27,6 +27,10 @@ const Dashboard = () => {
 
       <div className='flex items-start'>
 
+        {/* left sidebar */}
+
+        <div></div>
+
       </div>
      
     
