@@ -39,10 +39,17 @@ const Dashboard = () => {
 
         <div>
           <ul>
-            <NavLink to={'/dashboard/add-job'}>
-            <img src={assets.add_icon} alt="" />
-            <p>Add Job</p>
-
+            <NavLink to={"/dashboard/add-job"}>
+              <img src={assets.add_icon} alt="" />
+              <p>Add Job</p>
+            </NavLink>
+            <NavLink to={"/dashboard/"}>
+              <img src={assets.add_icon} alt="" />
+              <p>Add Job</p>
+            </NavLink>
+            <NavLink to={"/dashboard/add-job"}>
+              <img src={assets.add_icon} alt="" />
+              <p>Add Job</p>
             </NavLink>
           </ul>
         </div>
