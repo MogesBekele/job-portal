@@ -12,7 +12,10 @@ const AddJob = () => {
   useEffect(()=>{
        //initiate quill only once
 
-     
+     if (quillRef.current & editorRef.current) {
+      quillRef.current = new  Quill(editorRef.current)
+      
+     }
   },[])
   return (
     <form>
