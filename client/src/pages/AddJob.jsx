@@ -35,7 +35,7 @@ const AddJob = () => {
       </div>
       <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
         <div>
-          <p>Job Category</p>
+          <p className='mb-2'>Job Category</p>
           <select onChange={e=>setCategory(e.target.value)}>
             {
              JobCategories.map((category, index)=>(
@@ -45,7 +45,7 @@ const AddJob = () => {
           </select>
         </div>
         <div>
-          <p>Job Location</p>
+          <p className='mb-2'>Job Location</p>
           <select onChange={e=>setLocation(e.target.value)}>
             {
              JobLocations.map((location, index)=>(
@@ -55,7 +55,7 @@ const AddJob = () => {
           </select>
         </div>
         <div>
-          <p>Job Level</p>
+          <p className='mb-2'>Job Level</p>
           <select onChange={e=>setLevel(e.target.value)}>
           <option value="Beginner level">Beginner level</option>
           <option value="Intermediate leve">Intermediate level</option>
