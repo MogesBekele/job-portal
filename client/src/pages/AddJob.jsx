@@ -36,7 +36,7 @@ const AddJob = () => {
       <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
         <div>
           <p className='mb-2'>Job Category</p>
-          <select onChange={e=>setCategory(e.target.value)}>
+          <select className='w-full px-3 py-2 border-2 border-gray-300 rounded ' onChange={e=>setCategory(e.target.value)}>
             {
              JobCategories.map((category, index)=>(
               <option key={index} value={category}>{category}</option>
