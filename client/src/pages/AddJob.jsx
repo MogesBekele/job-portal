@@ -57,6 +57,8 @@ const AddJob = () => {
           <p>Job Level</p>
           <select onChange={e=>setLevel(e.target.value)}>
           <option value="Beginner level">Beginner level</option>
+          <option value="Intermediate leve">Intermediate level</option>
+          <option value="Senior level">Senior level</option>
           </select>
         </div>
       </div>
