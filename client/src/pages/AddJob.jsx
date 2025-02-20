@@ -24,7 +24,8 @@ const AddJob = () => {
     <form className='container p-4 flex flex-col w-full items-start gap-3 '>
       <div className='w-full'>
         <p className='mb-2'>Job Title</p>
-        <input type="text" placeholder='type here' onChange={e=>setTitle(e.target.value)} value={title} required/>
+        <input type="text" placeholder='type here' onChange={e=>setTitle(e.target.value)} value={title} required
+        className='w-full max-w-lg px-3 py-2 border-2 border-gray-300 rounded'/>
       </div>
       <div>
         <p>Job Description</p>
