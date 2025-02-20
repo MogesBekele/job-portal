@@ -27,7 +27,7 @@ const AddJob = () => {
         <input type="text" placeholder='type here' onChange={e=>setTitle(e.target.value)} value={title} required
         className='w-full max-w-lg px-3 py-2 border-2 border-gray-300 rounded'/>
       </div>
-      <div>
+      <div className='w-full max-w-lg'>
         <p>Job Description</p>
         <div ref={editorRef}>
 
