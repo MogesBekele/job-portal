@@ -34,7 +34,11 @@ const AddJob = () => {
       <div>
         <div>
           <p>Job Category</p>
-          <select onChange={e=>setCategory(e.target.value)}></select>
+          <select onChange={e=>setCategory(e.target.value)}>
+            {
+            
+            }
+          </select>
         </div>
       </div>
     </form>
