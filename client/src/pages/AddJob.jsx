@@ -66,7 +66,7 @@ const AddJob = () => {
       </div>
       <div>
         <p className='mb-2'>Job Salary</p>
-        <input className='w-full px-3 py-2 border-2 border-gray-300 rounded sm:w-[120px] ' onChange={e=>setSalary(e.target.value)} type="Number" placeholder='2500'/>
+        <input min={0} className='w-full px-3 py-2 border-2 border-gray-300 rounded sm:w-[120px] ' onChange={e=>setSalary(e.target.value)} type="Number" placeholder='2500'/>
       </div>
       <button>ADD</button>
     </form>
