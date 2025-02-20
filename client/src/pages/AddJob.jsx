@@ -61,7 +61,13 @@ const AddJob = () => {
           <option value="Senior level">Senior level</option>
           </select>
         </div>
+
       </div>
+      <div>
+        <p>Job Salary</p>
+        <input onChange={e=>setSalary(e.target.value)} type="Number" placeholder='2500'/>
+      </div>
+      <button>Add</button>
     </form>
   )
 }
