@@ -14,7 +14,7 @@ const AddJob = () => {
 
      if (quillRef.current && editorRef.current) {
       quillRef.current = new  Quill(editorRef.current, {
-        theme: 'snow'
+        theme: 'snow',
       })
       
      }
