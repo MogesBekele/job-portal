@@ -13,7 +13,9 @@ const AddJob = () => {
        //initiate quill only once
 
      if (quillRef.current & editorRef.current) {
-      quillRef.current = new  Quill(editorRef.current)
+      quillRef.current = new  Quill(editorRef.current, {
+        theme: 'snow'
+      })
       
      }
   },[])
