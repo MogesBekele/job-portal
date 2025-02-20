@@ -22,8 +22,8 @@ const AddJob = () => {
   },[])
   return (
     <form className='container p-4 flex flex-col w-full items-start gap-3 '>
-      <div>
-        <p>Job Title</p>
+      <div className='w-full'>
+        <p className='mb-2'>Job Title</p>
         <input type="text" placeholder='type here' onChange={e=>setTitle(e.target.value)} value={title} required/>
       </div>
       <div>
