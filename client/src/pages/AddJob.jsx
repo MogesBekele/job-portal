@@ -46,7 +46,7 @@ const AddJob = () => {
         </div>
         <div>
           <p className='mb-2'>Job Location</p>
-          <select onChange={e=>setLocation(e.target.value)}>
+          <select className='w-full px-3 py-2 border-2 border-gray-300 rounded ' onChange={e=>setLocation(e.target.value)}>
             {
              JobLocations.map((location, index)=>(
               <option key={index} value={location}>{location}</option>
@@ -56,7 +56,7 @@ const AddJob = () => {
         </div>
         <div>
           <p className='mb-2'>Job Level</p>
-          <select onChange={e=>setLevel(e.target.value)}>
+          <select className='w-full px-3 py-2 border-2 border-gray-300 rounded ' onChange={e=>setLevel(e.target.value)}>
           <option value="Beginner level">Beginner level</option>
           <option value="Intermediate leve">Intermediate level</option>
           <option value="Senior level">Senior level</option>
