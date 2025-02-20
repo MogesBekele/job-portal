@@ -33,7 +33,7 @@ const AddJob = () => {
 
         </div>
       </div>
-      <div>
+      <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
         <div>
           <p>Job Category</p>
           <select onChange={e=>setCategory(e.target.value)}>
