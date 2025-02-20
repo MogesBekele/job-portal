@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Quill from 'quill'
-import { JobCategories } from '../assets/assets'
+import { JobCategories, JobLocations } from '../assets/assets'
 const AddJob = () => {
   const [title, setTitle] = useState('')
   const [location, setLocation] = useState('addis')
@@ -44,11 +44,11 @@ const AddJob = () => {
           </select>
         </div>
         <div>
-          <p>Job Category</p>
-          <select onChange={e=>setCategory(e.target.value)}>
+          <p>Job Location</p>
+          <select onChange={e=>setLocation(e.target.value)}>
             {
-             JobCategories.map((category, index)=>(
-              <option key={index} value={category}>{category}</option>
+             JobLocations.map((location, index)=>(
+              <option key={index} value={location}>{location}</option>
              ))
             }
           </select>
