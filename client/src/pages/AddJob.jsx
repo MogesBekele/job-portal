@@ -54,13 +54,9 @@ const AddJob = () => {
           </select>
         </div>
         <div>
-          <p>Job Category</p>
-          <select onChange={e=>setCategory(e.target.value)}>
-            {
-             JobCategories.map((category, index)=>(
-              <option key={index} value={category}>{category}</option>
-             ))
-            }
+          <p>Job Level</p>
+          <select onChange={e=>setLevel(e.target.value)}>
+          <option value="Beginner level">Beginner level</option>
           </select>
         </div>
       </div>
