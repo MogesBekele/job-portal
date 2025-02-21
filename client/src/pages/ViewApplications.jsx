@@ -19,7 +19,7 @@ const ViewApplications = () => {
         <tbody>
         {
           viewApplicationsPageData.map((applicant, index)=>(
-            <tr>
+            <tr key={index} className='text-gray-700'>
               <td>{index+1}</td>
               <td>
                 <img src={applicant.imgSrc} alt="" />
