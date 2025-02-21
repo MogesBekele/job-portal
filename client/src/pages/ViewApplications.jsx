@@ -7,7 +7,7 @@ const ViewApplications = () => {
      <div>
       <table className='w-full max-w-4xl bg-white border-gray-200 max-sm:text-sm'>
         <thead>
-          <tr>
+          <tr className='border-b'>
             <th>#</th>
             <th>User name</th>
             <th>Job Title</th>
