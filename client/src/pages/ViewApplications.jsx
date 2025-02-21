@@ -5,7 +5,7 @@ const ViewApplications = () => {
   return (
     <div className='container mx-auto p-4'>
      <div>
-      <table>
+      <table className='w-full max-w-4xl bg-white border-gray-200 max-sm:text-sm'>
         <thead>
           <tr>
             <th>#</th>
