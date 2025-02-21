@@ -8,8 +8,8 @@ const ViewApplications = () => {
         <thead>
           <tr>
             <th>#</th>
-            <th></th>
-            <th></th>
+            <th>User name</th>
+            <th>Job Title</th>
             <th></th>
             <th></th>
             <th></th>
