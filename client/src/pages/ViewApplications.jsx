@@ -35,10 +35,11 @@ const ViewApplications = () => {
               <td className='py-2 px-4 border-b relative'>
                 <div className='relative inline-block text-left group'>
                   <button className='text-gray-500 action-button'>...</button>
-                </div>
+             
                 <div>
                   <button>Accept</button>
                   <button>Reject</button>
+                </div>
                 </div>
               
               </td>
