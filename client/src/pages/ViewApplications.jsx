@@ -3,7 +3,7 @@ import { assets, viewApplicationsPageData } from '../assets/assets'
 
 const ViewApplications = () => {
   return (
-    <div>
+    <div className='container mx-auto p-4'>
      <div>
       <table>
         <thead>
