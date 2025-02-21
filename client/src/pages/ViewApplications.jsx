@@ -26,7 +26,7 @@ const ViewApplications = () => {
                 <span>{applicant.name}</span>
               </td>
               <td className='py-2 px-4 border-b max-sm:hidden'>{applicant.jobTitle}</td>
-              <td>{applicant.location}</td>
+              <td className='py-2 px-4 border-b max-sm:hidden'>{applicant.location}</td>
               <td>
                 <a href="" target='_blank'>
                   Resume <img src={assets.resume_download_icon} alt="" />
