@@ -22,7 +22,7 @@ const ViewApplications = () => {
             <tr key={index} className='text-gray-700'>
               <td className='py-2 px-4 border-b text-center'>{index+1}</td>
               <td className='py-2 px-4 border-b text-center flex'>
-                <img src={applicant.imgSrc} alt="" />
+                <img className='w-10 h-10 rounded-full mr-3 max-sm:hidden' src={applicant.imgSrc} alt="" />
                 <span>{applicant.name}</span>
               </td>
               <td>{applicant.jobTitle}</td>
