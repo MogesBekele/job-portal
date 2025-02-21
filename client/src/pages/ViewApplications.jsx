@@ -9,11 +9,11 @@ const ViewApplications = () => {
         <thead>
           <tr className='border-b'>
             <th className='py-2 px-4 text-left'>#</th>
-            <th>User name</th>
-            <th>Job Title</th>
-            <th>Location</th>
-            <th>Resume</th>
-            <th>Action</th>
+            <th className='py-2 px-4 text-left'>User name</th>
+            <th className='py-2 px-4 text-left'>Job Title</th>
+            <th className='py-2 px-4 text-left'>Location</th>
+            <th className='py-2 px-4 text-left'>Resume</th>
+            <th className='py-2 px-4 text-left'>Action</th>
           </tr>
         </thead>
         <tbody>
