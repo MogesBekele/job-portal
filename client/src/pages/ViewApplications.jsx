@@ -6,7 +6,14 @@ const ViewApplications = () => {
      <div>
       <table>
         <thead>
-          <tr></tr>
+          <tr>
+            <th>#</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
         </thead>
       </table>
      </div>
