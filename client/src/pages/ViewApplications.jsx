@@ -25,7 +25,7 @@ const ViewApplications = () => {
                 <img className='w-10 h-10 rounded-full mr-3 max-sm:hidden' src={applicant.imgSrc} alt="" />
                 <span>{applicant.name}</span>
               </td>
-              <td>{applicant.jobTitle}</td>
+              <td className='py-2 px-4 border-b max-sm:hidden'>{applicant.jobTitle}</td>
               <td>{applicant.location}</td>
               <td>
                 <a href="" target='_blank'>
