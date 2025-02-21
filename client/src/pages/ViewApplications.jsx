@@ -19,7 +19,14 @@ const ViewApplications = () => {
         <tbody>
         {
           viewApplicationsPageData.map((applicant, index)=>(
-            
+            <tr>
+              <td>{index+1}</td>
+              <td>
+                <img src={applicant.imgSrc} alt="" />
+                <span>{applicant.name}</span>
+              </td>
+              <td>{applicant.jobTitle}</td>
+            </tr>
           ))
         }
         </tbody>
