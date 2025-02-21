@@ -20,7 +20,7 @@ const ViewApplications = () => {
         {
           viewApplicationsPageData.map((applicant, index)=>(
             <tr key={index} className='text-gray-700'>
-              <td>{index+1}</td>
+              <td className='py-2 px-4 border-b text-center'>{index+1}</td>
               <td>
                 <img src={applicant.imgSrc} alt="" />
                 <span>{applicant.name}</span>
