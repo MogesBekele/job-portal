@@ -32,8 +32,8 @@ const ViewApplications = () => {
                   Resume <img src={assets.resume_download_icon} alt="" />
                 </a>
               </td>
-              <td>
-                <div>
+              <td className='py-2 px-4 border-b relative'>
+                <div className='relative inline-block text-left group'>
                   <button>...</button>
                 </div>
                 <div>
