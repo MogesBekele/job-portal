@@ -10,9 +10,9 @@ const ViewApplications = () => {
             <th>#</th>
             <th>User name</th>
             <th>Job Title</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>Location</th>
+            <th>Resume</th>
+            <th>Action</th>
           </tr>
         </thead>
       </table>
