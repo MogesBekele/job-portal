@@ -27,8 +27,8 @@ const ViewApplications = () => {
               </td>
               <td className='py-2 px-4 border-b max-sm:hidden'>{applicant.jobTitle}</td>
               <td className='py-2 px-4 border-b max-sm:hidden'>{applicant.location}</td>
-              <td>
-                <a href="" target='_blank'>
+              <td className='p-2 px-4 border-b'>
+                <a href="" target='_blank' className='bg-blue-50 px-3 py-1 rounded inline-flex gap-2 items-center'>
                   Resume <img src={assets.resume_download_icon} alt="" />
                 </a>
               </td>
