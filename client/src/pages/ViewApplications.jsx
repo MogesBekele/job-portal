@@ -32,6 +32,16 @@ const ViewApplications = () => {
                   Resume <img src={assets.resume_download_icon} alt="" />
                 </a>
               </td>
+              <td>
+                <div>
+                  <button>...</button>
+                </div>
+                <div>
+                  <button>Accept</button>
+                  <button>Reject</button>
+                </div>
+              
+              </td>
             </tr>
           ))
         }
