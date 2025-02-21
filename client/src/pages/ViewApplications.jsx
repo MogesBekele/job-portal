@@ -1,5 +1,5 @@
 import React from 'react'
-import { viewApplicationsPageData } from '../assets/assets'
+import { assets, viewApplicationsPageData } from '../assets/assets'
 
 const ViewApplications = () => {
   return (
@@ -28,7 +28,9 @@ const ViewApplications = () => {
               <td>{applicant.jobTitle}</td>
               <td>{applicant.location}</td>
               <td>
-                <a href=""></a>
+                <a href="" target='_blank'>
+                  Resume <img src={assets.resume_download_icon} alt="" />
+                </a>
               </td>
             </tr>
           ))
