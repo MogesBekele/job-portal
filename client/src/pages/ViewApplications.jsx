@@ -4,7 +4,11 @@ const ViewApplications = () => {
   return (
     <div>
      <div>
-      
+      <table>
+        <thead>
+          <tr></tr>
+        </thead>
+      </table>
      </div>
       
     </div>
