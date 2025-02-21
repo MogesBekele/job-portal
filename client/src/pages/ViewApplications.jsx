@@ -1,4 +1,5 @@
 import React from 'react'
+import { viewApplicationsPageData } from '../assets/assets'
 
 const ViewApplications = () => {
   return (
@@ -15,6 +16,9 @@ const ViewApplications = () => {
             <th>Action</th>
           </tr>
         </thead>
+        <tbody>
+        
+        </tbody>
       </table>
      </div>
       
