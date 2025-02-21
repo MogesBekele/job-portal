@@ -26,6 +26,7 @@ const ViewApplications = () => {
                 <span>{applicant.name}</span>
               </td>
               <td>{applicant.jobTitle}</td>
+              <td>{applicant.location}</td>
             </tr>
           ))
         }
