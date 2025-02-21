@@ -17,7 +17,11 @@ const ViewApplications = () => {
           </tr>
         </thead>
         <tbody>
-        
+        {
+          viewApplicationsPageData.map((applicant, index)=>(
+            
+          ))
+        }
         </tbody>
       </table>
      </div>
