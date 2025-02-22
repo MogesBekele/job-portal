@@ -24,7 +24,7 @@ const ManageJobs = () => {
                 <td className="py-2 px-4 border-b">{job.title}</td>
                 <td className="py-2 px-4 border-b max-sm:hidden">{moment(job.date).format("ll")}</td>
                 <td className="py-2 px-4 border-b max-sm:hidden">{job.location}</td>
-                <td className="py-2 px-4 border-b">{job.applicants}</td>
+                <td className="py-2 px-4 border-b text-center">{job.applicants}</td>
                 <td className="py-2 px-4 border-b">
                   <input type="checkbox" />
                 </td>
