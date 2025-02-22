@@ -24,8 +24,8 @@ const ManageJobs = () => {
               <td>{index+1}</td>
               <td>{job.title}</td>
               <td>{moment(job.date).format('ll')}</td>
-              <td>{}</td>
-              <td></td>
+              <td>{job.location}</td>
+              <td>{job.applicants}</td>
               <td></td>
             </tr>
           ))
