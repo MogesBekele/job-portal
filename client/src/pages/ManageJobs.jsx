@@ -23,7 +23,7 @@ const ManageJobs = () => {
             <tr key={index}>
               <td>{index+1}</td>
               <td>{job.title}</td>
-              <td>{job.date}</td>
+              <td>{moment(job.date).format('ll')}</td>
               <td>{}</td>
               <td></td>
               <td></td>
