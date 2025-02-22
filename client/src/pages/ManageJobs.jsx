@@ -1,4 +1,5 @@
 import React from 'react'
+import { manageJobsData } from '../assets/assets'
 
 const ManageJobs = () => {
   return (
@@ -16,7 +17,11 @@ const ManageJobs = () => {
         </tr>
       </thead>
       <tbody>
-        
+        {
+          manageJobsData.map((job, index)=>(
+            <tr key={index}></tr>
+          ))
+        }
       </tbody>
     </table>
    </div>
