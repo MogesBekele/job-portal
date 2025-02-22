@@ -7,8 +7,8 @@ const ManageJobs = () => {
     <table>
       <thead>
         <tr>
-          <th></th>
-          <th></th>
+          <th>#</th>
+          <th>Job Title</th>
           <th></th>
           <th></th>
           <th></th>
