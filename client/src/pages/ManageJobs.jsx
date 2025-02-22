@@ -20,10 +20,10 @@ const ManageJobs = () => {
           <tbody>
             {manageJobsData.map((job, index) => (
               <tr key={index} className="text-gray-700">
-                <td className="py-2 px-4 border-b">{index + 1}</td>
+                <td className="py-2 px-4 border-b max-sm:hidden">{index + 1}</td>
                 <td className="py-2 px-4 border-b">{job.title}</td>
-                <td className="py-2 px-4 border-b">{moment(job.date).format("ll")}</td>
-                <td className="py-2 px-4 border-b">{job.location}</td>
+                <td className="py-2 px-4 border-b max-sm:hidden">{moment(job.date).format("ll")}</td>
+                <td className="py-2 px-4 border-b max-sm:hidden">{job.location}</td>
                 <td className="py-2 px-4 border-b">{job.applicants}</td>
                 <td className="py-2 px-4 border-b">
                   <input type="checkbox" />
