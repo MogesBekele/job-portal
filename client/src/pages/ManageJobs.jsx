@@ -33,6 +33,9 @@ const ManageJobs = () => {
           </tbody>
         </table>
       </div>
+      <div className="mt-4 flex justify-end">
+        <button className="bg-black text-white py-2 px-4 rounded">Add new Job</button>
+      </div>
     </div>
   );
 };
