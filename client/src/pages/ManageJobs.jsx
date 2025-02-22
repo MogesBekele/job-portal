@@ -34,7 +34,7 @@ const ManageJobs = () => {
         </table>
       </div>
       <div className="mt-4 flex justify-end">
-        <button className="bg-black text-white py-2 px-4 rounded">Add new Job</button>
+        <button className="bg-black text-white py-2 px-4 rounded cursor-pointer">Add new Job</button>
       </div>
     </div>
   );
