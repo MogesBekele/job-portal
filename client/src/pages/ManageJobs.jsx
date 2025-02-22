@@ -19,8 +19,8 @@ const ManageJobs = () => {
           </thead>
           <tbody>
             {manageJobsData.map((job, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
+              <tr key={index} className="text-gray-700">
+                <td className="py-2 px-4 border-b">{index + 1}</td>
                 <td>{job.title}</td>
                 <td>{moment(job.date).format("ll")}</td>
                 <td>{job.location}</td>
