@@ -6,7 +6,7 @@ const ManageJobs = () => {
   return (
     <div className="container p-4 max-w-5xl">
       <div className="overflow-x-auto">
-        <table>
+        <table className="min-w-full bg-white border border-gray-200 max-sm:text-sm">
           <thead>
             <tr>
               <th>#</th>
