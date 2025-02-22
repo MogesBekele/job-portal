@@ -13,7 +13,7 @@ const ManageJobs = () => {
               <th className="px-4 py-2 border-b text-left">Job Title</th>
               <th className="px-4 py-2 border-b text-left">Date</th>
               <th className="px-4 py-2 border-b text-left">Location</th>
-              <th className="px-4 py-2 border-b text-left">Applicants</th>
+              <th className="px-4 py-2 border-b text-center">Applicants</th>
               <th className="px-4 py-2 border-b text-left">Visible</th>
             </tr>
           </thead>
