@@ -19,7 +19,14 @@ const ManageJobs = () => {
       <tbody>
         {
           manageJobsData.map((job, index)=>(
-            <tr key={index}></tr>
+            <tr key={index}>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
           ))
         }
       </tbody>
