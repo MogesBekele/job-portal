@@ -1,8 +1,10 @@
 import React from "react";
 import { manageJobsData } from "../assets/assets";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 const ManageJobs = () => {
+  const navigate =useNavigate()
   return (
     <div className="container p-4 max-w-5xl">
       <div className="overflow-x-auto">
