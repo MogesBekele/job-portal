@@ -10,11 +10,11 @@ const ManageJobs = () => {
           <thead>
             <tr>
               <th className="px-4 py-2 border-b text-left">#</th>
-              <th>Job Title</th>
-              <th>Date</th>
-              <th>Location</th>
-              <th>Applicants</th>
-              <th>Visible</th>
+              <th className="px-4 py-2 border-b text-left">Job Title</th>
+              <th className="px-4 py-2 border-b text-left">Date</th>
+              <th className="px-4 py-2 border-b text-left">Location</th>
+              <th className="px-4 py-2 border-b text-left">Applicants</th>
+              <th className="px-4 py-2 border-b text-left">Visible</th>
             </tr>
           </thead>
           <tbody>
