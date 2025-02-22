@@ -15,6 +15,9 @@ const ManageJobs = () => {
           <th>Visible</th>
         </tr>
       </thead>
+      <tbody>
+        
+      </tbody>
     </table>
    </div>
     </div>
