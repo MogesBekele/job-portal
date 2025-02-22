@@ -9,10 +9,10 @@ const ManageJobs = () => {
         <tr>
           <th>#</th>
           <th>Job Title</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Applicants</th>
+          <th>Visible</th>
         </tr>
       </thead>
     </table>
