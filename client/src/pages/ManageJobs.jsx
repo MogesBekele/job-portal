@@ -9,7 +9,7 @@ const ManageJobs = () => {
         <table className="min-w-full bg-white border border-gray-200 max-sm:text-sm">
           <thead>
             <tr>
-              <th className="px-4 py-2 border-b text-left">#</th>
+              <th className="px-4 py-2 border-b text-left max-sm:hidden">#</th>
               <th className="px-4 py-2 border-b text-left">Job Title</th>
               <th className="px-4 py-2 border-b text-left">Date</th>
               <th className="px-4 py-2 border-b text-left">Location</th>
