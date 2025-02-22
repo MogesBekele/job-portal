@@ -20,7 +20,7 @@ const ManageJobs = () => {
         {
           manageJobsData.map((job, index)=>(
             <tr key={index}>
-              <td></td>
+              <td>{index+1}</td>
               <td></td>
               <td></td>
               <td></td>
