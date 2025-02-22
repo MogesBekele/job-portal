@@ -21,11 +21,11 @@ const ManageJobs = () => {
             {manageJobsData.map((job, index) => (
               <tr key={index} className="text-gray-700">
                 <td className="py-2 px-4 border-b">{index + 1}</td>
-                <td>{job.title}</td>
-                <td>{moment(job.date).format("ll")}</td>
-                <td>{job.location}</td>
-                <td>{job.applicants}</td>
-                <td>
+                <td className="py-2 px-4 border-b">{job.title}</td>
+                <td className="py-2 px-4 border-b">{moment(job.date).format("ll")}</td>
+                <td className="py-2 px-4 border-b">{job.location}</td>
+                <td className="py-2 px-4 border-b">{job.applicants}</td>
+                <td className="py-2 px-4 border-b">
                   <input type="checkbox" />
                 </td>
               </tr>
