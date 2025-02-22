@@ -26,7 +26,9 @@ const ManageJobs = () => {
               <td>{moment(job.date).format('ll')}</td>
               <td>{job.location}</td>
               <td>{job.applicants}</td>
-              <td></td>
+              <td>
+                <input type="checkbox" />
+              </td>
             </tr>
           ))
         }
