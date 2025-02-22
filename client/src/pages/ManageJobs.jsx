@@ -21,9 +21,9 @@ const ManageJobs = () => {
           manageJobsData.map((job, index)=>(
             <tr key={index}>
               <td>{index+1}</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{job.title}</td>
+              <td>{job.date}</td>
+              <td>{}</td>
               <td></td>
               <td></td>
             </tr>
