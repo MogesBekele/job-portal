@@ -5,7 +5,7 @@ import moment from "moment";
 const ManageJobs = () => {
   return (
     <div className="container p-4 max-w-5xl">
-      <div>
+      <div className="overflow-x-auto">
         <table>
           <thead>
             <tr>
