@@ -10,6 +10,8 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+await connectDB();
+
 
 // Basic route
 app.get('/', (req, res) => {
@@ -17,20 +19,3 @@ app.get('/', (req, res) => {
 });
 
 // Function to connect to the database with retries
-const connectWithRetry = async () => {
-  try {
-    await connectDB();
-    console.log('Database connected successfully');
-  } catch (err) {
-    console.error('Failed to connect to the database. Retrying in 5 seconds...', err);
-    setTimeout(connectWithRetry, 5000);
-  }
-};
-
-// Connect to the database
-connectWithRetry();
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
