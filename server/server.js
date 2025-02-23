@@ -13,6 +13,7 @@ app.use(express.json());
 await connectDB();
 
 
+
 // Basic route
 app.get('/', (req, res) => {
   res.send('Hello, api!');
