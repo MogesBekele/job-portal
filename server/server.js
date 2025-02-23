@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 // Middleware to parse JSON bodies
+app.use(cors());
 app.use(express.json());
 
 // Basic route
