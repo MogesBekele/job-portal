@@ -3,7 +3,7 @@ import cors from 'cors';
 import 'dotenv/config';
 import connectDB from './config/db.js';
 
-
+// Create an express instance
 const app = express();
 //connect to database 
 await connectDB()
