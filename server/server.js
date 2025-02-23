@@ -6,7 +6,7 @@ import connectDB from './config/db.js';
 
 const app = express();
 //connect to database 
-
+await connectDB()
 const port = process.env.PORT || 5000;
 
 // Middleware to parse JSON bodies
