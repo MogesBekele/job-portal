@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Basic route
 app.get('/', (req, res) => {
-  res.send('Hello, api!');
+  res.send('api is working!');
 });
 
 
