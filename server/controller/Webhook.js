@@ -20,8 +20,34 @@ export const clerkWebhooks = async(req, res) => {
 
   //switch case to handle different clerk webhook types
   switch(type){
+    case "user.created":
+      // CREATE A NEW USER IN DATABASE
+      const newUser = await User.create({
+        _id: data.id,
+        name: data.name,
+        email: data.email,
+        image: data.image
+      });
+      console.log(newUser);
+      break;
+    case "user.updated":
+      // FIND THE USER BY ID AND UPDATE THE USER
+      const updatedUser = await User.findByIdAndUpdate(data.id,{
+        name: data.name,
+        email: data.email,
+        image: data.image
+      },{new: true});
+      console.log(updatedUser);
+      break;
+    case "user.deleted":
+      // FIND THE USER BY ID AND DELETE THE USER
+      const deletedUser = await User.findByIdAndRemove(data.id);
+      console.log(deletedUser);
+      break;
+    default:
+      break
 
-    
+
   }
 
 
