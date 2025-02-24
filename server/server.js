@@ -18,6 +18,7 @@ await connectDB();
 app.get("/", (req, res) => {
   res.send("Hello, api!");
 });
+Sentry.setupExpressErrorHandler(app);
 
 // Function to connect to the database with retries
 
