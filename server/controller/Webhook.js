@@ -48,7 +48,12 @@ export const clerkWebhooks = async (req, res) => {
       // UPDATE THE USER IN DATABASE
       case "user.deleted": {
         await User.findByIdAndDelete(data.id);
+        res.json({});
+        break;
       }
+      // default case
+      default:
+        break;
     }
   } catch (error) {
     console.log(error);
