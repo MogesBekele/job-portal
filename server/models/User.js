@@ -8,3 +8,7 @@ email: {type: String, required: true, unique: true},
 resume: {type: String},
 image: {type: String, required: true},
 })
+
+const User = mongoose.model("User", UserSchema);
+
+export default User;
