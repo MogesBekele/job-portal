@@ -22,7 +22,7 @@ export const clerkWebhooks = async(req, res) => {
   switch(type){
     case "user.created":
       // CREATE A NEW USER IN DATABASE
-      const newUser = await User.create({
+      const userDta = await User.create({
         _id: data.id,
         name: data.name,
         email: data.email,
