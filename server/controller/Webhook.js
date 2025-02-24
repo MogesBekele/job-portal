@@ -34,23 +34,21 @@ export const clerkWebhooks = async(req, res) => {
       break;
     }
       // CREATE A NEW USER IN DATABASE
+    case "user.updated":{
+      const userData ={
+        _id: data.id,
+        email: data.email_address[0].email_address,
+        name : data.first_name + " " + data.last_name,
+        image : data.image_url,
+        resume : ''
+        
+      }
+      await User.findByIdAndUpdate(data.id, userData);
+      res.json({})
+      break;
+    }
    
-    case "user.updated":
-      // FIND THE USER BY ID AND UPDATE THE USER
-      const updatedUser = await User.findByIdAndUpdate(data.id,{
-        name: data.name,
-        email: data.email,
-        image: data.image
-      },{new: true});
-      console.log(updatedUser);
-      break;
-    case "user.deleted":
-      // FIND THE USER BY ID AND DELETE THE USER
-      const deletedUser = await User.findByIdAndRemove(data.id);
-      console.log(deletedUser);
-      break;
-    default:
-      break
+ 
 
 
   }
