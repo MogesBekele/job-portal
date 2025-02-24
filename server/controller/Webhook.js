@@ -14,6 +14,8 @@ export const clerkWebhooks = async(req, res) => {
     "svix-signature" : req.headers["svix-signature"]
   });
 
+  // GET THE data from request body
+
   }
   catch(error){
     console.log(error);
