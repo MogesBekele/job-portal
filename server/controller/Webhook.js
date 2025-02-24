@@ -16,6 +16,8 @@ export const clerkWebhooks = async(req, res) => {
 
   // GET THE data from request body
 
+  const {data, type} = req.body;
+
   }
   catch(error){
     console.log(error);
