@@ -4,7 +4,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
-import { companyRoute } from "./routes/companyRoute.js";
+import  companyRoute  from "./routes/companyRoute.js";
 
 
 const app = express();
