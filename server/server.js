@@ -23,7 +23,7 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
 
-
+//app.post("/webhook", clerkWebhooks)
 
 Sentry.setupExpressErrorHandler(app);
 
