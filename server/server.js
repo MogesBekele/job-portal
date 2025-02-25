@@ -4,6 +4,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
+import { companyRoute } from "./routes/companyRoute.js";
 
 
 const app = express();
@@ -23,9 +24,13 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
 
+
+
+app.use('/api/company', companyRoute);
 //app.post("/webhook", clerkWebhooks)
 
 Sentry.setupExpressErrorHandler(app);
+
 
 // Function to connect to the database with retries
 

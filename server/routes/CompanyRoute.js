@@ -43,3 +43,5 @@ router.put('/change-status', changeJobApplicationStatus);
 
 router.put('/change-visibility', changeVisibility);
 
+export default router;
+
