@@ -4,6 +4,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
+import { clerkWebhooks } from "./controller/Webhook.js";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -22,9 +23,7 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
 
-app.post("/webhook", async (req, res) => {
-
-})
+app.post("/webhook", clerkWebhooks)
 Sentry.setupExpressErrorHandler(app);
 
 // Function to connect to the database with retries
