@@ -22,3 +22,7 @@ export const postJob = async (req, res) => {}
 //get all job applicants
 
 export const getCompanyJobApplicants = async (req, res) => {}
+
+//get company posted job
+
+export const getCompanyPostedJobs = async (req, res) => {}
