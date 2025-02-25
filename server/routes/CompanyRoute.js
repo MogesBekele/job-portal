@@ -1,6 +1,10 @@
 import express from 'express';
-import { registerCompany } from '../controllers/CompanyController.js';
+import { registerCompany  } from '../controllers/CompanyController.js';
 import { loginCompany } from '../controllers/CompanyController.js';
+import { getCompanyData } from '../controllers/CompanyController.js';
+import { postJob } from '../controllers/CompanyController.js';
+import { getCompanyJobApplicants } from '../controllers/CompanyController.js';
+
 
 
 
@@ -9,7 +13,7 @@ const router = express.Router();
 
 //Register a company
 
-router.post('/register, registerCompany');
+router.post('/register', registerCompany);
 
 //Login a company
 
