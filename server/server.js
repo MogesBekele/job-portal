@@ -4,7 +4,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
-import  companyRoute  from "./routes/companyRoute.js";
+import CompanyRoute from "./routes/CompanyRoute.js";
 
 
 const app = express();
@@ -26,7 +26,7 @@ app.get("/debug-sentry", function mainHandler(req, res) {
 
 
 
-app.use('/api/company', companyRoute);
+app.use('/api/company', CompanyRoute);
 //app.post("/webhook", clerkWebhooks)
 
 Sentry.setupExpressErrorHandler(app);
