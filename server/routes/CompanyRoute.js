@@ -1,9 +1,18 @@
 import express from 'express';
 
-import { registerCompany, loginCompany, getCompanyData, postJob, getCompanyJobApplicants, getCompanyPostedJobs, changeJobApplicationStatus, changeVisibility } from '../controllers/CompanyController.js';
-
+import {
+  registerCompany,
+  loginCompany,
+  getCompanyData,
+  postJob,
+  getCompanyJobApplicants,
+  getCompanyPostedJobs,
+  changeJobApplicationStatus,
+  changeVisibility
+} from '../controller/CompanyController.js';
 
 const router = express.Router();
+
 
 
 //Register a company
