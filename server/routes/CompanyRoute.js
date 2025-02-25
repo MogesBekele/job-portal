@@ -10,6 +10,7 @@ import {
   changeJobApplicationStatus,
   changeVisibility
 } from '../controller/CompanyController.js';
+import upload from '../config/Multer.js';
 
 const router = express.Router();
 
@@ -17,7 +18,7 @@ const router = express.Router();
 
 //Register a company
 
-router.post('/register', registerCompany);
+router.post('/register', upload.single('image'), registerCompany);
 
 //Login a company
 
