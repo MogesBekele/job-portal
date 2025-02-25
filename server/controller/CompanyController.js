@@ -5,7 +5,7 @@ export const registerCompany = async (req, res) => {
   const imageFile = req.file;
 
   if (!name || !email || !password || !imageFile) {
-    return res.status(400).json({ message: "All fields are required" });
+    return res.json({success: false, message: "All fields are required"});
   }
 };
 
