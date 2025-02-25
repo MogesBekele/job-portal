@@ -39,3 +39,7 @@ router.get('/list-jobs', getCompanyPostedJobs);
 
 router.put('/change-status', changeJobApplicationStatus);
 
+//change visibility of job
+
+router.put('/change-visibility', changeVisibility);
+
