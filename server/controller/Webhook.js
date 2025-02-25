@@ -17,6 +17,7 @@ export const clerkWebhooks = async (req, res) => {
     // GET THE data from request body
 
     const { data, type } = req.body;
+    
 
     //switch case to handle different clerk webhook types
     switch (type) {
