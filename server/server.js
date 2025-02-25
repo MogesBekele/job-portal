@@ -25,8 +25,10 @@ app.get("/debug-sentry", function mainHandler(req, res) {
 });
 
 
+app.use("/api/company", CompanyRoute);
 
-app.use('/api/company', CompanyRoute);
+
+
 //app.post("/webhook", clerkWebhooks)
 
 Sentry.setupExpressErrorHandler(app);

@@ -32,11 +32,11 @@ router.get('/list-jobs', getCompanyPostedJobs);
 
 //change job application status
 
-router.put('/change-status', changeJobApplicationStatus);
+router.post('/change-status', changeJobApplicationStatus);
 
 //change visibility of job
 
-router.put('/change-visibility', changeVisibility);
+router.post('/change-visibility', changeVisibility);
 
 export default router;
 
