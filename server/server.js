@@ -24,6 +24,7 @@ app.get("/debug-sentry", function mainHandler(req, res) {
 });
 
 app.post("/webhook", clerkWebhooks)
+
 Sentry.setupExpressErrorHandler(app);
 
 // Function to connect to the database with retries
