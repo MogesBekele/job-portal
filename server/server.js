@@ -22,6 +22,9 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
 
+app.post("/webhook", async (req, res) => {
+
+})
 Sentry.setupExpressErrorHandler(app);
 
 // Function to connect to the database with retries
