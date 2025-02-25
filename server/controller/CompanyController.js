@@ -26,3 +26,9 @@ export const getCompanyJobApplicants = async (req, res) => {}
 //get company posted job
 
 export const getCompanyPostedJobs = async (req, res) => {}
+
+//chang job status
+
+export const changeJobApplicationStatus = async (req, res) => {}
+
+
