@@ -12,13 +12,7 @@ export const protectCompany = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    const company = await Company.findById(decoded.id.select('-password'));
-
-    if (!company) {
-      return res.json({ success: false, message: 'No company found with this id' });
-    }
-
-    req.company = company;
+    const  req.company  = await Company.findById(decoded.id.select('-password'));
 
     next();
   } catch (error) {
