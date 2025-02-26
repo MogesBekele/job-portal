@@ -31,7 +31,7 @@ router.get('/company', protectCompany,  getCompanyData);
 
 //post job
 
-router.post('/post-job', postJob);
+router.post('/post-job', protectCompany, postJob);
 
 //get all job applicants
 
