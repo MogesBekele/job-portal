@@ -1,7 +1,7 @@
 //register a new company
 
 import Company from "../models/Company.js";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
@@ -16,6 +16,10 @@ export const registerCompany = async (req, res) => {
     if (companyExist) {
       return res.json({success: false, message: "Company already exists"});
     }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
   } catch (error) {
     
   }
