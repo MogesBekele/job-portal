@@ -23,6 +23,13 @@ export const registerCompany = async (req, res) => {
 
     const imageUpload = await cloudinary.uploader.upload(imageFile.path);
 
+    const company = await Company.create({
+      name,
+      email,
+      password: hashedPassword,
+      image: imageUpload.secure_url,
+    });
+
   } catch (error) {
     
   }
