@@ -12,7 +12,7 @@ export const protectCompany = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    req.company = await Company.findById(decoded.id);
+    const company = await Company.findById(decoded.id.select('-password'));
 
     if (!company) {
       return res.json({ success: false, message: 'No company found with this id' });
@@ -24,5 +24,6 @@ export const protectCompany = async (req, res, next) => {
   } catch (error) {
     return res.json({ success: false, message: 'Not authorized to access this route' });
   }
+ 
 
 }
