@@ -35,9 +35,9 @@ export const registerCompany = async (req, res) => {
         name: company.name,
         email: company.email,
         image: company.image,
-      }});
-
-
+      },
+    
+    });
 
   } catch (error) {
     return res.json({success: false, message: error.message});
