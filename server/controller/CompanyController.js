@@ -3,6 +3,7 @@
 import Company from "../models/Company.js";
 import bcrypt from "bcrypt";
 import { v2 as cloudinary } from "cloudinary";
+import generateToken from "../utilis/GenerateToken.js";
 
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
@@ -36,6 +37,7 @@ export const registerCompany = async (req, res) => {
         email: company.email,
         image: company.image,
       },
+      token: generateToken(company._id),
     
     });
 
