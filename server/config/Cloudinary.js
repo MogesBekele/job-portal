@@ -8,3 +8,5 @@ const connectCloudinary = async () => {
     api_secret: process.env.CLOUDINARY_API_SECRET
   });
 }
+
+export default connectCloudinary;
