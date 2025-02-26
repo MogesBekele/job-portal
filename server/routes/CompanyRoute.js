@@ -39,7 +39,7 @@ router.get('/applicants', getCompanyJobApplicants);
 
 // get company posted jobs list
 
-router.get('/list-jobs', protectCompany, getCompanyPostedJobs);
+router.get('/list-jobs', protectCompany, protectCompany, getCompanyPostedJobs);
 
 //change job application status
 
