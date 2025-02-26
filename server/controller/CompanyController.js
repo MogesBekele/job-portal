@@ -30,9 +30,17 @@ export const registerCompany = async (req, res) => {
       image: imageUpload.secure_url,
     });
 
-    return res.json({success: true, message: "Company created successfully", company});
+    return res.json({success: true,
+      company:{
+        name: company.name,
+        email: company.email,
+        image: company.image,
+      }});
+
+
 
   } catch (error) {
+    return res.json({success: false, message: error.message});
     
   }
 
