@@ -11,6 +11,7 @@ import {
   changeVisibility
 } from '../controller/CompanyController.js';
 import upload from '../config/Multer.js';
+import { protectCompany } from '../middleware/AuthMiddleware.js';
 
 const router = express.Router();
 
@@ -26,7 +27,7 @@ router.post('/login', loginCompany);
 
 //Get company data
 
-router.get('/company', getCompanyData);
+router.get('/company', protectCompany,  getCompanyData);
 
 //post job
 
