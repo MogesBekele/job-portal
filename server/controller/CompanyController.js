@@ -2,6 +2,7 @@
 
 import Company from "../models/Company.js";
 import bcrypt from "bcrypt";
+import { v2 as cloudinary } from "cloudinary";
 
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
@@ -20,7 +21,7 @@ export const registerCompany = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    
+    const imageUpload = await cloudinary.uploader.upload(imageFile.path);
 
   } catch (error) {
     
