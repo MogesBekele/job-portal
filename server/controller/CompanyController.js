@@ -1,6 +1,7 @@
 //register a new company
 
 import Company from "../models/Company.js";
+import bcrypt from "bcryptjs";
 
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
@@ -18,6 +19,8 @@ export const registerCompany = async (req, res) => {
   } catch (error) {
     
   }
+
+
 
 
 };
