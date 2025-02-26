@@ -86,7 +86,7 @@ export const getCompanyData = async (req, res) => {};
 
 export const postJob = async (req, res) => {
 
-  const { title, description, location, salary, category, level, date } = req.body;
+  const { title, description, location, salary} = req.body;
   const companyId = req.company._id;
 };
 
