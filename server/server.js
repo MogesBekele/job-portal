@@ -5,6 +5,7 @@ import "dotenv/config";
 import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
 import CompanyRoute from "./routes/CompanyRoute.js";
+import connectCloudinary from "./config/Cloudinary.js";
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 await connectDB();
+await connectCloudinary()
 
 // Basic route
 app.get("/", (req, res) => {
