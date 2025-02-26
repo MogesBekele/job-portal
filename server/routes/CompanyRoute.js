@@ -43,7 +43,7 @@ router.get('/list-jobs', protectCompany, protectCompany, getCompanyPostedJobs);
 
 //change job application status
 
-router.post('/change-status', changeJobApplicationStatus);
+router.post('/change-status', protectCompany, changeJobApplicationStatus);
 
 //change visibility of job
 
