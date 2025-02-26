@@ -88,6 +88,9 @@ export const postJob = async (req, res) => {
 
   const { title, description, location, salary} = req.body;
   const companyId = req.company._id;
+
+  console.log(companyId, { title, description, location, salary});
+
 };
 
 //get all job applicants
