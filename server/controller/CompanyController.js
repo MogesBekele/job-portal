@@ -10,13 +10,13 @@ export const registerCompany = async (req, res) => {
   const imageFile = req.file;
 
   if (!name || !email || !password || !imageFile) {
-    return res.json({success: false, message: "All fields are required"});
+    return res.json({ success: false, message: "All fields are required" });
   }
 
   try {
-    const companyExist = await Company.findOne({email});
+    const companyExist = await Company.findOne({ email });
     if (companyExist) {
-      return res.json({success: false, message: "Company already exists"});
+      return res.json({ success: false, message: "Company already exists" });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -31,58 +31,50 @@ export const registerCompany = async (req, res) => {
       image: imageUpload.secure_url,
     });
 
-    return res.json({success: true,
-      company:{
+    return res.json({
+      success: true,
+      company: {
         name: company.name,
         email: company.email,
         image: company.image,
       },
       token: generateToken(company._id),
-    
     });
-
   } catch (error) {
-    return res.json({success: false, message: error.message});
-    
+    return res.json({ success: false, message: error.message });
   }
-
-
-
-
 };
 
 //company login
 
 export const loginCompany = async (req, res) => {
-
-  const {email, password} = req.body;
+  const { email, password } = req.body;
 
   try {
-    const company = await Company.findOne
-    ({email});
+    const company = await Company.findOne({ email });
 
-   if (bcrypt.compare(password, company.password)) {
-    return res.json({success: true,
-      company:{
-        _id: company._id,
-        name: company.name,
-        email: company.email,
-        image: company.image,
+    if (!company) {
+      return res.json({ success: false, message: "Invalid email or password" });
+    }
 
-      },
-      token: generateToken(company._id),
-      
-    
-   })
-    
-  }
-  else {
-    return res.json({success: false, message: "Invalid email or password"});
+    const isMatch = await bcrypt.compare(password, company.password);
 
-  
-   catch (error) {
-    
-    return res.json({success: false, message: error.message});
+    if (isMatch) {
+      return res.json({
+        success: true,
+        company: {
+          _id: company._id,
+          name: company.name,
+          email: company.email,
+          image: company.image,
+        },
+        token: generateToken(company._id),
+      });
+    } else {
+      return res.json({ success: false, message: "Invalid email or password" });
+    }
+  } catch (error) {
+    return res.json({ success: false, message: error.message });
   }
 };
 
