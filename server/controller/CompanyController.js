@@ -80,7 +80,20 @@ export const loginCompany = async (req, res) => {
 
 //get company data
 
-export const getCompanyData = async (req, res) => {};
+export const getCompanyData = async (req, res) => {
+
+  const company = req.company;
+
+  return res.json({
+    success: true,
+    company: {
+      _id: company._id,
+      name: company.name,
+      email: company.email,
+      image: company.image,
+    },
+  });
+};
 
 //post job
 
@@ -121,8 +134,10 @@ export const postJob = async (req, res) => {
 
 //get all job applicants
 
-export const getCompanyJobApplicants = async (req, res) => {};
+export const getCompanyJobApplicants = async (req, res) => {
 
+ 
+}
 //get company posted job
 
 export const getCompanyPostedJobs = async (req, res) => {};
