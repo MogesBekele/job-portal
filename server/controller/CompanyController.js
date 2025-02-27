@@ -109,6 +109,7 @@ export const postJob = async (req, res) => {
      newJob
     });
   } catch (error) {
+    return res.json({ success: false, message: error.message });
     
   }
 
