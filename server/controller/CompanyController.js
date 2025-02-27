@@ -100,6 +100,14 @@ export const postJob = async (req, res) => {
       location,
       salary
     });
+
+    await newJob.save()
+
+    return res.json({
+      success: true,
+      message: "Job posted successfully",
+     newJob
+    });
   } catch (error) {
     
   }
