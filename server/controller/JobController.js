@@ -1,4 +1,4 @@
-
+import Job from "../models/Job.js";
 // get all jobs
 export const getJobs = async (req, res) => {
   try {
