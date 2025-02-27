@@ -91,6 +91,19 @@ export const postJob = async (req, res) => {
 
   console.log(companyId, { title, description, location, salary});
 
+  try {
+    
+    const newJob = await Job.create({
+      company: companyId,
+      title,
+      description,
+      location,
+      salary
+    });
+  } catch (error) {
+    
+  }
+
 };
 
 //get all job applicants
