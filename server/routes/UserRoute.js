@@ -16,3 +16,5 @@ router.get('/applications', getUserJobApplications);
 
 //update user profile
 router.post('/update=resume', upload.single('resume'), updateUserResume);
+
+export default router;
