@@ -24,7 +24,9 @@ export const getJobById = async (req, res) => {
     if (!job) {
       return res.json({ success: false, message: "Job not found" });
     }
-    
+
+    return res.json({ success: true, job });
+
 
 
   } catch (error) {
