@@ -157,5 +157,17 @@ export const changeVisibility = async (req, res) => {
     const companyId = req.company._id;
 
     const job = await Job.findById(id);
+
+    if (companyId.toString() === job.companyId.toString()) {
+      job.visible = !job.visible;
+   
+    }
+    await job.save();
+
+    return res.json({
+      success: true,
+      message: "Job visibility changed",
+      job,
+    });
   } catch (error) {}
 };
