@@ -94,7 +94,7 @@ export const postJob = async (req, res) => {
   try {
     
     const newJob = await Job.create({
-      company: companyId,
+      companyId,
       title,
       description,
       location,
