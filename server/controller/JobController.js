@@ -18,7 +18,8 @@ export const getJobById = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const job = await Job.findById(id).populate("companyId", "name image");
+    const job = await Job.findById(id)
+      .populate({path: "companyId", select: '-password'});
 
     return res.json({ success: true, job });
   } catch (error) {
