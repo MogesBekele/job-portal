@@ -101,7 +101,7 @@ export const postJob = async (req, res) => {
       salary,
       date: Date.now(),
       level,
-      category,
+      category
 
     });
 
