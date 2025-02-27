@@ -81,18 +81,23 @@ export const loginCompany = async (req, res) => {
 //get company data
 
 export const getCompanyData = async (req, res) => {
-
-  const company = req.company;
-
-  return res.json({
-    success: true,
-    company: {
-      _id: company._id,
-      name: company.name,
-      email: company.email,
-      image: company.image,
-    },
-  });
+try {
+  
+    const company = req.company;
+  
+    return res.json({
+      success: true,
+      company: {
+        _id: company._id,
+        name: company.name,
+        email: company.email,
+        image: company.image,
+      },
+    });
+} catch (error) {
+  return res.json({ success: false, message: error.message });
+  
+}
 };
 
 //post job
