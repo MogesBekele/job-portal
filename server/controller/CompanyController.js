@@ -138,8 +138,15 @@ export const getCompanyPostedJobs = async (req, res) => {
     const company = req.company._id;
     const jobs = await Job.find({companyId})
 
+    return res.json({
+      success: true,
+      jobs,
+    });
+
+
 
   } catch (error) {
+    return res.json({ success: false, message: error.message });
     
   }
 };
