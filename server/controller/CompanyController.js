@@ -4,6 +4,7 @@ import Company from "../models/Company.js";
 import bcrypt from "bcrypt";
 import { v2 as cloudinary } from "cloudinary";
 import generateToken from "../utilis/GenerateToken.js";
+import Job from "../models/Job.js";
 
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
@@ -130,7 +131,18 @@ export const postJob = async (req, res) => {
 export const getCompanyJobApplicants = async (req, res) => {};
 //get company posted job
 
-export const getCompanyPostedJobs = async (req, res) => {};
+export const getCompanyPostedJobs = async (req, res) => {
+
+  try {
+    
+    const company = req.company._id;
+    const jobs = await Job.find({companyId})
+
+
+  } catch (error) {
+    
+  }
+};
 
 //chang job status
 
