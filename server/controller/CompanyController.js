@@ -98,7 +98,8 @@ export const postJob = async (req, res) => {
       title,
       description,
       location,
-      salary
+      salary,
+      date: Date.now()
     });
 
     await newJob.save()
