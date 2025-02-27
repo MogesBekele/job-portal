@@ -169,5 +169,8 @@ export const changeVisibility = async (req, res) => {
       message: "Job visibility changed",
       job,
     });
-  } catch (error) {}
+  } catch (error) {
+    return res.json({ success: false, message: error.message
+    });
+  }
 };
