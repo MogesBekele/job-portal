@@ -81,36 +81,27 @@ export const loginCompany = async (req, res) => {
 //get company data
 
 export const getCompanyData = async (req, res) => {
-try {
-  
+  try {
     const company = req.company;
-  
+
     return res.json({
       success: true,
-      company: {
-        _id: company._id,
-        name: company.name,
-        email: company.email,
-        image: company.image,
-      },
+      company,
     });
-} catch (error) {
-  return res.json({ success: false, message: error.message });
-  
-}
+  } catch (error) {
+    return res.json({ success: false, message: error.message });
+  }
 };
 
 //post job
 
 export const postJob = async (req, res) => {
-
   const { title, description, location, salary, level, category } = req.body;
   const companyId = req.company._id;
 
-  console.log(companyId, { title, description, location, salary});
+  console.log(companyId, { title, description, location, salary });
 
   try {
-    
     const newJob = await Job.create({
       companyId,
       title,
@@ -119,30 +110,24 @@ export const postJob = async (req, res) => {
       salary,
       date: Date.now(),
       level,
-      category
-
+      category,
     });
 
-    await newJob.save()
+    await newJob.save();
 
     return res.json({
       success: true,
       message: "Job posted successfully",
-     newJob
+      newJob,
     });
   } catch (error) {
     return res.json({ success: false, message: error.message });
-    
   }
-
 };
 
 //get all job applicants
 
-export const getCompanyJobApplicants = async (req, res) => {
-
- 
-}
+export const getCompanyJobApplicants = async (req, res) => {};
 //get company posted job
 
 export const getCompanyPostedJobs = async (req, res) => {};
