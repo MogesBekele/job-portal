@@ -14,7 +14,7 @@ export const getJobs = async (req, res) => {
 
 // get single job
 
-export const getJob = async (req, res) => {
+export const getJobById = async (req, res) => {
   const { id } = req.params;
 
   try {

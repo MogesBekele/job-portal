@@ -1,5 +1,5 @@
 import express from 'express'
-import { getJobs } from '../controller/JobController'
+import { getJobById, getJobs } from '../controller/JobController.js'
 
 const router = express.Router()
 
@@ -8,6 +8,7 @@ router.get('/', getJobs)
 
 // route to get a single job by id
 
-router.get('/:id', getJob)
+router.get('/:id', getJobById)
 
 export default router
+//       token: generateToken(company._id),
