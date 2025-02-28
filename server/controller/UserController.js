@@ -30,8 +30,11 @@ export const getUserData = async (req, res) => {
 //apply for a job
 
 export const applyForJob = async (req, res) => {
+ 
+  const { jobId } = req.body;
+  const userId = req.auth.userId;
 
-  
+
 };
 
 //get user applied applications
