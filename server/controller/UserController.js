@@ -68,9 +68,6 @@ export const applyForJob = async (req, res) => {
     message: "Application submitted successfully"
   });
 
-  
-  
-    
   } catch (error) {
     
     res.json({
