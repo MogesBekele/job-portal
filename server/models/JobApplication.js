@@ -9,3 +9,6 @@ const JobApplicationSchema = new mongoose.Schema({
   status: {type: String, default: 'pending'},
   date: {type: Number, required: true},
 })
+
+
+const JobApplication = mongoose.model('JobApplication', JobApplicationSchema);
