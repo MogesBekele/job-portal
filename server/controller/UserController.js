@@ -114,9 +114,10 @@ export const updateUserResume = async (req, res) => {
     const userData = await User.findById(userId);
 
     if (resumeFile) {
-      const resumeUpload = await cloudinary.uploader.upload(resumeFile, {
-        upload_preset: "dev_setups",
-      });
+      const resumeUpload = await cloudinary.uploader.upload(resumeFile.path);
+
+      userData.resume = resumeUpload.secure_url;
+      userData.resumeId = resumeUpload.public_id;
       
     }
 
