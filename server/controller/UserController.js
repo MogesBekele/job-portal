@@ -29,7 +29,10 @@ export const getUserData = async (req, res) => {
 
 //apply for a job
 
-export const applyForJob = async (req, res) => {};
+export const applyForJob = async (req, res) => {
+
+  
+};
 
 //get user applied applications
 
