@@ -1,5 +1,6 @@
 import User from "../models/User.js";
 import JobApplication from "../models/JobApplication.js";
+import Job from "../models/Job.js";
 
 // get user data
 
