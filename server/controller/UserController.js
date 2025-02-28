@@ -88,7 +88,9 @@ try {
   const userId = req.auth.userId;
 
   const applications = await JobApplication.find({userId})
-  .populate('companyId', 'name, email, image');
+  .populate('companyId', 'name, email, image')
+  .populate('jobId', 'title description location level salary')
+  .exec();
 
   
 
