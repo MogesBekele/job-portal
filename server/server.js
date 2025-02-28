@@ -17,6 +17,7 @@ const port = process.env.PORT || 5000;
 // Middleware to parse JSON bodies
 app.use(cors());
 app.use(express.json());
+app.use(clerkMiddleware())
 
 await connectDB();
 await connectCloudinary()
