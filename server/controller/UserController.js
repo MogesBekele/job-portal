@@ -2,6 +2,7 @@ import User from "../models/User.js";
 import JobApplication from "../models/JobApplication.js";
 import Job from "../models/Job.js";
 
+
 // get user data
 
 export const getUserData = async (req, res) => {
@@ -47,10 +48,21 @@ export const applyForJob = async (req, res) => {
       })
     }
   const jobData = await Job.findById(jobId);
+  if (!jobData) {
+    return res.json({
+      success: false,
+      message: "Job not found",
+    });
+
+  
   
     
   } catch (error) {
     
+    res.json({
+      success: false,
+      message: error.message,
+    });
   }
 
 
