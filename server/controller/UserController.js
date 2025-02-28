@@ -2,7 +2,6 @@ import User from "../models/User.js";
 import JobApplication from "../models/JobApplication.js";
 import Job from "../models/Job.js";
 
-
 // get user data
 
 export const getUserData = async (req, res) => {
@@ -33,81 +32,73 @@ export const getUserData = async (req, res) => {
 //apply for a job
 
 export const applyForJob = async (req, res) => {
- 
   const { jobId } = req.body;
   const userId = req.auth.userId;
 
   try {
+    const isAlreadyApplied = await JobApplication.findOne({ userId, jobId });
 
-    const isAlreadyApplied = await JobApplication.findOne({userId, jobId})
-
-    if(isAlreadyApplied.length>0){
+    if (isAlreadyApplied.length > 0) {
       return res.json({
         success: false,
-        message: "You have already applied for this job"
-      })
+        message: "You have already applied for this job",
+      });
     }
-  const jobData = await Job.findById(jobId);
-  if (!jobData) {
-    return res.json({
-      success: false,
-      message: "Job not found",
+    const jobData = await Job.findById(jobId);
+    if (!jobData) {
+      return res.json({
+        success: false,
+        message: "Job not found",
+      });
+    }
+
+    await JobApplication.create({
+      userId,
+      companyId: jobData.companyId,
+      jobId,
+      date: Date.now(),
     });
 
-  }
-
-  await JobApplication.create({
-    userId,
-    companyId: jobData.companyId,
-    jobId,
-    date: Date.now(),
-  });
-
-  res.json({
-    success: true,
-    message: "Application submitted successfully"
-  });
-
+    res.json({
+      success: true,
+      message: "Application submitted successfully",
+    });
   } catch (error) {
-    
     res.json({
       success: false,
       message: error.message,
     });
   }
-
-
 };
 
 //get user applied applications
 
 export const getUserJobApplications = async (req, res) => {
+  try {
+    const userId = req.auth.userId;
 
-try {
+    const applications = await JobApplication.find({ userId })
+      .populate("companyId", "name, email, image")
+      .populate("jobId", "title description location level salary")
+      .exec();
 
-  const userId = req.auth.userId;
+    if (!applications) {
+      return res.json({
+        success: false,
+        message: "No applications found",
+      });
+    }
 
-  const applications = await JobApplication.find({userId})
-  .populate('companyId', 'name, email, image')
-  .populate('jobId', 'title description location level salary')
-  .exec();
-
-  if(!applications){
-    return res.json({
+    res.json({
+      success: true,
+      applications,
+    });
+  } catch (error) {
+    res.json({
       success: false,
-      message: "No applications found"
-    })
+      message: error.message,
+    });
   }
-
-  
-
-
-  
-} catch (error) {
-
-
-  
-}
 };
 
 //update user profile
