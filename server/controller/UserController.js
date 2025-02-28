@@ -38,6 +38,13 @@ export const applyForJob = async (req, res) => {
   try {
 
     const isAlreadyApplied = await JobApplication.findOne({userId, jobId})
+
+    if(isAlreadyApplied){
+      return res.json({
+        success: false,
+        message: "You have already applied for this job"
+      })
+    }
     
   } catch (error) {
     
