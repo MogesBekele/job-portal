@@ -54,7 +54,14 @@ export const applyForJob = async (req, res) => {
       message: "Job not found",
     });
 
-  
+  }
+
+  await JobApplication.create({
+    userId,
+    companyId: jobData.companyId,
+    jobId,
+    date: Date.now(),
+  });
   
     
   } catch (error) {
