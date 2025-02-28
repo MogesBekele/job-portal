@@ -117,9 +117,16 @@ export const updateUserResume = async (req, res) => {
       const resumeUpload = await cloudinary.uploader.upload(resumeFile.path);
 
       userData.resume = resumeUpload.secure_url;
-      userData.resumeId = resumeUpload.public_id;
+    
       
     }
+
+    await userData.save();
+
+    res.json({
+      success: true,
+      message: "Resume uploaded successfully",
+    });
 
  
 
