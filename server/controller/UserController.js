@@ -103,4 +103,19 @@ export const getUserJobApplications = async (req, res) => {
 
 //update user profile
 
-export const updateUserResume = async (req, res) => {};
+export const updateUserResume = async (req, res) => {
+
+  try {
+    const userId = req.auth.userId;
+    const { resume } = req.body;
+
+    const user
+    
+  } catch (error) {
+    res.json({
+      success: false,
+      message: error.message,
+    });
+    
+  }
+};
