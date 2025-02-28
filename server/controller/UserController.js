@@ -45,6 +45,8 @@ export const applyForJob = async (req, res) => {
         message: "You have already applied for this job"
       })
     }
+  const jobData = await Job.findById(jobId);
+  
     
   } catch (error) {
     
