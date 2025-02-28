@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import JobApplication from "../models/JobApplication.js";
 
 // get user data
 
@@ -33,6 +34,14 @@ export const applyForJob = async (req, res) => {
  
   const { jobId } = req.body;
   const userId = req.auth.userId;
+
+  try {
+
+    const isAlreadyApplied = await JobApplication.findOne({userId, jobId})
+    
+  } catch (error) {
+    
+  }
 
 
 };
