@@ -92,6 +92,13 @@ try {
   .populate('jobId', 'title description location level salary')
   .exec();
 
+  if(!applications){
+    return res.json({
+      success: false,
+      message: "No applications found"
+    })
+  }
+
   
 
 
