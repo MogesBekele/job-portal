@@ -81,7 +81,24 @@ export const applyForJob = async (req, res) => {
 
 //get user applied applications
 
-export const getUserJobApplications = async (req, res) => {};
+export const getUserJobApplications = async (req, res) => {
+
+try {
+
+  const userId = req.auth.userId;
+
+  const applications = await JobApplication.find({userId}).populate('jobId').populate('companyId');
+
+  
+
+
+  
+} catch (error) {
+
+
+  
+}
+};
 
 //update user profile
 
