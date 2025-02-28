@@ -12,3 +12,5 @@ const JobApplicationSchema = new mongoose.Schema({
 
 
 const JobApplication = mongoose.model('JobApplication', JobApplicationSchema);
+
+export default JobApplication;
