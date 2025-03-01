@@ -27,6 +27,7 @@ export const AppContextProvider = (props)=>{
     fetchJobs()
   },[])
   const value = {
+    backEndUrl,
     searchFilter,
     setSearchFilter,
     isSearched,
