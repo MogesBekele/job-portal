@@ -3,6 +3,7 @@ import { manageJobsData } from "../assets/assets";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import axios from "axios";
 
 const ManageJobs = () => {
   const navigate =useNavigate()
@@ -14,6 +15,16 @@ const {backEndUrl, companyToken} = useContext(AppContext)
 //fetch company jobs
 
 const fetchCompanyJobs = async ()=>{
+
+  try {
+    const {data} = await axios.get(backEndUrl+ '/api/company/post-jobs', {headers:{token: companyToken}})
+
+    
+  } catch (error) {
+    
+  }
+
+  
 
 }
 
