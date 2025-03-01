@@ -35,6 +35,7 @@ const RecruiterLogin = () => {
         setCompanyToken(data.token);
         localStorage.setItem("companyToken", data.token);
         setShowRecruiterLogin(false);
+        navigate("/dashboard");
       }
     } catch (error) {
       console.log(error);
