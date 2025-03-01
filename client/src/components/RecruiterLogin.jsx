@@ -28,9 +28,9 @@ const RecruiterLogin = () => {
           email,
           password,
         });
-        console.log(data);
+        
         if (data.success) {
-          console.log(data);
+         
           setCompanyData(data.company);
           setCompanyToken(data.token);
           localStorage.setItem("companyToken", data.token);
@@ -49,7 +49,7 @@ const RecruiterLogin = () => {
         formData.append("image", image);
         const { data } = await axios.post(backEndUrl + "/api/company/register", formData);
         if (data.success) {
-          console.log(data);
+          
           setCompanyData(data.company);
           setCompanyToken(data.token);
           localStorage.setItem("companyToken", data.token);
@@ -64,7 +64,7 @@ const RecruiterLogin = () => {
 
 
     } catch (error) {
-      console.log(error);
+     toast.error(error.message)
     }
   };
   useEffect(() => {
