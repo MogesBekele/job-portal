@@ -29,17 +29,20 @@ const RecruiterLogin = () => {
           password,
         });
         console.log(data);
+        if (data.success) {
+          console.log(data);
+          setCompanyData(data.company);
+          setCompanyToken(data.token);
+          localStorage.setItem("companyToken", data.token);
+          setShowRecruiterLogin(false);
+          navigate("/dashboard");
+        } else {
+          toast.error(data.message);
+        }
       }
-      if (data.success) {
-        console.log(data);
-        setCompanyData(data.company);
-        setCompanyToken(data.token);
-        localStorage.setItem("companyToken", data.token);
-        setShowRecruiterLogin(false);
-        navigate("/dashboard");
-      }
+    
       else{
-        toast.error(data.message);
+        
       }
 
 
