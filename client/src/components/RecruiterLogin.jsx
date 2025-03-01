@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useNavigate } from "react";
 import { assets } from "../assets/assets";
 import { AppContext } from "../context/AppContext";
 import axios from "axios";
 import { data } from "react-router-dom";
 
 const RecruiterLogin = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState("Login");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -32,7 +33,6 @@ const RecruiterLogin = () => {
         setCompanyData(data.company);
         setCompanyToken(data.token);
         localStorage.setItem("companyToken", data.token);
-
         setShowRecruiterLogin(false);
       }
     } catch (error) {
