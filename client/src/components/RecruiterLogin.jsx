@@ -17,6 +17,26 @@ const RecruiterLogin = () => {
       setIsTextDataSubmited(true)
       
     }
+
+    try {
+      if (state === 'Login') {
+        const {data} = await axios.post(`${backEndUrl}/company/login`, {email, password})
+        console.log(data)
+      }
+      if (state === 'sign up') {
+        const formData = new FormData()
+        formData.append('name', name)
+        formData.append('email', email)
+        formData.append('password', password)
+        formData.append('image', image)
+        const {data} = await axios.post(`${backEndUrl}/company/signup`, formData)
+        console.log(data)
+      }
+      
+    } catch (error) {
+      console.log(error)
+      
+    }
   }
   useEffect(()=>{
     document.body.style.overflow = 'hidden'
