@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
-  const {showRecruiterLogin} = useContext(AppContext)
+  const {showRecruiterLogin, companyToken} = useContext(AppContext)
   return (
     <div >
       { showRecruiterLogin && <RecruiterLogin/>}
