@@ -40,7 +40,9 @@ export const AppContextProvider = (props) => {
       } else {
      toast.error(data.message);
       }
-    } catch (error) {}
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   useEffect(() => {
@@ -51,6 +53,12 @@ export const AppContextProvider = (props) => {
       setCompanyToken(storeCompanyToken);
     }
   }, []);
+
+  useEffect(() => {
+    if (companyToken) {
+      fetchCompanyData();
+    }
+  }, [companyToken]);
   const value = {
     backEndUrl,
     searchFilter,
