@@ -6,6 +6,8 @@ import { jobsData } from '../assets/assets';
 export const AppContext = createContext();
 
 export const AppContextProvider = (props)=>{
+  const backEndUrl =  Process.env.VITE_BACKEND_URL
+
   const [searchFilter, setSearchFilter] = useState({
     title: '',
     location: ''
