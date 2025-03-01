@@ -26,6 +26,10 @@ const RecruiterLogin = () => {
       }
       if (data.success) {
         console.log(data)
+        setCompanyData(data.company)
+        setCompanyToken(data.token)
+        localStorage.setItem('companyToken', data.token)
+        localStorage.setItem('companyData', JSON.stringify(data.company))
         
       }
    
