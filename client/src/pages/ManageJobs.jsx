@@ -8,6 +8,13 @@ const ManageJobs = () => {
 
 const [jobs, setJobs] = useState(false)
 
+
+//fetch company jobs
+
+const fetchCompanyJobs = async ()=>{
+  
+}
+
   return (
     <div className="container p-4 max-w-5xl">
       <div className="overflow-x-auto">
