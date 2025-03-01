@@ -39,10 +39,7 @@ const RecruiterLogin = () => {
         navigate("/dashboard");
       }
 
-      const toastId = toast.success(data.message);
-      if (toastId) {
-        toast.dismiss(toastId);
-      }
+
     } catch (error) {
       console.log(error);
     }
