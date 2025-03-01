@@ -20,11 +20,11 @@ const Dashboard = () => {
           />
           {companyData && (
             <div className="flex items-center gap-3">
-              <p className="max-sm:hidden">Welcome, Job board</p>
+              <p className="max-sm:hidden">Welcome, {companyData.name}</p>
               <div className="relative group">
                 <img
                   className="w-8  rounded-full cursor-pointer"
-                  src={assets.company_icon}
+                  src={companyData.image}
                   alt=""
                 />
                 <div className="absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12">
