@@ -1,6 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import Quill from 'quill'
 import { JobCategories, JobLocations } from '../assets/assets'
+import axios from 'axios'
+import { AppContext } from '../context/AppContext'
 const AddJob = () => {
   const [title, setTitle] = useState('')
   const [location, setLocation] = useState('addis')
@@ -9,6 +11,7 @@ const AddJob = () => {
   const [salary, setSalary] =useState(0)
   const editorRef = useRef(null)
   const quillRef = useRef(null)
+  const {backEndUrl, companyToken} = useContext(AppContext)
 
 
   const onSubmitHandler = async (e)=>{
@@ -16,6 +19,9 @@ const AddJob = () => {
     try {
 
       const description = quillRef.current.root.innerHTML
+      const {data} = await axios.post(backEndUrl + '/api/jobs/add', {title, description, location, category, level},
+        {headers: {token: companyToken}}
+      )
       
     } catch (error) {
       
