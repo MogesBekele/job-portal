@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
 import axios from 'axios'
+import { data } from 'react-router-dom'
 
 const RecruiterLogin = () => {
   const [state, setState] =useState('Login')
@@ -23,15 +24,11 @@ const RecruiterLogin = () => {
         const {data} = await axios.post(backEndUrl + '/api/company/login', {email, password})
         console.log(data)
       }
-      if (state === 'sign up') {
-        const formData = new FormData()
-        formData.append('name', name)
-        formData.append('email', email)
-        formData.append('password', password)
-        formData.append('image', image)
-        const {data} = await axios.post(`${backEndUrl}/company/signup`, formData)
+      if (data.success) {
         console.log(data)
+        
       }
+   
       
     } catch (error) {
       console.log(error)
