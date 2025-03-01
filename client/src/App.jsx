@@ -25,6 +25,16 @@ const App = () => {
         <Route path='/applications' element={<Applications />} />
         <Route path='/apply-job/:id' element={<ApplyJob />} />
         <Route path='/dashboard'  element={<Dashboard/>}>
+
+        {
+          companyToken ? <Route path='add-job' element ={<AddJob/>}/> : <Route path='add-job' element ={<RecruiterLogin/>}/>
+        }
+        {
+          companyToken ? <Route path='manage-jobs' element ={<ManageJobs/>}/> : <Route path='manage-jobs' element ={<RecruiterLogin/>}/>
+        }
+        {
+          companyToken ? <Route path='view-applications' element ={<ViewApplications/>}/> : <Route path='view-applications' element ={<RecruiterLogin/>}/>
+        }
         <Route path='add-job' element ={<AddJob/>}/>
         <Route path='manage-jobs' element ={<ManageJobs/>}/>
         <Route path='view-applications' element ={<ViewApplications/>}/>
