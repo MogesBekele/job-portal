@@ -12,8 +12,15 @@ const AddJob = () => {
 
 
   const onSubmitHandler = async (e)=>{
-    
     e.preventDefualt()
+    try {
+
+      const description = quillRef.current.root.innerHTML
+      
+    } catch (error) {
+      
+    }
+
 
   }
 
