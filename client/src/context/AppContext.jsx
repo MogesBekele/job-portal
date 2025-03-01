@@ -2,6 +2,7 @@ import { createContext, useEffect } from "react";
 import { useState } from "react";
 import JobCard from "../components/JobCard";
 import { jobsData } from "../assets/assets";
+import { toast } from "react-toastify";
 
 export const AppContext = createContext();
 
@@ -37,8 +38,7 @@ export const AppContextProvider = (props) => {
       if (data.success) {
         setCompanyData(data.company);
       } else {
-        setCompanyToken(null);
-        localStorage.removeItem("companyToken");
+     toast.error(data.message);
       }
     } catch (error) {}
   };
