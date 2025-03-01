@@ -18,7 +18,9 @@ const Dashboard = () => {
             src={assets.logo}
             alt=""
           />
-          <div className="flex items-center gap-3">
+          {
+            companyData? <>
+                  <div className="flex items-center gap-3">
             <p className="max-sm:hidden">Welcome, Job board</p>
             <div className="relative group">
               <img
@@ -33,6 +35,10 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
+            
+            </>: null
+          }
+    
         </div>
       </div>
 
