@@ -20,7 +20,7 @@ const RecruiterLogin = () => {
 
     try {
       if (state === 'Login') {
-        const {data} = await axios.post(`${backEndUrl}/company/login`, {email, password})
+        const {data} = await axios.post(backEndUrl + '/api/company/login', {email, password})
         console.log(data)
       }
       if (state === 'sign up') {
