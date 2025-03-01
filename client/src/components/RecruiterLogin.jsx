@@ -38,6 +38,9 @@ const RecruiterLogin = () => {
         setShowRecruiterLogin(false);
         navigate("/dashboard");
       }
+      else{
+        toast.error(data.message);
+      }
 
 
     } catch (error) {

@@ -19,6 +19,7 @@ const App = () => {
   return (
     <div >
       { showRecruiterLogin && <RecruiterLogin/>}
+      <ToastContainer/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/applications' element={<Applications />} />
