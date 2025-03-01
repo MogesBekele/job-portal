@@ -4,29 +4,31 @@ import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const ManageJobs = () => {
-  const navigate =useNavigate()
+  const navigate = useNavigate();
 
-const [jobs, setJobs] = useState(false)
-const {backEndUrl, companyToken} = useContext(AppContext)
+  const [jobs, setJobs] = useState(false);
+  const { backEndUrl, companyToken } = useContext(AppContext);
 
+  //fetch company jobs
 
-//fetch company jobs
+  const fetchCompanyJobs = async () => {
+    try {
+      const { data } = await axios.get(backEndUrl + "/api/company/post-jobs", {
+        headers: { token: companyToken },
+      });
 
-const fetchCompanyJobs = async ()=>{
-
-  try {
-    const {data} = await axios.get(backEndUrl+ '/api/company/post-jobs', {headers:{token: companyToken}})
-
-    
-  } catch (error) {
-    
-  }
-
-  
-
-}
+      if (data.success) {
+        setJobs(data.jobsData.reverse());
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
 
   return (
     <div className="container p-4 max-w-5xl">
@@ -36,8 +38,12 @@ const fetchCompanyJobs = async ()=>{
             <tr>
               <th className="px-4 py-2 border-b text-left max-sm:hidden">#</th>
               <th className="px-4 py-2 border-b text-left">Job Title</th>
-              <th className="px-4 py-2 border-b text-left max-sm:hidden">Date</th>
-              <th className="px-4 py-2 border-b text-left max-sm:hidden">Location</th>
+              <th className="px-4 py-2 border-b text-left max-sm:hidden">
+                Date
+              </th>
+              <th className="px-4 py-2 border-b text-left max-sm:hidden">
+                Location
+              </th>
               <th className="px-4 py-2 border-b text-center">Applicants</th>
               <th className="px-4 py-2 border-b text-left">Visible</th>
             </tr>
@@ -45,11 +51,19 @@ const fetchCompanyJobs = async ()=>{
           <tbody>
             {manageJobsData.map((job, index) => (
               <tr key={index} className="text-gray-700">
-                <td className="py-2 px-4 border-b max-sm:hidden">{index + 1}</td>
+                <td className="py-2 px-4 border-b max-sm:hidden">
+                  {index + 1}
+                </td>
                 <td className="py-2 px-4 border-b">{job.title}</td>
-                <td className="py-2 px-4 border-b max-sm:hidden">{moment(job.date).format("ll")}</td>
-                <td className="py-2 px-4 border-b max-sm:hidden">{job.location}</td>
-                <td className="py-2 px-4 border-b text-center">{job.applicants}</td>
+                <td className="py-2 px-4 border-b max-sm:hidden">
+                  {moment(job.date).format("ll")}
+                </td>
+                <td className="py-2 px-4 border-b max-sm:hidden">
+                  {job.location}
+                </td>
+                <td className="py-2 px-4 border-b text-center">
+                  {job.applicants}
+                </td>
                 <td className="py-2 px-4 border-b">
                   <input className="scale-125 ml-4" type="checkbox" />
                 </td>
@@ -59,7 +73,12 @@ const fetchCompanyJobs = async ()=>{
         </table>
       </div>
       <div className="mt-4 flex justify-end">
-        <button onClick={()=>navigate('/dashboard/add-job')} className="bg-black text-white py-2 px-4 rounded cursor-pointer">Add new Job</button>
+        <button
+          onClick={() => navigate("/dashboard/add-job")}
+          className="bg-black text-white py-2 px-4 rounded cursor-pointer"
+        >
+          Add new Job
+        </button>
       </div>
     </div>
   );
