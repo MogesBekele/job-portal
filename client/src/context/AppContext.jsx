@@ -33,7 +33,13 @@ export const AppContextProvider = (props) => {
           token: companyToken,
         },
       });
-      setCompanyData(data.company);
+
+      if (data.success) {
+        setCompanyData(data.company);
+      } else {
+        setCompanyToken(null);
+        localStorage.removeItem("companyToken");
+      }
     } catch (error) {}
   };
 
