@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { manageJobsData } from "../assets/assets";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 const ManageJobs = () => {
   const navigate =useNavigate()
 
 const [jobs, setJobs] = useState(false)
+const {backEndUrl, companyToken} = useContext(AppContext)
 
 
 //fetch company jobs
 
 const fetchCompanyJobs = async ()=>{
-  
+
 }
 
   return (
