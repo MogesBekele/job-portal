@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
+import { AppContext } from "../context/AppContext";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const {companyData} = useContext(AppContext)
   return (
     <div className="min-h-screen">
       {/* navbar for recruiter panel */}
