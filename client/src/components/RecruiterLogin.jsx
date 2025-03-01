@@ -48,6 +48,16 @@ const RecruiterLogin = () => {
         formData.append("password", password);
         formData.append("image", image);
         const { data } = await axios.post(backEndUrl + "/api/company/register", formData);
+        if (data.success) {
+          console.log(data);
+          setCompanyData(data.company);
+          setCompanyToken(data.token);
+          localStorage.setItem("companyToken", data.token);
+          setShowRecruiterLogin(false);
+          navigate("/dashboard");
+        } else {
+          toast.error(data.message);
+        }
         
         
       }
