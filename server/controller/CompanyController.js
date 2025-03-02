@@ -133,7 +133,7 @@ export const getCompanyJobApplicants = async (req, res) => {};
 
 export const getCompanyPostedJobs = async (req, res) => {
   try {
-    const company = req.company._id;
+    const companyId = req.company._id;
     const jobs = await Job.find({ companyId });
 
     return res.json({
