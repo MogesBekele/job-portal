@@ -22,22 +22,16 @@ export const AppContextProvider = (props) => {
   const [companyData, setCompanyData] = useState(null);
 
   const fetchJobs = async () => {
-   try {
+    try {
+      const { data } = await axios.get(backEndUrl + "/api/jobs");
 
-     const { data } = await axios.get(backEndUrl + "/api/jobs");
-
-     if (data.success) {
-       setJobs(data.jobsData);
-       setIsSearched(false);
-       setSearchFilter({ title: "", location: "" });
-     } else {
-       toast.error(data.message);
-     }
-
-    
-   } catch (error) {
-    
-   }
+      if (data.success) {
+        setJobs(data.jobs);
+        console.log(data.jobs);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   //fetch company data
@@ -53,9 +47,8 @@ export const AppContextProvider = (props) => {
       if (data.success) {
         setCompanyData(data.company);
         console.log(data);
-        
       } else {
-     toast.error(data.message);
+        toast.error(data.message);
       }
     } catch (error) {
       toast.error(error.message);
