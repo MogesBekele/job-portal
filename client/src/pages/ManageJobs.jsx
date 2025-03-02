@@ -75,7 +75,7 @@ const ManageJobs = () => {
                   {job.applicants}
                 </td>
                 <td className="py-2 px-4 border-b">
-                  <input className="scale-125 ml-4" type="checkbox" />
+                  <input className="scale-125 ml-4" type="checkbox" checked={job.visible} />
                 </td>
               </tr>
             ))}
