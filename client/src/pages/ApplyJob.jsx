@@ -14,18 +14,14 @@ const ApplyJob = () => {
   const { jobs } = useContext(AppContext);
 
   const fetchJob = async () => {
-    const data = jobs.filter((job) => job._id === id);
-    if (data.length !== 0) {
-      setJobData(data[0]);
-      console.log(data[0]);
-    }
+  
   };
 
   useEffect(() => {
-    if (jobs.length > 0) {
+   
       fetchJob();
-    }
-  }, [id, jobs]);
+    
+  }, [id]);
   return jobData ? (
     <>
       <Navbar />
