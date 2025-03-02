@@ -136,7 +136,9 @@ export const getCompanyPostedJobs = async (req, res) => {
     const companyId = req.company._id;
     const jobs = await Job.find({ companyId });
 
-    const jobsData = await Promise.all(jobs.map(job =>))
+    const jobsData = await Promise.all(jobs.map(async ()=>{
+      
+    }))
 
     return res.json({
       success: true,
