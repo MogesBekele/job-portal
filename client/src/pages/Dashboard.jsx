@@ -5,7 +5,7 @@ import { AppContext } from "../context/AppContext";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const { companyData } = useContext(AppContext);
+  const { companyData, setCompanyData, setCompanyToken } = useContext(AppContext);
   return (
     <div className="min-h-screen">
       {/* navbar for recruiter panel */}
