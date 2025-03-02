@@ -29,6 +29,9 @@ export const AppContextProvider = (props) => {
         setJobs(data.jobs);
         console.log(data.jobs);
       }
+      else {
+        toast.error(data.message);
+      }
     } catch (error) {
       toast.error(error.message);
     }
