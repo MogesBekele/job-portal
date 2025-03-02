@@ -26,6 +26,14 @@ export const AppContextProvider = (props) => {
 
      const { data } = await axios.get(backEndUrl + "/api/jobs");
 
+     if (data.success) {
+       setJobs(data.jobsData);
+       setIsSearched(false);
+       setSearchFilter({ title: "", location: "" });
+     } else {
+       toast.error(data.message);
+     }
+
     
    } catch (error) {
     
