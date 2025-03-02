@@ -9,6 +9,7 @@ import moment from "moment";
 import JobCard from "../components/JobCard";
 import Footer from "../components/Footer"
 import { Axios } from "axios";
+import { toast } from "react-toastify";
 const ApplyJob = () => {
   const { id } = useParams();
   const [jobData, setJobData] = useState(null);
@@ -17,6 +18,15 @@ const ApplyJob = () => {
   const fetchJob = async () => {
 
     const {data} = Axios.get(backEndUrl+ `/api/jobs/${id}`)
+
+    if (data.success) {
+      setJobData(data.jobs);
+      
+      
+    }else{
+      toast.error(data.message)
+    }
+
 
  
   
