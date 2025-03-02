@@ -71,9 +71,7 @@ export const AppContextProvider = (props) => {
       if (data.success) {
         setUserData(data.userData);
         console.log(data.userData);
-      } else {
-        toast.error(data.message);
-      }
+      } 
       } catch (error) {
         toast.error(error.message);
       }
