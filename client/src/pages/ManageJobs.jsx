@@ -32,6 +32,12 @@ const ManageJobs = () => {
     }
   };
 
+  //to change visibility 
+
+  const changeVisibility = async (jobId, visibility) => {
+   
+    }
+
   useEffect(()=>{
     if (companyToken) {
       fetchCompanyJobs()
