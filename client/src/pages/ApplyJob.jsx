@@ -16,7 +16,7 @@ const ApplyJob = () => {
 
   const fetchJob = async () => {
 
-    const {data} = Axios.length()
+    const {data} = Axios.get(backEndUrl+ `/api/jobs/${id}`)
 
  
   
