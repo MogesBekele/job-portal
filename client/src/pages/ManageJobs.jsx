@@ -53,6 +53,7 @@ const ManageJobs = () => {
 
       
     } catch (error) {
+      toast.error(error.message);
       
     }
    
