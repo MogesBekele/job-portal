@@ -42,6 +42,15 @@ const ManageJobs = () => {
         { id },
         { headers: { token: companyToken } }
       );
+
+      if (data.success) {
+        toast.success(data.message);
+        fetchCompanyJobs();
+        
+      }else{
+        toast.error(data.message);
+      }
+
       
     } catch (error) {
       
