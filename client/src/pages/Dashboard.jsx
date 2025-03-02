@@ -6,6 +6,16 @@ import { AppContext } from "../context/AppContext";
 const Dashboard = () => {
   const navigate = useNavigate();
   const { companyData, setCompanyData, setCompanyToken } = useContext(AppContext);
+
+  // function to logout for company
+
+  const logout = () => {
+    setCompanyData(null);
+    localStorage
+    setCompanyToken(null);
+    navigate("/");
+  };
+
   return (
     <div className="min-h-screen">
       {/* navbar for recruiter panel */}
