@@ -5,7 +5,6 @@ import { jobsData } from "../assets/assets";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-
 export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
@@ -30,8 +29,7 @@ export const AppContextProvider = (props) => {
       if (data.success) {
         setJobs(data.jobs);
         console.log(data.jobs);
-      }
-      else {
+      } else {
         toast.error(data.message);
       }
     } catch (error) {
