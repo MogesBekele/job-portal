@@ -63,15 +63,7 @@ export const AppContextProvider = (props) => {
   //fetch user data
   const fetchUserData = async () => {
     try {
-      const { data } = await axios.get(backEndUrl + "/api/user/user", {
-        headers: {
-          token: companyToken,
-        },
-      });
-      if (data.success) {
-        setUserData(data.userData);
-        
-      } 
+   
       } catch (error) {
         toast.error(error.message);
       }
