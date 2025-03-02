@@ -34,7 +34,12 @@ const ManageJobs = () => {
 
   //to change visibility 
 
-  const changeVisibility = async (jobId, visibility) => {
+  const changeJobVisibility = async (id) => {
+    try {
+      
+    } catch (error) {
+      
+    }
    
     }
 
@@ -81,7 +86,7 @@ const ManageJobs = () => {
                   {job.applicants}
                 </td>
                 <td className="py-2 px-4 border-b">
-                  <input className="scale-125 ml-4" type="checkbox" checked={job.visible} />
+                  <input onChange={()=>changeJobVisibility(job_id)} className="scale-125 ml-4" type="checkbox" checked={job.visible} />
                 </td>
               </tr>
             ))}
