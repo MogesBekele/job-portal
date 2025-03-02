@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   const logout = () => {
     setCompanyData(null);
-    localStorage
+    localStorage.removeItem('companyToken')
     setCompanyToken(null);
     navigate("/");
   };
