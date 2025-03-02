@@ -14,6 +14,14 @@ const ApplyJob = () => {
   const { jobs } = useContext(AppContext);
 
   const fetchJob = async () => {
+
+    const data = jobs.filter((job) => job._id === id);
+    if (data.length > 0) {
+      setJobData(data[0]);
+    } else {
+      toast.error("Job not found.");
+      navigate("/home");
+    }
   
   };
 
