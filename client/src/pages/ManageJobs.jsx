@@ -36,6 +36,12 @@ const ManageJobs = () => {
 
   const changeJobVisibility = async (id) => {
     try {
+
+      const { data } = await axios.post(
+        backEndUrl + "/api/company/change-visibility",
+        { id },
+        { headers: { token: companyToken } }
+      );
       
     } catch (error) {
       
