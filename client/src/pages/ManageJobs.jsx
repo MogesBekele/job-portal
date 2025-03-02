@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 const ManageJobs = () => {
   const navigate = useNavigate();
 
-  const [jobs, setJobs] = useState(false);
+  const [jobs, setJobs] = useState([]);
   const { backEndUrl, companyToken } = useContext(AppContext);
 
   //fetch company jobs
