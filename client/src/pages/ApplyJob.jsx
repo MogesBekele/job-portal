@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import Loading from "../components/Loading";
 import Navbar from "../components/Navbar";
-import { assets } from "../assets/assets";
+import { assets, jobsData } from "../assets/assets";
 import kconvert from "k-convert";
 import moment from "moment";
 import JobCard from "../components/JobCard";
@@ -79,6 +79,15 @@ const ApplyJob = () => {
   useEffect(() => {
     fetchJob();
   }, [id]);
+
+  useEffect(()=>{
+    if (userApplications.length>0 && jobsData ) {
+      checkAlreadyApplied()
+    }
+  },[userApplications, jobsData, id ])
+
+
+
   return jobData ? (
     <>
       <Navbar />
