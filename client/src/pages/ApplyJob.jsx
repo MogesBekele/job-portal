@@ -10,8 +10,10 @@ import JobCard from "../components/JobCard";
 import Footer from "../components/Footer";
 import { Axios } from "axios";
 import { toast } from "react-toastify";
+import { useAuth } from "@clerk/clerk-react";
 const ApplyJob = () => {
   const { id } = useParams();
+  const {getToken} = useAuth()
   const navigate = useNavigate()
   const [jobData, setJobData] = useState(null);
   const { jobs, backEndUrl, userData, userApplications } = useContext(AppContext);
@@ -48,6 +50,8 @@ const ApplyJob = () => {
         return toast.error('upload your resume');
         
       }
+
+
 
       
     } catch (error) {
