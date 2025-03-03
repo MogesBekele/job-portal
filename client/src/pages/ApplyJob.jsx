@@ -13,7 +13,7 @@ import { toast } from "react-toastify";
 const ApplyJob = () => {
   const { id } = useParams();
   const [jobData, setJobData] = useState(null);
-  const { jobs, backEndUrl } = useContext(AppContext);
+  const { jobs, backEndUrl, userData, userApplications } = useContext(AppContext);
 
   const fetchJob = async () => {
 
@@ -33,6 +33,15 @@ const ApplyJob = () => {
     }
  
   };
+
+  const applyHandler =async ()=>{
+    try {
+
+      
+    } catch (error) {
+      
+    }
+  }
 
   useEffect(() => {
     fetchJob();
