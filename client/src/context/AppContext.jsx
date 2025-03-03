@@ -99,6 +99,14 @@ export const AppContextProvider = (props) => {
       fetchCompanyData();
     }
   }, [companyToken]);
+
+  useEffect(()=>{
+    if (user) {
+      fetchUserData()
+      
+    }
+  },[user])
+
   const value = {
     backEndUrl,
     searchFilter,
