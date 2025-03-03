@@ -82,6 +82,8 @@ export const AppContextProvider = (props) => {
       toast.error(error.message);
     }
   };
+// function to fetch users applied application data
+  const 
 
 
 
