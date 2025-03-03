@@ -92,7 +92,7 @@ const ApplyJob = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center text-end text-sm max-md:mx-auto max-md:text-center ">
-              <button className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer">
+              <button onClick={applyHandler} className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer">
                 Apply Now
               </button>
               <p className="mt-1 text-gray-600">
