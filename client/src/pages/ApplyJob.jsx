@@ -49,7 +49,7 @@ const ApplyJob = () => {
       const { data } = await Axios.post(
         backEndUrl + "/api/users/apply",
         {
-          jobId: jobData._id,
+          jobId: JobData._id,
         },
         {
           headers: {
@@ -60,6 +60,7 @@ const ApplyJob = () => {
 
       if (data.success) {
         toast.success(data.message);
+        fetchUsersApplications()
       } else {
         toast.error(data.message);
       }
