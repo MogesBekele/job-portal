@@ -147,7 +147,7 @@ const ApplyJob = () => {
                 onClick={applyHandler}
                 className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer mt-10"
               >
-                Apply Now
+               {isAlreadyApplied? ' already applied': 'Apply Now' }
               </button>
             </div>
             {/* right section */}
