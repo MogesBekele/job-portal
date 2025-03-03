@@ -42,6 +42,7 @@ const ApplyJob = () => {
         
       }
       if (!userData.resume) {
+        return toast.error('upload your resume');
         
       }
 
