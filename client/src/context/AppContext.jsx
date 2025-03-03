@@ -66,6 +66,22 @@ export const AppContextProvider = (props) => {
   const fetchUserData = async () => {
     try {
    
+      const token =await getToken();
+      const { data } = await axios.get(backEndUrl + "/api/user", {
+        headers: {
+          token,
+        },
+      });
+
+      if (data.success) {
+        setUserData(data.userData);
+        console.log(data.userData);
+        setUserApplications(data.userData.applications);
+        console.log(data.userData.applications);}
+
+
+
+
       } catch (error) {
         toast.error(error.message);
       }
