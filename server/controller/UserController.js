@@ -109,7 +109,7 @@ export const updateUserResume = async (req, res) => {
 
   try {
     const userId = req.auth.userId;
-   const resumeFile =req.resumeFile
+   const resumeFile =req.File
 
     const userData = await User.findById(userId);
 
