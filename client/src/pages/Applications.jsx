@@ -37,6 +37,9 @@ const updateResume= async ()=>{
     
   }
 
+  setIsEdit(false)
+  setResume(null)
+
 
 }
 
