@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import Loading from "../components/Loading";
 import Navbar from "../components/Navbar";
-import { assets, jobsData } from "../assets/assets";
+import { assets} from "../assets/assets";
 import kconvert from "k-convert";
 import moment from "moment";
 import JobCard from "../components/JobCard";
@@ -15,7 +15,7 @@ const ApplyJob = () => {
   const { id } = useParams();
   const { getToken } = useAuth();
   const navigate = useNavigate();
-  const [jobData, setJobData] = useState(null);
+  const [JobData, setJobData] = useState(null);
   const [isAlreadyApplied, setIsAlreadyApplied] = useState(false)
   const { jobs, backEndUrl, userData, userApplications, fetchUsersApplications } =
     useContext(AppContext);
@@ -69,7 +69,7 @@ const ApplyJob = () => {
   };
 
   const checkAlreadyApplied = ()=>{
-    const hasApplied = userApplications.some(item=>item.jobId._id===jobData._id)
+    const hasApplied = userApplications.some(item=>item.jobId._id===JobData._id)
 
     setIsAlreadyApplied(hasApplied)
 
@@ -81,14 +81,14 @@ const ApplyJob = () => {
   }, [id]);
 
   useEffect(()=>{
-    if (userApplications.length>0 && jobsData ) {
+    if (userApplications.length>0 && JobData ) {
       checkAlreadyApplied()
     }
-  },[userApplications, jobsData, id ])
+  },[userApplications, JobData, id ])
 
 
 
-  return jobData ? (
+  return JobData ? (
     <>
       <Navbar />
       <div className="container min-h-screen flex flex-col py-10 px-4 2xl:px-20 mx-auto">
@@ -97,7 +97,7 @@ const ApplyJob = () => {
             <div className="flex flex-col md:flex-row items-center">
               <img
                 className="h-24 bg-white rounded-lg p-4 mr-4 max-md:mb-4 border"
-                src={jobData.companyId.image}
+                src={JobData.companyId.image}
                 alt=""
               />
               <div className="text-center md:text-left text-neutral-700">
@@ -107,19 +107,19 @@ const ApplyJob = () => {
                 <div className="flex flex-row flex-wrap max-md:justify-center gap-y-2 gap-6 items-center text-gray-700 mt-2">
                   <span className="flex items-center gap-1">
                     <img src={assets.suitcase_icon} alt="" />
-                    {jobData.companyId.name}
+                    {JobData.companyId.name}
                   </span>
                   <span className="flex items-center gap-1">
                     <img src={assets.location_icon} alt="" />
-                    {jobData.location}
+                    {JobData.location}
                   </span>
                   <span className="flex items-center gap-1">
                     <img src={assets.person_icon} alt="" />
-                    {jobData.level}
+                    {JobData.level}
                   </span>
                   <span className="flex items-center gap-1">
                     <img src={assets.money_icon} alt="" />
-                    CTC: {kconvert.convertTo(jobData.salary)}
+                    CTC: {kconvert.convertTo(JobData.salary)}
                   </span>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const ApplyJob = () => {
                {isAlreadyApplied? ' already applied': 'Apply Now' }
               </button>
               <p className="mt-1 text-gray-600">
-                posted {moment(jobData.date).fromNow()}
+                posted {moment(JobData.date).fromNow()}
               </p>
             </div>
           </div>
@@ -152,12 +152,12 @@ const ApplyJob = () => {
             </div>
             {/* right section */}
             <div className="w-full lg:w-1/3 mt-8 lg:ml-8 space-y-5 ">
-              <h2>More jobs from {jobData.companyId.name}</h2>
+              <h2>More jobs from {JobData.companyId.name}</h2>
               {jobs
                 .filter(
                   (job) =>
-                    job._id !== jobData._id &&
-                    job.companyId._id === jobData.companyId._id
+                    job._id !== JobData._id &&
+                    job.companyId._id === JobData.companyId._id
                 )
                 .filter((job) => true)
                 .slice(0, 4)
