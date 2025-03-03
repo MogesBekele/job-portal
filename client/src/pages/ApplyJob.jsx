@@ -56,8 +56,7 @@ const ApplyJob = () => {
 
       const { data } = await Axios.post(backEndUrl + "/api/users/apply", {
         jobId: jobData._id,
-        userId: userData._id,
-        resume: userData.resume
+       
       }, {
         headers: {
           Authorization: `Bearer ${token}`
@@ -65,7 +64,7 @@ const ApplyJob = () => {
       });
       
       if (data.success) {
-        toast.success('Application submitted successfully');
+        toast.success(data.message);
         navigate('/dashboard')
       } else {
         toast.error(data.message);
