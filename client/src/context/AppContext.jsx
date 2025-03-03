@@ -4,13 +4,13 @@ import JobCard from "../components/JobCard";
 
 import { toast } from "react-toastify";
 import axios from "axios";
-import {useAuth, useUser} from  '@clerk/clerk-react'
+import { useAuth, useUser } from "@clerk/clerk-react";
 export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
   const backEndUrl = import.meta.env.VITE_BACKEND_URL;
-  const {user} = useUser()
-  const {getToken} = useAuth()
+  const { user } = useUser();
+  const { getToken } = useAuth();
 
   const [searchFilter, setSearchFilter] = useState({
     title: "",
@@ -65,11 +65,10 @@ export const AppContextProvider = (props) => {
   //fetch user data
   const fetchUserData = async () => {
     try {
-   
-      const token =await getToken();
+      const token = await getToken();
       const { data } = await axios.get(backEndUrl + "/api/user", {
         headers: {
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${token}`,
         },
       });
 
@@ -77,15 +76,12 @@ export const AppContextProvider = (props) => {
         setUserData(data.userData);
         console.log(data.userData);
         setUserApplications(data.userData.applications);
-        console.log(data.userData.applications);}
-
-
-
-
-      } catch (error) {
-        toast.error(error.message);
+        console.log(data.userData.applications);
       }
+    } catch (error) {
+      toast.error(error.message);
     }
+  };
   useEffect(() => {
     fetchJobs();
 
