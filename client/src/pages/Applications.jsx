@@ -15,7 +15,19 @@ const Applications = () => {
 
 
 const updateResume= async ()=>{
-  
+  try {
+    const formData = new FormData()
+    formData.append('resume', resume)
+ const token = await getToken()
+    const { data } = await axios.post(backEndUrl+ '/api/users/update-resume', formData,
+      {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+    
+  } catch (error) {
+    
+  }
+
 
 }
 
