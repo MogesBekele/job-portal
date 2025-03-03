@@ -74,39 +74,32 @@ export const AppContextProvider = (props) => {
 
       if (data.success) {
         setUserData(data.user);
-        
-      }else{
+      } else {
         toast.error(data.message);
       }
     } catch (error) {
       toast.error(error.message);
     }
   };
-// function to fetch users applied application data
-  const fetchUserApplications = async ()=>{
+  // function to fetch users applied application data
+  const fetchUserApplications = async () => {
     try {
-
       const token = await getToken();
       const { data } = await axios.get(backEndUrl + "/api/user/applications", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-      
+
       if (data.success) {
         setUserApplications(data.applications);
-       
       } else {
         toast.error(data.message);
       }
-      
     } catch (error) {
       toast.error(error.message);
-      
     }
-  }
-
-
+  };
 
   useEffect(() => {
     fetchJobs();
@@ -123,13 +116,12 @@ export const AppContextProvider = (props) => {
     }
   }, [companyToken]);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (user) {
-      fetchUserData()
-      fetchUserApplications()
-      
+      fetchUserData();
+      fetchUserApplications();
     }
-  },[user])
+  }, [user]);
 
   const value = {
     backEndUrl,
@@ -145,9 +137,12 @@ export const AppContextProvider = (props) => {
     setCompanyToken,
     companyData,
     setCompanyData,
-    userData, setUserData,
-    userApplications, setUserApplications,
-    fetchUserData
+    userData,
+    setUserData,
+    userApplications,
+    setUserApplications,
+    fetchUserData,
+    fetchUserApplications,
   };
   return (
     <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
