@@ -23,8 +23,17 @@ const updateResume= async ()=>{
       {
         headers: { Authorization: `Bearer ${token}` }
       })
+
+      if (data.success) {
+        toast.success(data.message)
+        await fetchUserData()
+        
+      }else{
+        toast.error(data.message)
+      }
     
   } catch (error) {
+    toast.error(error.message)
     
   }
 
