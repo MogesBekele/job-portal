@@ -83,7 +83,7 @@ const updateResume= async ()=>{
           <tbody>
             {
               userApplications.map((job, index)=>true ?(
-                <tr>
+                <tr key={index}>
                   <td className='py-3 px-4 flex items-center gap-2 border-b'>
                     <img className='w-8 h-8' src={job.companyId.image} alt="" />
                     {job.companyId.name}
