@@ -4,11 +4,12 @@ import JobCard from "../components/JobCard";
 import { jobsData } from "../assets/assets";
 import { toast } from "react-toastify";
 import axios from "axios";
-
+import {useUser} from  '@clerk/clerk-react'
 export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
   const backEndUrl = import.meta.env.VITE_BACKEND_URL;
+  const {user} = useUser()
 
   const [searchFilter, setSearchFilter] = useState({
     title: "",
