@@ -121,6 +121,8 @@ export const AppContextProvider = (props) => {
     setCompanyToken,
     companyData,
     setCompanyData,
+    userData, setUserData,
+    userApplications, setUserApplications
   };
   return (
     <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
