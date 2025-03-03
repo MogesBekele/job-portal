@@ -74,6 +74,7 @@ const ApplyJob = () => {
 
       
     } catch (error) {
+      toast.error(error.message);
       
     }
   }
