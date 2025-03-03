@@ -67,6 +67,10 @@ const ApplyJob = () => {
     }
   };
 
+  const checkAlreadyApplied = ()=>{
+    const hasApplied = userApplications.some
+  }
+
   useEffect(() => {
     fetchJob();
   }, [id]);
