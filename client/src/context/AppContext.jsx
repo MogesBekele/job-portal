@@ -95,12 +95,13 @@ export const AppContextProvider = (props) => {
       
       if (data.success) {
         setUserApplications(data.applications);
-        console.log(data.applications);
+       
       } else {
         toast.error(data.message);
       }
       
     } catch (error) {
+      toast.error(error.message);
       
     }
   }
