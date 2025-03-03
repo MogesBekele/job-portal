@@ -88,7 +88,7 @@ const updateResume= async ()=>{
                     <img className='w-8 h-8' src={job.companyId.image} alt="" />
                     {job.companyId.name}
                   </td>
-                  <td className='py-2 px-4 border-b'>{job.JobId.title} </td>
+                  <td className='py-2 px-4 border-b'>{job.jobId.title} </td>
                   <td className='py-2 px-4 border-b max-sm:hidden'>{job.jobId.location}</td>
                   <td className='py-2 px-4 border-b max-sm:hidden '>{moment(job.date).format('ll')}</td>
                   <td className='py-2 px-4 border-b '>
