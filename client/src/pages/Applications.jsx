@@ -4,11 +4,21 @@ import { assets, jobsApplied } from '../assets/assets'
 import moment from 'moment'
 import Footer from "../components/Footer"
 import { AppContext } from '../context/AppContext'
+import { useAuth, useUser } from '@clerk/clerk-react'
 
 const Applications = () => {
+  const {user} = useUser()
+  const {getToken} = useAuth()
   const [isEdit, setIsEdit] =useState(false)
   const [resume, setResume] =useState(null)
   const {backEndUrl, userData, userApplications, fetchUserData} = useContext(AppContext)
+
+
+const updateResume= async ()=>{
+  
+
+}
+
   return (
     <>
       <Navbar/>
