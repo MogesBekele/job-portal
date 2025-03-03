@@ -126,6 +126,7 @@ export const AppContextProvider = (props) => {
   useEffect(()=>{
     if (user) {
       fetchUserData()
+      fetchUserApplications()
       
     }
   },[user])
