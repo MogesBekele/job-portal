@@ -1,7 +1,7 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
 import JobCard from "../components/JobCard";
-import { jobsData } from "../assets/assets";
+
 import { toast } from "react-toastify";
 import axios from "axios";
 import {useAuth, useUser} from  '@clerk/clerk-react'
