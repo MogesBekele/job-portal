@@ -107,7 +107,7 @@ const ApplyJob = () => {
                 className="rich-text"
                 dangerouslySetInnerHTML={{ __html: jobData.description }}
               ></div>
-              <button className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer mt-10">
+              <button onClick={applyHandler} className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer mt-10">
                 Apply Now
               </button>
             </div>
