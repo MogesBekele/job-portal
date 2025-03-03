@@ -129,7 +129,7 @@ const ApplyJob = () => {
                 onClick={applyHandler}
                 className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer"
               >
-                Apply Now
+               {isAlreadyApplied? ' already applied': 'Apply Now' }
               </button>
               <p className="mt-1 text-gray-600">
                 posted {moment(jobData.date).fromNow()}
