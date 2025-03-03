@@ -83,7 +83,13 @@ export const AppContextProvider = (props) => {
     }
   };
 // function to fetch users applied application data
-  const 
+  const fetchUserApplications = async ()=>{
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
 
 
 
