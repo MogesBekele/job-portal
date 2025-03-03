@@ -65,7 +65,7 @@ const ApplyJob = () => {
       
       if (data.success) {
         toast.success(data.message);
-        navigate('/dashboard')
+       
       } else {
         toast.error(data.message);
       }
