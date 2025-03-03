@@ -16,6 +16,7 @@ const ApplyJob = () => {
   const { getToken } = useAuth();
   const navigate = useNavigate();
   const [jobData, setJobData] = useState(null);
+  const [isAlreadyApplied, setIsAlreadyApplied] = useState(false)
   const { jobs, backEndUrl, userData, userApplications, fetchUsersApplications } =
     useContext(AppContext);
 
@@ -70,7 +71,7 @@ const ApplyJob = () => {
   const checkAlreadyApplied = ()=>{
     const hasApplied = userApplications.some(item=>item.jobId._id===jobData._id)
 
-    
+
   }
 
   useEffect(() => {
