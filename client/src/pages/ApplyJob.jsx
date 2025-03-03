@@ -51,7 +51,25 @@ const ApplyJob = () => {
         
       }
 
-      const token = await getToken
+      const token = await getToken()
+
+
+      const { data } = await Axios.post(backEndUrl + "/api/users/apply", {
+        jobId: jobData._id,
+        userId: userData._id,
+        resume: userData.resume
+      }, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      
+      if (data.success) {
+        toast.success('Application submitted successfully');
+        navigate('/dashboard')
+      } else {
+        toast.error(data.message);
+      }
 
 
 
