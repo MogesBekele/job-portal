@@ -16,7 +16,7 @@ const ApplyJob = () => {
   const { getToken } = useAuth();
   const navigate = useNavigate();
   const [jobData, setJobData] = useState(null);
-  const { jobs, backEndUrl, userData, userApplications } =
+  const { jobs, backEndUrl, userData, userApplications, fetchUsersApplications } =
     useContext(AppContext);
 
   const fetchJob = async () => {
