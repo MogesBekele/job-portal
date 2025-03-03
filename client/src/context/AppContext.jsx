@@ -73,7 +73,7 @@ export const AppContextProvider = (props) => {
       });
 
       if (data.success) {
-        setUserData(data. user);
+        setUserData(data.user);
         
       }else{
         toast.error(data.message);
