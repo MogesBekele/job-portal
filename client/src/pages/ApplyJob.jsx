@@ -19,6 +19,7 @@ const ApplyJob = () => {
 
     try {
 
+  
       const { data } = Axios.get(backEndUrl + `/api/jobs/${id}`);
 
       if (data.success) {
@@ -36,6 +37,13 @@ const ApplyJob = () => {
 
   const applyHandler =async ()=>{
     try {
+      if (!userData) {
+        return toast.error('login to apply for jobs');
+        
+      }
+      if (!userData.resume) {
+        
+      }
 
       
     } catch (error) {
