@@ -13,16 +13,14 @@ import { toast } from "react-toastify";
 import { useAuth } from "@clerk/clerk-react";
 const ApplyJob = () => {
   const { id } = useParams();
-  const {getToken} = useAuth()
-  const navigate = useNavigate()
+  const { getToken } = useAuth();
+  const navigate = useNavigate();
   const [jobData, setJobData] = useState(null);
-  const { jobs, backEndUrl, userData, userApplications } = useContext(AppContext);
+  const { jobs, backEndUrl, userData, userApplications } =
+    useContext(AppContext);
 
   const fetchJob = async () => {
-
     try {
-
-  
       const { data } = Axios.get(backEndUrl + `/api/jobs/${id}`);
 
       if (data.success) {
@@ -30,54 +28,44 @@ const ApplyJob = () => {
       } else {
         toast.error(data.message);
       }
-      
     } catch (error) {
       toast.error(error.message);
-      
     }
- 
   };
 
-  const applyHandler =async ()=>{
+  const applyHandler = async () => {
     try {
       if (!userData) {
-        return toast.error('login to apply for jobs');
-        
+        return toast.error("login to apply for jobs");
       }
       if (!userData.resume) {
-        
-        navigate('/applications')
-        return toast.error('upload your resume');
-        
+        navigate("/applications");
+        return toast.error("upload your resume");
       }
 
-      const token = await getToken()
+      const token = await getToken();
 
-
-      const { data } = await Axios.post(backEndUrl + "/api/users/apply", {
-        jobId: jobData._id,
-       
-      }, {
-        headers: {
-          Authorization: `Bearer ${token}`
+      const { data } = await Axios.post(
+        backEndUrl + "/api/users/apply",
+        {
+          jobId: jobData._id,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
-      });
-      
+      );
+
       if (data.success) {
         toast.success(data.message);
-       
       } else {
         toast.error(data.message);
       }
-
-
-
-      
     } catch (error) {
       toast.error(error.message);
-      
     }
-  }
+  };
 
   useEffect(() => {
     fetchJob();
@@ -119,7 +107,10 @@ const ApplyJob = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center text-end text-sm max-md:mx-auto max-md:text-center ">
-              <button onClick={applyHandler} className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer">
+              <button
+                onClick={applyHandler}
+                className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer"
+              >
                 Apply Now
               </button>
               <p className="mt-1 text-gray-600">
@@ -134,7 +125,10 @@ const ApplyJob = () => {
                 className="rich-text"
                 dangerouslySetInnerHTML={{ __html: jobData.description }}
               ></div>
-              <button onClick={applyHandler} className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer mt-10">
+              <button
+                onClick={applyHandler}
+                className="bg-blue-600 p-2.5 px-10 text-white rounded cursor-pointer mt-10"
+              >
                 Apply Now
               </button>
             </div>
