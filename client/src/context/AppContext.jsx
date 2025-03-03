@@ -122,7 +122,8 @@ export const AppContextProvider = (props) => {
     companyData,
     setCompanyData,
     userData, setUserData,
-    userApplications, setUserApplications
+    userApplications, setUserApplications,
+    fetchUserData
   };
   return (
     <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
