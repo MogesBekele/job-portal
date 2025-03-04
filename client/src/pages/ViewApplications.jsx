@@ -53,7 +53,7 @@ const ViewApplications = () => {
             {applicants.filter(item=>item.jobId && item.userId).map((applicant, index) => (
               <tr key={index} className="text-gray-700">
                 <td className="py-2 px-4 border-b text-center">{index + 1}</td>
-                <td className="py-2 px-4 border-b text-center flex">
+                <td className="py-2 px-4 border-b text-center flex items-center">
                   <img
                     className="w-10 h-10 rounded-full mr-3 max-sm:hidden"
                     src={applicant.userId.image}
