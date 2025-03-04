@@ -31,8 +31,10 @@ const ViewApplications = () => {
   //fetch company job application data on component mount
 
   useEffect(() => {
-    fetchCompanyApplications();
-  }, []);
+   if (companyToken) {
+     fetchCompanyApplications();
+   }
+  }, [companyToken]);
 
   return (
     <div className="container mx-auto p-4">
