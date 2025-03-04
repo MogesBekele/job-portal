@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { assets, jobsApplied } from '../assets/assets'
 import moment from 'moment'
@@ -42,6 +42,15 @@ const updateResume= async ()=>{
 
 
 }
+
+useEffect(()=>{
+  if (user) {
+    
+    fetchUserApplications()
+    
+  }
+
+},[user])
 
   return (
     <>
