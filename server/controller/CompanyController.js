@@ -179,6 +179,8 @@ const {id, status} = req.body;
 
 //find job application and update status
 
+await JobApplication.findOneAndUpdate({_id: id}, {status: status})
+
 
 
 };
