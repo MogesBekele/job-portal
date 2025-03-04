@@ -50,7 +50,7 @@ const ViewApplications = () => {
             </tr>
           </thead>
           <tbody>
-            {viewApplicationsPageData.map((applicant, index) => (
+            {applicants.filter(item=>item.jobId && item.userId).map((applicant, index) => (
               <tr key={index} className="text-gray-700">
                 <td className="py-2 px-4 border-b text-center">{index + 1}</td>
                 <td className="py-2 px-4 border-b text-center flex">
