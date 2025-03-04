@@ -162,7 +162,7 @@ const ApplyJob = () => {
                 )
                 .filter((job) =>{
                   //set of applied jobid
-                  const appliedJobIds = new Set
+                  const appliedJobIds = new Set(userApplications.map(app=>app.jobId&& app.jobId._id))
                 })
                 .slice(0, 4)
                 .map((job, index) => (
