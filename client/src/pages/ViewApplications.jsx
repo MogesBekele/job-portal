@@ -111,7 +111,8 @@ const ViewApplications = () => {
                       Reject
                     </button>
                   </div>
-                </div>: <div></div>
+                </div>
+                : <div>{applicant.status}</div>
                   }
                   
                 </td>
