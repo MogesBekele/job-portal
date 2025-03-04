@@ -71,7 +71,7 @@ const ManageJobs = () => {
   return jobs ? jobs.length === 0 ? (
   
   <div className="fle items-center justify-center h-[70vh]">
-    <p>No Jobs Available</p>
+    <p className="text-xl sm:text-2xl">No Jobs Available</p>
   </div>): (
     <div className="container p-4 max-w-5xl">
       <div className="overflow-x-auto">
