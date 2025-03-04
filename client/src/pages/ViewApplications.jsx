@@ -7,6 +7,10 @@ const ViewApplications = () => {
 
   const {backEndUrl, companyToken} = useContext(AppContext)
   const [applicants, setApplicants] = useState(false)
+
+  //function to fetch company job application data
+
+  
   return (
     <div className='container mx-auto p-4'>
      <div>
