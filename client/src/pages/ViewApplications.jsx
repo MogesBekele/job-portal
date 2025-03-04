@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Loading from "../components/Loading";
 
 const ViewApplications = () => {
   const { backEndUrl, companyToken } = useContext(AppContext);
@@ -95,7 +96,7 @@ const ViewApplications = () => {
         </table>
       </div>
     </div>
-  );
+  ): <Loading/>
 };
 
 export default ViewApplications;
