@@ -165,6 +165,7 @@ const ApplyJob = () => {
                   const appliedJobIds = new Set(userApplications.map(app=>app.jobId&& app.jobId._id))
 
                   //return true if the user has not applied for this job
+                  return !appliedJobIds.has(job._id)
                 })
                 .slice(0, 4)
                 .map((job, index) => (
