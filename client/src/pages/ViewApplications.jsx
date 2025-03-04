@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 import { useState } from "react";
 
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const ViewApplications = () => {
   const { backEndUrl, companyToken } = useContext(AppContext);
@@ -17,8 +18,11 @@ const ViewApplications = () => {
       if (data.success) {
         setApplicants(data.applications.reverse());
       }
+      else{
+        toast.error(data.message)
+      }
     } catch (error) {
-      console.error(error);
+      toast.error(error.message);
     }
   };
 
