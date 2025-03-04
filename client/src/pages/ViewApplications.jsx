@@ -10,7 +10,12 @@ const ViewApplications = () => {
 
   //function to fetch company job application data
 
-  
+  const fetchCompanyApplications = async () => {
+
+    
+  }
+
+
   return (
     <div className='container mx-auto p-4'>
      <div>
