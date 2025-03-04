@@ -11,7 +11,7 @@ const Applications = () => {
   const {getToken} = useAuth()
   const [isEdit, setIsEdit] =useState(false)
   const [resume, setResume] =useState(null)
-  const {backEndUrl, userData, userApplications, fetchUserData} = useContext(AppContext)
+  const {backEndUrl, userData, userApplications, fetchUserData, fetchUserApplications} = useContext(AppContext)
 
 
 const updateResume= async ()=>{
