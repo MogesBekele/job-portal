@@ -13,12 +13,7 @@ const ViewApplications = () => {
 
   const fetchCompanyApplications = async () => {
     try {
-      const { data } = await axios.get(
-        backEndUrl + "/api/company/view-applications",
-        {
-          headers: { token: companyToken },
-        }
-      );
+      const { data } = await axios.get(backEndUrl + "/api/company/applicants");
       if (data.success) {
         setApplicants(data.applications);
       }
