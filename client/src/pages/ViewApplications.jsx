@@ -56,7 +56,11 @@ const ViewApplications = () => {
     }
   }, [companyToken]);
 
-  return  applicants ? applicants.length === 0 ? (<div></div>): (
+  return  applicants ? applicants.length === 0 ? (
+    <div className="fle items-center justify-center h-[70vh]">
+    <p className="text-xl sm:text-2xl">No Jobs Available</p>
+  </div>
+  ): (
     <div className="container mx-auto p-4">
       <div>
         <table className="w-full max-w-4xl bg-white border-gray-200 max-sm:text-sm">
