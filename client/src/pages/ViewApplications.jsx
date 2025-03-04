@@ -11,8 +11,18 @@ const ViewApplications = () => {
   //function to fetch company job application data
 
   const fetchCompanyApplications = async () => {
+    try {
+      const { data } = await axios.get(backEndUrl + "/api/company/view-applications", {
+        headers: { token: companyToken },
+      });
+      if (data.success) {
+        setApplicants(data.applications);
+      }
+    } catch (error) {
+      console.error(error);
+    }
 
-    
+
   }
 
 
