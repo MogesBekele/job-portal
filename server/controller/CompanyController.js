@@ -5,6 +5,7 @@ import bcrypt from "bcrypt";
 import { v2 as cloudinary } from "cloudinary";
 import generateToken from "../utilis/GenerateToken.js";
 import Job from "../models/Job.js";
+import JobApplication from "../models/JobApplication.js";
 
 
 export const registerCompany = async (req, res) => {
@@ -133,7 +134,8 @@ export const getCompanyJobApplicants = async (req, res) => {
 
   try {
     const companyId = req.company._id;
-    const applications = await JobApplication.Company.find({ companyId})
+    const applications = await JobApplication.find({ companyId})
+    
     
   } catch (error) {
     
