@@ -7,7 +7,6 @@ import generateToken from "../utilis/GenerateToken.js";
 import Job from "../models/Job.js";
 import JobApplication from "../models/JobApplication.js";
 
-
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
   const imageFile = req.file;
@@ -131,15 +130,12 @@ export const postJob = async (req, res) => {
 //get all job applicants
 
 export const getCompanyJobApplicants = async (req, res) => {
-
   try {
     const companyId = req.company._id;
-    const applications = await JobApplication.find({ companyId})
-    
-    
-  } catch (error) {
-    
-  }
+    const applications = await JobApplication.find({ companyId })
+      .populate("userId", "Nmae image resume")
+      .populate("jobId", "title location category level salary");
+  } catch (error) {}
 };
 //get company posted job
 
@@ -148,14 +144,16 @@ export const getCompanyPostedJobs = async (req, res) => {
     const companyId = req.company._id;
     const jobs = await Job.find({ companyId });
 
-    const jobsData = await Promise.all(jobs.map(async (job)=>{
-      const applicants = await JobApplication.find({jobId: job._id})
+    const jobsData = await Promise.all(
+      jobs.map(async (job) => {
+        const applicants = await JobApplication.find({ jobId: job._id });
 
-      return {
-        ...job.toObject(), 
-        applicants:applicants.length
-      }
-    }))
+        return {
+          ...job.toObject(),
+          applicants: applicants.length,
+        };
+      })
+    );
 
     return res.json({
       success: true,
@@ -181,7 +179,6 @@ export const changeVisibility = async (req, res) => {
 
     if (companyId.toString() === job.companyId.toString()) {
       job.visible = !job.visible;
-   
     }
     await job.save();
 
@@ -191,7 +188,6 @@ export const changeVisibility = async (req, res) => {
       job,
     });
   } catch (error) {
-    return res.json({ success: false, message: error.message
-    });
+    return res.json({ success: false, message: error.message });
   }
 };
