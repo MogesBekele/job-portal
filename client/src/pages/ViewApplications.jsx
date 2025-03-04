@@ -37,7 +37,6 @@ const ViewApplications = () => {
         { headers: { token: companyToken } }
       );
       if (data.success) {
-        toast.success("Status updated successfully");
         fetchCompanyApplications();
       } else {
         toast.error(data.message);
