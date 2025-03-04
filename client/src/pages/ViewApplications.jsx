@@ -34,7 +34,7 @@ const ViewApplications = () => {
     }
   }, [companyToken]);
 
-  return (
+  return  applicants ? applicants.length === 0 ? (<div></div>): (
     <div className="container mx-auto p-4">
       <div>
         <table className="w-full max-w-4xl bg-white border-gray-200 max-sm:text-sm">
