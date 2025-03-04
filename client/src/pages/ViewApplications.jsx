@@ -18,22 +18,20 @@ const ViewApplications = () => {
       });
       if (data.success) {
         setApplicants(data.applications.reverse());
-      }
-      else{
-        toast.error(data.message)
+      } else {
+        toast.error(data.message);
       }
     } catch (error) {
       toast.error(error.message);
     }
   };
 
-
   //fetch company job application data on component mount
 
   useEffect(() => {
-   if (companyToken) {
-     fetchCompanyApplications();
-   }
+    if (companyToken) {
+      fetchCompanyApplications();
+    }
   }, [companyToken]);
 
   return (
