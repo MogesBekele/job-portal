@@ -181,6 +181,11 @@ const {id, status} = req.body;
 
 await JobApplication.findOneAndUpdate({_id: id}, {status: status})
 
+return res.json({
+  success: true,
+  message: "Job application status updated",
+});
+
 
 
 };
