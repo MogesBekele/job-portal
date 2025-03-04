@@ -13,7 +13,9 @@ const ViewApplications = () => {
 
   const fetchCompanyApplications = async () => {
     try {
-      const { data } = await axios.get(backEndUrl + "/api/company/applicants");
+      const { data } = await axios.get(backEndUrl + "/api/company/applicants", {
+        headers: { token: companyToken },
+      });
       if (data.success) {
         setApplicants(data.applications.reverse());
       }
@@ -24,6 +26,13 @@ const ViewApplications = () => {
       toast.error(error.message);
     }
   };
+
+
+  //fetch company job application data on component mount
+
+  useEffect(() => {
+    fetchCompanyApplications();
+  }, []);
 
   return (
     <div className="container mx-auto p-4">
