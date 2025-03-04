@@ -98,6 +98,8 @@ const ViewApplications = () => {
                   </a>
                 </td>
                 <td className="py-2 px-4 border-b relative">
+
+                  {applicant.status === 'pending'}
                   <div className="relative inline-block text-left group">
                     <button className="text-gray-500 action-button">...</button>
 
