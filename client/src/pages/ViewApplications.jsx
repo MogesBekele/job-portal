@@ -15,7 +15,7 @@ const ViewApplications = () => {
     try {
       const { data } = await axios.get(backEndUrl + "/api/company/applicants");
       if (data.success) {
-        setApplicants(data.applications);
+        setApplicants(data.applications.reverse());
       }
     } catch (error) {
       console.error(error);
