@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { assets, viewApplicationsPageData } from "../assets/assets";
 import { AppContext } from "../context/AppContext";
 import { useState } from "react";
-
 import axios from "axios";
 import { toast } from "react-toastify";
 
