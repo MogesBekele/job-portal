@@ -6,6 +6,7 @@ import { v2 as cloudinary } from "cloudinary";
 import generateToken from "../utilis/GenerateToken.js";
 import Job from "../models/Job.js";
 
+
 export const registerCompany = async (req, res) => {
   const { name, email, password } = req.body;
   const imageFile = req.file;
