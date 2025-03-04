@@ -141,7 +141,9 @@ export const getCompanyJobApplicants = async (req, res) => {
         success: true,
         applications,
       });
-  } catch (error) {}
+  } catch (error) {
+    return res.json({ success: false, message: error.message });
+  }
 };
 //get company posted job
 
