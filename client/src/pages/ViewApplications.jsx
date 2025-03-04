@@ -69,7 +69,7 @@ const ViewApplications = () => {
                 </td>
                 <td className="p-2 px-4 border-b">
                   <a
-                    href=""
+                    href={applicant.userId.resume}
                     target="_blank"
                     className="bg-blue-50 px-3 py-1 rounded inline-flex gap-2 items-center"
                   >
