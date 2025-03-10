@@ -67,4 +67,5 @@ const Hero = () => {
 };
 // creating the hero section for the app
 // i understand the useref application on this section
+// flex property on the input and search buttton
 export default Hero;
