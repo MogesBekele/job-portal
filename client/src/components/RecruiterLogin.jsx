@@ -19,7 +19,7 @@ const RecruiterLogin = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault;
     if (state == "sign up" && !isTextDataSubmited) {
-     return setIsTextDataSubmited(true);
+      return setIsTextDataSubmited(true);
     }
 
     try {
@@ -28,9 +28,8 @@ const RecruiterLogin = () => {
           email,
           password,
         });
-        
+
         if (data.success) {
-         
           setCompanyData(data.company);
           setCompanyToken(data.token);
           localStorage.setItem("companyToken", data.token);
@@ -39,17 +38,17 @@ const RecruiterLogin = () => {
         } else {
           toast.error(data.message);
         }
-      }
-    
-      else{
+      } else {
         const formData = new FormData();
         formData.append("name", name);
         formData.append("email", email);
         formData.append("password", password);
         formData.append("image", image);
-        const { data } = await axios.post(backEndUrl + "/api/company/register", formData);
+        const { data } = await axios.post(
+          backEndUrl + "/api/company/register",
+          formData
+        );
         if (data.success) {
-          
           setCompanyData(data.company);
           setCompanyToken(data.token);
           localStorage.setItem("companyToken", data.token);
@@ -58,13 +57,9 @@ const RecruiterLogin = () => {
         } else {
           toast.error(data.message);
         }
-        
-        
       }
-
-
     } catch (error) {
-     toast.error(error.message)
+      toast.error(error.message);
     }
   };
   useEffect(() => {

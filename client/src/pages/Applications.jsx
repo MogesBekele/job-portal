@@ -82,9 +82,10 @@ const Applications = () => {
             </>
           ) : (
             <div className="flex gap-2">
-              <a target="_blank" href={userData.resume}
+              <a
+                target="_blank"
+                href={userData.resume}
                 className="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg"
-                
               >
                 Resume
               </a>
