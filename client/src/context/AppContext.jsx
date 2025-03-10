@@ -15,7 +15,7 @@ export const AppContextProvider = (props) => {
   const [searchFilter, setSearchFilter] = useState({
     title: "",
     location: "",
-  });
+  });// for hero section
   const [jobs, setJobs] = useState([]);
   const [isSearched, setIsSearched] = useState(false);
 
