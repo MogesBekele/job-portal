@@ -63,6 +63,7 @@ const Hero = () => {
       </div>
     </div>
   );
-};
 
+};
+// creating the hero section for the app
 export default Hero;
