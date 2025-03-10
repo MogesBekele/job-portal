@@ -3,19 +3,18 @@ import { assets } from "../assets/assets";
 import { AppContext } from "../context/AppContext";
 
 const Hero = () => {
-  const {setSearchFilter, setIsSearched} = useContext(AppContext)
-  
+  const { setSearchFilter, setIsSearched } = useContext(AppContext);
 
-  const titleRef = useRef(null)
-  const locationRef = useRef(null)
-  const onSearch = ()=>{
+  const titleRef = useRef(null);
+  const locationRef = useRef(null);
+  const onSearch = () => {
     setSearchFilter({
       title: titleRef.current.value,
-      location: locationRef.current.value
-    })
-    setIsSearched(true)
-   // console.log(titleRef.current.value, locationRef.current.value)
-  }
+      location: locationRef.current.value,
+    });
+    setIsSearched(true);
+    // console.log(titleRef.current.value, locationRef.current.value)
+  };
   return (
     <div className="container 2xl:px-20  mx-auto  my-10">
       <div className="bg-gradient-to-r from-purple-800 to-purple-950 text-white py-16 text-center mx-2  rounded-xl">
@@ -30,7 +29,7 @@ const Hero = () => {
           <div className="flex items-center">
             <img className="h-4 sm:h-5" src={assets.search_icon} alt="" />
             <input
-            ref={titleRef}
+              ref={titleRef}
               type="text"
               placeholder="search for jobs"
               className="max-sm:text-xs p-2 rounded outline-none w-full"
@@ -39,13 +38,16 @@ const Hero = () => {
           <div className="flex items-center">
             <img className="h-4 sm:h-5" src={assets.location_icon} alt="" />
             <input
-            ref={locationRef}
+              ref={locationRef}
               type="text"
               placeholder="Location"
               className="max-sm:text-xs p-2 rounded outline-none w-full"
             />
           </div>
-          <button onClick={onSearch} className="bg-blue-500 px-6 py-2 rounded text-white m-1">
+          <button
+            onClick={onSearch}
+            className="bg-blue-500 px-6 py-2 rounded text-white m-1"
+          >
             Search
           </button>
         </div>
@@ -56,18 +58,17 @@ const Hero = () => {
           <img className="h-6" src={assets.microsoft_logo} alt="" />
           <img className="h-6" src={assets.walmart_logo} alt="" />
           <img className="h-6" src={assets.accenture_logo} alt="" />
-          <img  className="h-6"src={assets.samsung_logo} alt="" />
+          <img className="h-6" src={assets.samsung_logo} alt="" />
           <img className="h-6" src={assets.amazon_logo} alt="" />
           <img className="h-6" src={assets.adobe_logo} alt="" />
         </div>
       </div>
     </div>
   );
-
 };
 // creating the hero section for the app
 // i understand the useref application on this section
 // flex property on the input and search buttton
-// the two state value assigned on it which are setsearchfilter and setissearch 
+// the two state value assigned on it which are setsearchfilter and setissearch
 // ggod tounderstand state value with useref
 export default Hero;
