@@ -28,6 +28,7 @@ const AppDownload = () => {
     // app download page completeed
     //use sentiry for error handling
     //clerk for autenticatioon and autorization for the app
+    //tailwind css for styling purposes
   );
 };
 
