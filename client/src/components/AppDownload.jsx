@@ -26,7 +26,7 @@ const AppDownload = () => {
       </div>
     </div>
     // app download page completeed
-    //use sentiry for error handilnig
+    //use sentiry for error handling
   );
 };
 
