@@ -25,7 +25,6 @@ const AppDownload = () => {
         />
       </div>
     </div>
-  
   );
 };
 
