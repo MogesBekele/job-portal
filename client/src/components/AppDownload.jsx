@@ -29,6 +29,7 @@ const AppDownload = () => {
     //use sentiry for error handling
     //clerk for autenticatioon and autorization for the app
     //tailwind css for styling purposes
+    // react-router for handiling the routes
   );
 };
 
