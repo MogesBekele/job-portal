@@ -37,5 +37,6 @@ const Navbar = () => {
 };
 
 // i seen the logic using the user condition above
+// recruiter login is the otheer
 
 export default Navbar;
