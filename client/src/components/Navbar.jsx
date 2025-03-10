@@ -36,4 +36,6 @@ const Navbar = () => {
   );
 };
 
+// i seen the logic using the user interface
+
 export default Navbar;
