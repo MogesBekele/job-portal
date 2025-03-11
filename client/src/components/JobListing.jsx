@@ -202,3 +202,4 @@ export default JobListing;
 //import search state from appcontext
 //add functionality on cross image to remove the search filter
 // add css 
+// add category filter
