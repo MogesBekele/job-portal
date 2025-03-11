@@ -191,3 +191,4 @@ export default ApplyJob;
 
 //fetch job with thier id
 // add loading animation
+//
