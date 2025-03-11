@@ -106,7 +106,7 @@ const ApplyJob = () => {
               />
               <div className="text-center md:text-left text-neutral-700">
                 <h1 className="text-2xl sm:text-4xl font-medium">
-                  {jobData.title}
+                  {JobData.title}
                 </h1>
                 <div className="flex flex-row flex-wrap max-md:justify-center gap-y-2 gap-6 items-center text-gray-700 mt-2">
                   <span className="flex items-center gap-1">
@@ -190,3 +190,4 @@ const ApplyJob = () => {
 export default ApplyJob;
 
 //fetch job with thier id
+// add loading animation
