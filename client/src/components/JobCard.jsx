@@ -50,3 +50,4 @@ export default JobCard;
 
 // pass job as individual item
 // add innerHTML for the descrition
+// add css
