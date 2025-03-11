@@ -211,3 +211,4 @@ export default JobListing;
 // search the job category and location to display the searched job on the list
 // handle category change
 //handle location change
+// use include method
