@@ -19,3 +19,4 @@ const Footer = () => {
 
 export default Footer;
 //footer created
+// simple footer
