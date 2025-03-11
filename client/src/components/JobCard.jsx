@@ -52,3 +52,4 @@ export default JobCard;
 // add innerHTML for the descrition
 // add css
 //use usenavigate
+// used scrollto function to scroll
