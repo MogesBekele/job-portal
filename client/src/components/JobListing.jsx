@@ -201,9 +201,9 @@ export default JobListing;
 //add the search filter from the hero components
 //import search state from appcontext
 //add functionality on cross image to remove the search filter
-// add css 
+// add css
 // add category filter
 // add location filter
 //mount jobcard
-// add showfilter 
-// add pagination 
+// add showfilter
+// add pagination
