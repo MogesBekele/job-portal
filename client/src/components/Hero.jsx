@@ -70,5 +70,5 @@ const Hero = () => {
 // i understand the useref application on this section
 // flex property on the input and search buttton
 // the two state value assigned on it which are setsearchfilter and setissearch
-// ggod tounderstand state value with useref
+// add useref on the input and search filter
 export default Hero;
