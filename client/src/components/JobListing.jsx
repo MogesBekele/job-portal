@@ -206,3 +206,4 @@ export default JobListing;
 // add location filter
 //mount jobcard
 // add showfilter 
+// add pagination
