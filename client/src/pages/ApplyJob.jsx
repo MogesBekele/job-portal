@@ -192,4 +192,4 @@ export default ApplyJob;
 //fetch job with thier id
 // add loading animation
 // add navbar 
-
+// applied tailwind css
