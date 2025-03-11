@@ -197,3 +197,5 @@ const JobListing = () => {
 };
 
 export default JobListing;
+
+//add the search filter from the hero components
