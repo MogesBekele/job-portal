@@ -212,4 +212,5 @@ export default JobListing;
 // handle category change
 //handle location change
 // use include method
-// useefect method to filter
+// useeffect method to filter
+// 
