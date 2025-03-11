@@ -213,4 +213,4 @@ export default JobListing;
 //handle location change
 // use include method
 // useeffect method to filter
-// 
+// to lower case
