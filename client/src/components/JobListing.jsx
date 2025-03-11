@@ -207,3 +207,4 @@ export default JobListing;
 //mount jobcard
 // add showfilter
 // add pagination
+//filter the job list from search input
