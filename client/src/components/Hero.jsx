@@ -71,4 +71,5 @@ const Hero = () => {
 // flex property on the input and search buttton
 // the two state value assigned on it which are setsearchfilter and setissearch
 // add useref on the input and search filter
+// create onsearch function for functionalty of the search filter
 export default Hero;
