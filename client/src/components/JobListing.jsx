@@ -203,3 +203,4 @@ export default JobListing;
 //add functionality on cross image to remove the search filter
 // add css 
 // add category filter
+// add location filter
