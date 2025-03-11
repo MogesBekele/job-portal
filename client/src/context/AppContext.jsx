@@ -16,7 +16,7 @@ export const AppContextProvider = (props) => {
     title: "",
     location: "",
   }); // for hero section
-  const [jobs, setJobs] = useState([]);// for jobListings
+  const [jobs, setJobs] = useState([]); // for jobListings
   const [isSearched, setIsSearched] = useState(false);
 
   const [showRecruiterLogin, setShowRecruiterLogin] = useState(false);
