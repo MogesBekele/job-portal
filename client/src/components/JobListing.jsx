@@ -204,3 +204,4 @@ export default JobListing;
 // add css 
 // add category filter
 // add location filter
+//mount jobcard
