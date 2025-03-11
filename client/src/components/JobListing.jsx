@@ -215,3 +215,4 @@ export default JobListing;
 // useeffect method to filter
 // to lower case
 // use slice reverce and filter method to filter the results
+// 
