@@ -216,3 +216,5 @@ export default JobListing;
 // to lower case
 // use slice reverce and filter method to filter the results
 // use math method for pagination
+
+// this page is a little bit difficult so i come back to here
