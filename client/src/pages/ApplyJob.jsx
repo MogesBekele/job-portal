@@ -183,3 +183,5 @@ const ApplyJob = () => {
 };
 
 export default ApplyJob;
+
+//fetch job with thier id
