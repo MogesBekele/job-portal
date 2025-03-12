@@ -193,4 +193,5 @@ export default ApplyJob;
 // add loading animation
 // add navbar 
 // applied tailwind css
+// 
 
