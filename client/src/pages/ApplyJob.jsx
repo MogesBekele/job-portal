@@ -197,4 +197,5 @@ export default ApplyJob;
 // use kconvert package to convert
 // use timestamp 
 // moment package used
+// tailwind css applied
 
