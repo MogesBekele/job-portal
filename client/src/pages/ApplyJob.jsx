@@ -194,5 +194,5 @@ export default ApplyJob;
 // add navbar 
 // applied tailwind css
 // create state to display the job
-//
+// 
 
