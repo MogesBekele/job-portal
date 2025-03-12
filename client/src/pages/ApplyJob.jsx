@@ -202,5 +202,5 @@ export default ApplyJob;
 // add job description 
 //use dangeriuslyinnerhtml
 // custom css applied
-// 
+// ad more custom properties applied
 
