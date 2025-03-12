@@ -198,5 +198,5 @@ export default ApplyJob;
 // use timestamp 
 // moment package used
 // tailwind css applied in all div
-// 
+// design the applied job section
 
