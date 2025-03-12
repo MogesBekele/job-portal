@@ -201,4 +201,5 @@ export default ApplyJob;
 // design the applied job section
 // add job description 
 //use dangeriuslyinnerhtml
+// 
 
