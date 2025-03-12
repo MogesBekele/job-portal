@@ -195,5 +195,5 @@ export default ApplyJob;
 // applied tailwind css
 // create state to display the job
 // use kconvert package to convert
-//
+// 
 
