@@ -196,7 +196,6 @@ export default ApplyJob;
 // use kconvert package to convert
 // use timestamp 
 // moment package used
-// tailwind css applied in all div
 // design the applied job section
 //use dangeriuslyinnerhtml
 // custom css applied
