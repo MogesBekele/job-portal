@@ -191,7 +191,6 @@ export default ApplyJob;
 
 //fetch job with thier id
 // add loading animation
-// add navbar 
 // applied tailwind css
 // create state to display the job
 // use kconvert package to convert
