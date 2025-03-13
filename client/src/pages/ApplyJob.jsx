@@ -198,7 +198,6 @@ export default ApplyJob;
 // moment package used
 // tailwind css applied in all div
 // design the applied job section
-// add job description 
 //use dangeriuslyinnerhtml
 // custom css applied
 
