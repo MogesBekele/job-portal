@@ -161,3 +161,4 @@ export default Applications;
 // tailewind css applied
 // footer added
 // table is added
+//
