@@ -154,3 +154,5 @@ const Applications = () => {
 };
 
 export default Applications;
+
+// add the navbar components
