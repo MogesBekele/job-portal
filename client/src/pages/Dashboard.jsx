@@ -109,3 +109,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// dashboard page is created
