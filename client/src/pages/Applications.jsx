@@ -159,3 +159,4 @@ export default Applications;
 // resume added
 // resume edit buttun
 // tailewind css applied
+// footer added
