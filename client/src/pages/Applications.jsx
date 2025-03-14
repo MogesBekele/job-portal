@@ -158,3 +158,4 @@ export default Applications;
 // add the navbar components
 // resume added
 // resume edit buttun
+// tailewind css applied
