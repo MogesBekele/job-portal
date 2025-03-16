@@ -145,7 +145,7 @@ const ApplyJob = () => {
               <h2 className="font-bold text-2xl mb-4">Job description</h2>
               <div
                 className="rich-text"
-                dangerouslySetInnerHTML={{ __html: jobData.description }}
+                dangerouslySetInnerHTML={{ __html: JobData.description }}
               ></div>
               <button
                 onClick={applyHandler}
