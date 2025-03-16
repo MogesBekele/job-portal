@@ -150,4 +150,5 @@ export const AppContextProvider = (props) => {
 };
 
 // usecontext used
-//
+// understand the usecontext
+// understand the child context
