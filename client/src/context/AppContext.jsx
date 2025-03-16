@@ -153,4 +153,3 @@ export const AppContextProvider = (props) => {
 // understand the usecontext
 // understand the child context
 // understand how to pass the child context to the components
-
