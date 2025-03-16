@@ -194,11 +194,9 @@ export default ApplyJob;
 // applied tailwind css
 // create state to display the job
 // use kconvert package to convert
-// use timestamp 
+// use timestamp
 // moment package used
 // tailwind css applied in all di
 // design the applied job section
 //use dangeriuslyinnerhtml
 // custom css applied
-
-
