@@ -15,7 +15,7 @@ const AddJob = () => {
   const { backEndUrl, companyToken } = useContext(AppContext);
 
   const onSubmitHandler = async (e) => {
-    e.preventDefualt();
+    e.preventDefault();
     try {
       const description = quillRef.current.root.innerHTML;
       const { data } = await axios.post(
