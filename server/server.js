@@ -49,4 +49,4 @@ app.listen(port, () => {
 });
 
 // sentery is used to connect to the database with retries and retries up to 5 times per second.
-//
+// this is used to avoid the need to connect to the database multiple times per second and the retries will be increased by 5 times per second.
