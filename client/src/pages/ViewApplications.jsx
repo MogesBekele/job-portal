@@ -153,3 +153,6 @@ const ViewApplications = () => {
 };
 
 export default ViewApplications;
+
+// viewapplication component created
+
