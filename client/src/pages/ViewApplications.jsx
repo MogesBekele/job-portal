@@ -159,4 +159,5 @@ export default ViewApplications;
 // tailwind css is applied
 // this component is used to display the applicatioon view application
 // imported from asset section
+// the data is imported from asset section 
 
