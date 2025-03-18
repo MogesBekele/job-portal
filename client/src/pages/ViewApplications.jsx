@@ -156,5 +156,5 @@ export default ViewApplications;
 
 // viewapplication component created
 // toast is used for error handling
-// 
+// tailwind css is applied
 
