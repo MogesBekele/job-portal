@@ -47,3 +47,7 @@ Sentry.setupExpressErrorHandler(app);
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
+
+// sentery is used to connect to the database with retries and retries up to 5 times per second.
+// cloudinary is used  to connect to the database
+//
