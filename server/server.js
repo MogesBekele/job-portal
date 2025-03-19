@@ -53,5 +53,5 @@ app.listen(port, () => {
 // the middleware include multer and cloudinary
 // atlas mongodb deriver is used to generate the mongodb string for the mongodb instance and the mongodb instance will be 
 // postman method is used for checking the api
-// sentry for error handling
+
 // webhook package is used to autenticate
