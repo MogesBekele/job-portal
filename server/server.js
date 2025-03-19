@@ -47,5 +47,4 @@ app.listen(port, () => {
 
 // the middleware include multer and cloudinary
 
-
 // webhook package is used to autenticate
