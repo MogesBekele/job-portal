@@ -47,5 +47,5 @@ app.listen(port, () => {
 // this is used to avoid the need to connect to the database multiple times per second and the retries will be increased by 5 times per second.
 // the middleware include multer and cloudinary
 // atlas mongodb deriver is used to generate the mongodb string for the mongodb instance and the mongodb instance will be
-// postman method is used for checking the api
+
 // webhook package is used to autenticate
