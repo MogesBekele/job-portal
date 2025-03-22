@@ -19,6 +19,8 @@ app.use(express.json());
 app.use(clerkMiddleware());
 
 await connectDB();
+
+// Connect to cloudinary
 await connectCloudinary();
 
 // Basic route
