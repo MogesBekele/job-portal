@@ -10,3 +10,5 @@ const companySchema = new mongoose.Schema({
 const Company = mongoose.model("Company", companySchema);
 
 export default Company;
+
+//the company schema is used to create 
