@@ -47,6 +47,7 @@ export const registerCompany = async (req, res) => {
     return res.json({ success: false, message: error.message });
   }
 };
+// completion of register section
 
 //company login
 
