@@ -30,7 +30,7 @@ export const registerCompany = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      image: imageUpload.secure_url,
+      image: imageUpload.secure_url
     });
 
     return res.json({
