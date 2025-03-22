@@ -36,6 +36,7 @@ export const registerCompany = async (req, res) => {
     return res.json({
       success: true,
       company: {
+        _id: company._id,
         name: company.name,
         email: company.email,
         image: company.image,
