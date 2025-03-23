@@ -24,3 +24,5 @@ export const protectCompany = async (req, res, next) => {
     });
   }
 };
+
+// middleware route to protect the company data 
