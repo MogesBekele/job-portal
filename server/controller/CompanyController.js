@@ -81,6 +81,7 @@ export const loginCompany = async (req, res) => {
     return res.json({ success: false, message: error.message });
   }
 };
+//login page created successfully
 
 //get company data
 
