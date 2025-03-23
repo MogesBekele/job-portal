@@ -26,4 +26,5 @@ export const protectCompany = async (req, res, next) => {
 };
 
 // middleware route to protect the company data 
+// for all routes
 // the company data with out passwords
