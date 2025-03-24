@@ -1,14 +1,14 @@
-import express from 'express'
-import { getJobById, getJobs } from '../controller/JobController.js'
+import express from "express";
+import { getJobById, getJobs } from "../controller/JobController.js";
 
-const router = express.Router()
+const router = express.Router();
 
 // all jobs data
-router.get('/', getJobs)
+router.get("/", getJobs);
 
 // route to get a single job by id
 
-router.get('/:id', getJobById)
+router.get("/:id", getJobById);
 
-export default router
+export default router;
 //       token: generateToken(company._id),
