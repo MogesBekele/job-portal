@@ -32,3 +32,5 @@ export const getJobById = async (req, res) => {
     return res.json({ success: false, message: error.message });
   }
 };
+
+// job controller is created
