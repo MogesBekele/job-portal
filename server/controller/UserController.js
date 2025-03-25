@@ -137,8 +137,7 @@ export const updateUserResume = async (req, res) => {
 // get user information
 // apply for a job
 // get user job applications
-// update user resume
- // clerk middleware is used
+
  // cloudinary is used to upload resume
  // user middleware is used to authenticate user
  // multer middleware is used to handle resume upload
