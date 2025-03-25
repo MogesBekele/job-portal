@@ -130,3 +130,5 @@ export const updateUserResume = async (req, res) => {
     });
   }
 };
+
+//user controller functions
