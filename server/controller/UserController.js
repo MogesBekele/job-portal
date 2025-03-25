@@ -135,3 +135,4 @@ export const updateUserResume = async (req, res) => {
 // get user information
 // apply for a job
 // get user job applications
+// update user resume
