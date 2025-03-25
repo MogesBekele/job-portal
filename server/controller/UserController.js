@@ -136,4 +136,4 @@ export const updateUserResume = async (req, res) => {
 // apply for a job
 // get user job applications
 // update user resume
-// clerk middleware is used 
+// clerk middleware is used
