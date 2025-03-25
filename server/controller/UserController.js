@@ -90,7 +90,7 @@ export const getUserJobApplications = async (req, res) => {
       });
     }
 
-    
+
 
     res.json({
       success: true,
@@ -139,3 +139,4 @@ export const updateUserResume = async (req, res) => {
 // get user job applications
 // update user resume
 // clerk middleware is used
+// cloudinary is used to upload resume
