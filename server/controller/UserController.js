@@ -90,8 +90,6 @@ export const getUserJobApplications = async (req, res) => {
       });
     }
 
-
-
     res.json({
       success: true,
       applications,
@@ -137,12 +135,11 @@ export const updateUserResume = async (req, res) => {
 // get user information
 // apply for a job
 // get user job applications
-// update user resume
- // clerk middleware is used
- // cloudinary is used to upload resume
- // user middleware is used to authenticate user
- // multer middleware is used to handle resume upload
- // express-validator middleware is used to validate user input
- // mongoose is used to interact with MongoDB database
+
+// cloudinary is used to upload resume
+// user middleware is used to authenticate user
+// multer middleware is ucommit on the server side the applicationsed to handle resume upload
+// express-validator middleware is used to validate user input
+// mongoose is used to interact with MongoDB database
 // clerk middleware is used
 // cloudinary is used to upload resume
