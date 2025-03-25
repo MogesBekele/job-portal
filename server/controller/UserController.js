@@ -145,4 +145,4 @@ export const updateUserResume = async (req, res) => {
  // express-validator middleware is used to validate user input
  // mongoose is used to interact with MongoDB database
 
-// cloudinary is used to upload resume
+
