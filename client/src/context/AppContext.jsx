@@ -21,7 +21,7 @@ export const AppContextProvider = (props) => {
 
   const [showRecruiterLogin, setShowRecruiterLogin] = useState(false);
 
-  const [companyToken, setCompanyToken] = useState(null);//recrieter login token
+  const [companyToken, setCompanyToken] = useState(null);//recriuter login token
   const [companyData, setCompanyData] = useState(null);
   const [userData, setUserData] = useState(null);
   const [userApplications, setUserApplications] = useState([]);
