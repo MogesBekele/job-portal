@@ -32,7 +32,7 @@ const RecruiterLogin = () => {
         if (data.success) {
           setCompanyData(data.company);
           setCompanyToken(data.token);
-          localStorage.setItem("companyToken", data.token);
+          localStorage.setItem("companyToken", data.token);// store in local storage
           setShowRecruiterLogin(false);
           navigate("/dashboard");
         } else {
