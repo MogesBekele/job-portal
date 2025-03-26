@@ -33,7 +33,7 @@ const RecruiterLogin = () => {
           setCompanyData(data.company);
           setCompanyToken(data.token);
           localStorage.setItem("companyToken", data.token);// store in local storage
-          setShowRecruiterLogin(false);
+          setShowRecruiterLogin(false);//close the login form
           navigate("/dashboard");
         } else {
           toast.error(data.message);
