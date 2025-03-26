@@ -43,7 +43,7 @@ const RecruiterLogin = () => {
         formData.append("name", name);
         formData.append("email", email);
         formData.append("password", password);
-        formData.append("image", image);
+        formData.append("image", image);// for recruiter sighups
         const { data } = await axios.post(
           backEndUrl + "/api/company/register",
           formData
