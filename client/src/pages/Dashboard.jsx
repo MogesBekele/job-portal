@@ -117,5 +117,4 @@ export default Dashboard;
 // outlet routes
 // navigate fuunction used to navigate
 // have left sidebar and right sidebar
-//NavLink tag used
-// 
+//NavLink tag us
