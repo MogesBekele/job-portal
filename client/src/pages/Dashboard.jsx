@@ -116,4 +116,3 @@ export default Dashboard;
 // which include viewapplication,  add-job,  and manage jobs
 // outlet routes
 
-// 
