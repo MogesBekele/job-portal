@@ -17,7 +17,7 @@ const ManageJobs = () => {
 
   const fetchCompanyJobs = async () => {
     try {
-      const { data } = await axios.get(backEndUrl + "/api/company/post-jobs", {
+      const { data } = await axios.get(backEndUrl + "/api/company/list-jobs", {
         headers: { token: companyToken },
       });
 
