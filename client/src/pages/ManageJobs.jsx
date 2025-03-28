@@ -134,3 +134,9 @@ export default ManageJobs;
 // moment package is used 
 // usenavigate package is used to navigate
 // toastify package is used to display toast messages
+ // tailwind css is used to design the application
+ // manageJobsData is used to fetch the job data from the assets section
+ // companyToken is used to authenticate the company
+ // useEffect hook is used to fetch the job data when the companyToken is available
+ // axios is used to make HTTP requests to the backend server
+ // moment package is used to format the date and time
