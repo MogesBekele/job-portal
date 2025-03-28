@@ -121,3 +121,4 @@ export default Dashboard;
 // logout function used to log out user from dashboard
 // and redirect to home page
 // useEffect used to check if user is logged in or not
+//
