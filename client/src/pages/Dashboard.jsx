@@ -119,3 +119,4 @@ export default Dashboard;
 // have left sidebar and right sidebar
 //NavLink tag used
 // logout function used to log out user from dashboard
+// and redirect to home page
