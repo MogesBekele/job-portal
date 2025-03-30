@@ -199,4 +199,4 @@ export default ApplyJob;
 // tailwind css applied in all di
 // design the applied job section
 //use dangeriuslyinnerhtml
-
+// custom css applied
