@@ -165,3 +165,4 @@ export default Applications;
 // table is scrollable
 // table is sortable
 // table is filterable
+// table is searchable
