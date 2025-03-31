@@ -175,5 +175,6 @@ export default Applications;
  // table is editable
  // table is deletable
 // table is filterable by date
+// table is filterable by status
 
 
