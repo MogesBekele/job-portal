@@ -287,8 +287,7 @@ export default Applications;
  // table is sortable by location
  // table is editable
  // table is deletable
-// table is filterable by date
-
+ 
 
 
 
