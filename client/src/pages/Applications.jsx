@@ -308,23 +308,6 @@ export default Applications;
  // table is deletable
 // table is filterable by date
 
- // table is filterable by status
- // table is filterable by company
- // table is filterable by job title
- // table is filterable by location
- // table is searchable by date
- // table is searchable by status
- // table is searchable by company
- // table is searchable by job title
- // table is searchable by location
- // table is paginated
- // table is sortable by date
- // table is sortable by status
- // table is sortable by company
- // table is sortable by job title
- // table is sortable by location
- // table is editable
- // table is deletable
 
 
 
