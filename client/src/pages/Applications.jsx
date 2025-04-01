@@ -195,9 +195,6 @@ export default Applications;
 // table is filterable by date
  // table is filterable by status
  // table is filterable by company
- // table is filterable by job title
- // table is filterable by location
-// table is searchable by date
 
 
  
