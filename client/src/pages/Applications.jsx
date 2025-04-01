@@ -166,10 +166,7 @@ export default Applications;
 // table is sortable
 // table is filterable
 // table is searchable
-// table is paginated
-// table is sortable by date
- // table is sortable by status
- // table is sortable by company
+
 
 
 
