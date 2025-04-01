@@ -226,7 +226,7 @@ export default Applications;
  // table is sortable by date
  // table is sortable by status
  // table is sortable by company
- // table is sortable by job title
+
 
 
 
