@@ -184,13 +184,7 @@ export default Applications;
  // table is searchable by company
  // table is searchable by job title
  // table is searchable by location
- // table is paginated
- // table is sortable by date
- // table is sortable by status
- // table is sortable by company
- // table is sortable by job title
- // table is sortable by location
- // table is editable
+
 
 
 
