@@ -205,7 +205,7 @@ export default Applications;
  // table is searchable by location
  // table is paginated
  // table is sortable by date
- // table is sortable by status
+
 
 
 
