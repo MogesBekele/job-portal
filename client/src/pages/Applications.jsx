@@ -203,7 +203,8 @@ export default Applications;
  // table is searchable by company
  // table is searchable by job title
  // table is searchable by location
-// table is paginated
+
+
 
 
 
