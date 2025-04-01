@@ -199,11 +199,7 @@ export default Applications;
  // table is filterable by location
 // table is searchable by date
 
- // table is searchable by status
- // table is searchable by company
- // table is searchable by job title
- // table is searchable by location
- // table is paginated
+
  
 
 
