@@ -191,10 +191,7 @@ export default Applications;
  // table is sortable by job title
  // table is sortable by location
  // table is editable
- // table is deletable
-// table is filterable by date
- // table is filterable by status
- // table is filterable by company
+
 
 
  
