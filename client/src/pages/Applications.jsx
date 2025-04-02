@@ -160,8 +160,6 @@ export default Applications;
 // resume edit buttun
 // tailewind css applied
 // footer added
-// table is added
-// table is responsive
 
 
 
