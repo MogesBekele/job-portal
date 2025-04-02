@@ -161,6 +161,7 @@ export default Applications;
 // tailewind css applied
 // footer added
 // applied jobs table added
+// applied jobs table data added
 
 
 
