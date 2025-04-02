@@ -164,8 +164,7 @@ export default Applications;
 // table is responsive
 // table is scrollable
 // table is sortable
-// table is filterable
-// table is searchable
+
 
 
 
