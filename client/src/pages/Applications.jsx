@@ -162,8 +162,7 @@ export default Applications;
 // footer added
 // table is added
 // table is responsive
-// table is scrollable
-// table is sortable
+
 
 
 
